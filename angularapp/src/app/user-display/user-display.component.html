@@ -2,7 +2,7 @@
     
   <div class="container">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search username" [(ngModel)]="searchUser">
+      <input type="text" class="form-control" placeholder="Search username" >
         <span class="input-group-btn">
           <button class="btn btn-search" type="button"><i class="fa fa-search fa-fw"></i> Search</button>
         </span>
@@ -24,7 +24,7 @@
         </tr>  
     </thead>  
     <tbody>  
-      <tr *ngFor="let u of users | searchPipe:searchUser">  
+      <tr *ngFor="let u of users">  
         <td>{{ u.email }}</td>  
         <td>{{ u.username }}</td>  
         <td>{{ u.mobileNo }}</td> 

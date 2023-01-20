@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserdisplayService } from '../services/userdisplay.service';
 
 interface UserDetails
 {
@@ -16,9 +17,25 @@ export class UserDisplayComponent implements OnInit {
 searchUser:any;
 users:any;
 
-  constructor() { }
-
+  constructor(private userdisplay:UserdisplayService) 
+  { 
+    userdisplay.users().subscribe((data:any) =>
+    {
+      console.log(data);
+      this.users=data;
+    })
+  }
+  
   ngOnInit(): void {
   }
+
+  getUserFormData(data:any)
+  {
+    this.userdisplay.saveUsers(data).subscribe((result:any) =>
+    {
+      console.log(result);
+    })
+  }
+
 
 }
