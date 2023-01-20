@@ -1,22 +1,22 @@
 <div>
     <form [formGroup]="addThemForm" (ngSubmit)="addThem()">
       <label for="fname">Theme name</label>
-      <input type="text" id="themeName" name="themname" placeholder="theme name.." formControlName="themeName">
+      <input type="text" id="themeName" name="themname" placeholder="Enter theme name" formControlName="themeName">
   
       <label for="lname">Image Url</label>
-      <input type="text" id="imageUrl" name="imageUrl" placeholder="Image url.." fromControlName="imageUrl">
+      <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter the image url" fromControlName="imageUrl">
 
       <label for="lname">Photographer Name</label>
-      <input type="text" id="PhotographerDetails" name="lastname" placeholder="Photographer name..." formControlName="PhotographerDetails">
+      <input type="text" id="PhotographerDetails" name="lastname" placeholder="Enter photographer details" formControlName="PhotographerDetails">
 
       <label for="lname">Theme return gift</label>
-      <input type="text" id="returnGifts" name="returnGifts" placeholder="Theme return gift..." formControlName="returnGifts">
+      <input type="text" id="returnGifts" name="returnGifts" placeholder=" Enter theme return gift" formControlName="returnGifts">
       
       <label for="lname">Theme cost</label>
-      <input type="text" id="themCost" name="themeCost" placeholder="Theme costs..." formControlName="themeCost">
+      <input type="text" id="themCost" name="themeCost" placeholder=" Enter theme costs" formControlName="themeCost">
     
       <label for="lname">Theme Descrioption</label>
-      <input type="text" id="themeDescription" name="themeDescrioption" placeholder="Theme Discription..." height="400px" formControlName="themeDescription">
+      <input type="text" id="themeDescription" name="themeDescrioption" placeholder="Enter theme Discription" height="400px" formControlName="themeDescription">
 
       <input type="submit" value="Add Theme"> <input type="button" value="Next Page">
     </form>
