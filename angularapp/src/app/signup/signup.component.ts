@@ -9,10 +9,10 @@ import { LoginServicesService } from '../services/login-services.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private signupService:LoginServicesService) {}
+  constructor(private signUpService:LoginServicesService) {}
   ngOnInit(): void {}
 
- signupForm = new FormGroup({
+ registerForm = new FormGroup({
     userType: new FormControl('',[Validators.required]),
     email: new FormControl('', [Validators.required,Validators.email]),
     username: new FormControl('',[Validators.required, Validators.minLength(5),Validators.maxLength(20)]),
@@ -22,25 +22,25 @@ export class SignupComponent implements OnInit {
   });
 
   get userType(){
-    return this.signupForm.get('userType');
+    return this.registerForm.get('userType');
   }
   get email(){
-    return this.signupForm.get('email');
+    return this.registerForm.get('email');
   }
   get username(){
-    return this.signupForm.get('username');
+    return this.registerForm.get('username');
   }
   get mobileNumber(){
-    return this.signupForm.get('mobileNumber');
+    return this.registerForm.get('mobileNumber');
   }
   get password(){
-    return this.signupForm.get('password');
+    return this.registerForm.get('password');
   }
   get confirmPassword(){
-    return this.signupForm.get('confirmPassword');
+    return this.registerForm.get('confirmPassword');
   }
   register(user:any){
-    this.signupService.addUser(user).subscribe((result:any)=>{
+    this.signUpService.addUser(user).subscribe((result:any)=>{
       console.log("registered");
     });
   }
