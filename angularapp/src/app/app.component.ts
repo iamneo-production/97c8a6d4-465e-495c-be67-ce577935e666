@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularapp';
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9e08a6970ae3cd563afff00ddf94d747e100bfae
 }

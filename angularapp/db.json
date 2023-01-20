@@ -1,0 +1,17 @@
+{
+    "users":[
+<<<<<<< HEAD
+        {
+            "usertype":"admin",
+            "username":"Thabang",
+            "email":"Thabang@gmail.com",
+            "password":""
+        }
+    ]
+}
+
+=======
+      
+    ]
+}
+>>>>>>> Birthday-Event-Booking-App-MatabaneThabang
