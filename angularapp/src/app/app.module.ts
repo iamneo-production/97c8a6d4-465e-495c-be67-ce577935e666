@@ -7,10 +7,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent, SignupComponent
+    AppComponent, SignupComponent, LoginComponent
   ],
   imports: [
     BrowserModule,

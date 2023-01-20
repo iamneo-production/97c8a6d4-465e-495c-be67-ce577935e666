@@ -8,7 +8,7 @@ export class LoginServicesService {
 
   constructor(private http:HttpClient) { }
 
-  url = "";
+  url = "https://8080-baafadfefdeafdaadbbceeaceaecabef.examlyiopb.examly.io/users";
 
   getUsers(){
     return this.http.get(this.url);
