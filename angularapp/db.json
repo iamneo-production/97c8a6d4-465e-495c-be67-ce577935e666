@@ -1,5 +1,14 @@
 {
-    "users":[
+    "themes":[
+        {
+            "id":1,
+            "themeName":"All white party",
+            "imageUrl":"../ygsbbbsh/bbb",
+            "PhotographerDetails":"esihletuswa",
+            "returnGifts":"free cake",
+            "themCost":"3000",
+            "themeDescription":"Small party"
+        }
       
     ]
 }

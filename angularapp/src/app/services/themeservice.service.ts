@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ThemeserviceService {
-
+  getProductByName(title: any){
+    
+  }
   constructor() { }
 }
