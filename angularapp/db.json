@@ -2,12 +2,12 @@
     "themes":[
         {
             "id":1,
-            "themeName":"All white party",
-            "imageUrl":"../ygsbbbsh/bbb",
-            "PhotographerDetails":"esihletuswa",
-            "returnGifts":"free cake",
+            "themeName":"bithday party",
+            "imageUrl":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/passion-fruit-birthday-cake-royalty-free-image-1658764165.jpg?crop=1.00xw:0.752xh;0,0&resize=980:*",
+            "PhotographerDetails":"Tuswa",
+            "returnGifts":"Cake",
             "themCost":"3000",
-            "themeDescription":"Small party"
+            "themDescription":"Small party"
         }
       
     ]
