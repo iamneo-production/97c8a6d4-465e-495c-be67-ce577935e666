@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { UserService } from './user.service';
 import {FormControl,FormGroup} from '@angular/forms';
 
+=======
+>>>>>>> 6a932961e1b5d1f9fb8b12a2ba60822d432d970b
 
 @Component({
   selector: 'app-root',
@@ -10,6 +13,7 @@ import {FormControl,FormGroup} from '@angular/forms';
 })
 export class AppComponent {
   title = 'angularapp';
+<<<<<<< HEAD
 
   constructor(private userdata: UserService) {}
 
@@ -37,4 +41,6 @@ export class AppComponent {
 
       });
 }
+=======
+>>>>>>> 6a932961e1b5d1f9fb8b12a2ba60822d432d970b
 }
