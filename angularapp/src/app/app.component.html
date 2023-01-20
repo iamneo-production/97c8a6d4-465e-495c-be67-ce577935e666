@@ -1,0 +1,16 @@
+<h1>My Delete Form</h1>
+<br>
+<form [formGroup]="myForm" (ngSubmit) = delete(myForm.value)>
+    
+  <input type="number"> placeholder="Enter ID" formControlName="id" id="id">
+    <br>
+    <br>
+    <input type="text"> placeholder="Enter Username" formControlName="username" id="username">
+    <br>
+    <br>
+    <input type="password"> placeholder="Enter Password" formControlName="password id="password">
+    <br>
+    <br>
+    <button>Delete</button>
+
+</form>
