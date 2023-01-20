@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SignupComponent } from './signup/signup.component';
+import { AddThemesComponent } from './add-themes/add-themes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    AddThemesComponent
   ],
   imports: [
     BrowserModule,
