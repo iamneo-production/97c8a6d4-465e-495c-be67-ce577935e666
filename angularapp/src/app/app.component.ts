@@ -14,6 +14,7 @@ import {FormControl,FormGroup} from '@angular/forms';
 export class AppComponent {
   title = 'angularapp';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   constructor(private userdata: UserService) {}
 
@@ -43,4 +44,7 @@ export class AppComponent {
 }
 =======
 >>>>>>> 6a932961e1b5d1f9fb8b12a2ba60822d432d970b
+=======
+  
+>>>>>>> 9e08a6970ae3cd563afff00ddf94d747e100bfae
 }
