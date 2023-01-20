@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './user.service';
-
+import {FormControl,FormGroup} from '@angular/forms';
 
 
 @Component({
@@ -10,4 +10,31 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
   title = 'angularapp';
+
+  constructor(private userdata: UserService) {}
+
+  myForm = new FormGroup({
+    id: new FormControl(''),
+    username: new FormControl(''),
+    password: new FormControl('')
+
+  });
+
+  get id(){
+      return this.myForm.get('id');
+  }
+  get username(){
+    return this.myForm.get('username');
+  }
+  get password(){
+  return this.myForm.get('password');
+  }
+
+    delete(item,any){
+      alert(" Are You Sure You Want To Delete User ?");
+      this.userdata.deleteUser(item).subscribe((user:any)=>{
+        console.log(user);
+
+      });
+}
 }
