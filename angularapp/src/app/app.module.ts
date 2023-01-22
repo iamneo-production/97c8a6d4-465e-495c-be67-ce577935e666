@@ -7,11 +7,13 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { DisplaythemeComponent } from './displaytheme/displaytheme.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DisplaythemeComponent
   ],
   imports: [
     BrowserModule,
