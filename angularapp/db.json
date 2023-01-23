@@ -1,5 +1,7 @@
 {
+<<<<<<< HEAD
     "users":[
+<<<<<<< HEAD
         {
             "usertype":"admin",
             "username":"Thabang",
@@ -9,3 +11,14 @@
     ]
 }
 
+=======
+      
+    ]
+}
+>>>>>>> Birthday-Event-Booking-App-MatabaneThabang
+=======
+  "users": [
+   
+  ]
+}
+>>>>>>> Birthday-Event-Booking-App-MatabaneThabang
