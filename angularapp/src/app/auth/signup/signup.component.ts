@@ -55,8 +55,6 @@ confirmPass(form:any){
 // Register Method
 register(form:any)
 {
-
-
   var confirm : boolean = window.confirm("Do you want to submit this user.");
   console.log(confirm);
 
@@ -73,6 +71,4 @@ this.loginService.addUser(this.user).subscribe
 );
 }  
 }
-
-
 }
