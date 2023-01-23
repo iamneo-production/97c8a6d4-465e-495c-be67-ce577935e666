@@ -13,7 +13,11 @@ export class ThemeserviceService {
 
   themes()
   {
-    return 
+    return this.http.get(this.Url);
   }
+  addTheme(data:any){
+    return this.http.post(this.Url,data);
+  }
+  
 
 }
