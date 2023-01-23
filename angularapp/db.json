@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "users":[
 <<<<<<< HEAD
         {
@@ -13,5 +14,11 @@
 =======
       
     ]
+}
+>>>>>>> Birthday-Event-Booking-App-MatabaneThabang
+=======
+  "users": [
+   
+  ]
 }
 >>>>>>> Birthday-Event-Booking-App-MatabaneThabang
