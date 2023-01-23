@@ -15,7 +15,7 @@ export class ThemeserviceService {
   {
     return this.http.get(this.Url);
   }
-  addTheme(data:any){
+  addtheme(data:any){
     return this.http.post(this.Url,data);
   }
   
