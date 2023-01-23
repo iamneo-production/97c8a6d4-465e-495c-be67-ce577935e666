@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SignupComponent } from './signup/signup.component';
 import { AddThemesComponent } from './add-themes/add-themes.component';
 import { ThemeserviceService} from '../app/services/themeservice.service';
+import { AddMenuComponent } from './add-menu/add-menu.component';
 
 
 =======
@@ -30,7 +31,8 @@ import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
     AppComponent,
 <<<<<<< HEAD
     SignupComponent,
-    AddThemesComponent
+    AddThemesComponent,
+    AddMenuComponent
 =======
     AuthComponent,
     SignupComponent,
