@@ -9,13 +9,8 @@ import { ThemeserviceService} from '../services/themeservice.service';
 export class AddThemesComponent {
 themes:any;
 themdata:any;
-  constructor(themedata:ThemeserviceService) {
-    // themedata.themes().subscribe((data:any)=>
-    // {
-    //   console.log(data);
-    //   this.themes=data;
-    // });
-   }
+  constructor(themedata:ThemeserviceService) { }
+
    getThemForm(data:any){
      this.themdata.addtheme(data).subscribe((result:any)=>{
        console.log(result);

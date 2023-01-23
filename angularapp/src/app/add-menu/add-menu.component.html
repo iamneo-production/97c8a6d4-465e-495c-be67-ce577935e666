@@ -1,10 +1,7 @@
 
-<table border="0"   style="background-color:white;" >
-    <tr>
-        <th> <h1>Add Food Menu</h1></th><th><button><a routerLink="addTheme">BACK</a></button></th>
-        <td>
+
             <h1>Add Item</h1>
-            <form #formMenu="ngForm"   (ngSubmit)="getMenuData(formMenu.value)" id="addMenu>
+            <form #formMenu="ngForm"   (ngSubmit)="getMenuData(formMenu.value)">
                 <input type="file" id="myFile" ngModel name="filename" required>
                  <br>
                 <input type="text" id="itemName" ngModel name="itemName" placeholder="Enter Item Name.." required>
@@ -17,14 +14,10 @@
                 </select>
                <br>
                <br>
-               <input type="text" id="itemPrice">
+               <input type="text" ngModel name="itemPrice" id="itemPrice">
             
                 <input type="submit" value="Add menu">
               </form>
-        </td>
-        <td>
-            <img src="../assets/b5.jpg" alt="pic" width="50%" height="50%">
-        </td>
-    </tr>
-</table>
+        
+            
   
