@@ -10,6 +10,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthComponent } from './auth/auth.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
+import { DisplayUserComponent } from './auth/display-user/display-user.component';
+import { SearchComponent } from './auth/search/search.component';
+import { EditUserComponent } from './auth/edit-user/edit-user.component';
+import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { LoginComponent } from './auth/login/login.component';
     AuthComponent,
     SignupComponent,
     LoginComponent,
+    DisplayUserComponent,
+    SearchComponent,
+    EditUserComponent,
+    DeleteUserComponent,
   ],
   imports: [
     BrowserModule,
