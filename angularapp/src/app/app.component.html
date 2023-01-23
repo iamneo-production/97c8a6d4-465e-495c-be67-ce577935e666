@@ -9,11 +9,11 @@
   </ul>
 
   <div class="col-md-3 text-end">
-    <a class="btn btn-outline-primary me-2" routerLink="login">Login</a>
-    <a class="btn btn-primary mx-4" routerLink="signup">Sign-up</a>
+    <a class="btn btn-outline-primary me-2" (click) = "login()">Login</a>
+    <a class="btn btn-primary mx-4" (click)="signup()">Sign-up</a>
   </div>
-  <router-outlet></router-outlet>
 </header>
+<router-outlet></router-outlet>
 
 
 
