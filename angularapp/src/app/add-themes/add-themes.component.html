@@ -1,23 +1,33 @@
-<div>
-    <form [formGroup]="addThemForm" (ngSubmit)="addThem()">
-      <label for="fname">Theme name</label>
-      <input type="text" id="themeName" name="themname" placeholder="Enter theme name" formControlName="themeName">
-  
-      <label for="lname">Image Url</label>
-      <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter the image url" fromControlName="imageUrl">
-
-      <label for="lname">Photographer Name</label>
-      <input type="text" id="PhotographerDetails" name="lastname" placeholder="Enter photographer details" formControlName="PhotographerDetails">
-
-      <label for="lname">Theme return gift</label>
-      <input type="text" id="returnGifts" name="returnGifts" placeholder=" Enter theme return gift" formControlName="returnGifts">
-      
-      <label for="lname">Theme cost</label>
-      <input type="text" id="themCost" name="themeCost" placeholder=" Enter theme costs" formControlName="themeCost">
-    
-      <label for="lname">Theme Descrioption</label>
-      <input type="text" id="themeDescription" name="themeDescrioption" placeholder="Enter theme Discription" height="400px" formControlName="themeDescription">
-
-      <input type="submit" value="Add Theme"> <input type="button" value="Next Page">
-    </form>
-  </div>
+<p>add-theme works!</p>
+<table border="0">
+  <tr>
+    <td>
+        <div>
+            <form #themeform="ngForm" (ngSubmit)="getThemeForm(themeform.value)">
+        
+              
+              <input type="text" id="themeName" ngModel name="themeName" placeholder="Enter theme name" >
+          
+              
+              <input type="text" id="imageUrl" ngModel name="imageUrl" placeholder="Enter the image Url" >
+          
+              <input type="text" id="photograpgerDetails" ngModel name="photograpgerDetails" placeholder="Enter Phographer details" >
+        
+              <input type="text" id="videographerDetails" ngModel name="videographerDetails" placeholder="Enter videographer details">
+        
+              <input type="text" id="returnGift" ngModel name="returnGift" placeholder="Enter theme return Gift" >
+        
+              <input type="text" id="themeCost" ngModel name="themeCost" placeholder="Enter theme cost">
+             
+              <input type="text" id="themeDecription" ngModel name="themeDescription" placeholder="Enter theme description">
+            
+              <input type="submit">
+            </form>
+            
+          </div>
+    </td>
+    <td>
+   <img src="../assets/b5.jfif" alt="pic" width="50%" height="50%">
+    </td>
+  </tr>
+</table>
