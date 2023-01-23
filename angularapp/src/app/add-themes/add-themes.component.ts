@@ -17,7 +17,7 @@ themdata:any;
     // });
    }
    getThemForm(data:any){
-     this.themdata.addthem(data).subscribe((result:any)=>{
+     this.themdata.addtheme(data).subscribe((result:any)=>{
        console.log(result);
        alert("Theme Added successfully!!!!");
      });
