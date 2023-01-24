@@ -16,6 +16,7 @@ import { EditUserComponent } from './auth/edit-user/edit-user.component';
 import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
 import { AddThemeComponent } from './add-theme/add-theme.component';
 import { AddMenuComponent } from './add-menu/add-menu.component';
+import { DisplayThemeComponent } from './display-theme/display-theme.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { AddMenuComponent } from './add-menu/add-menu.component';
     DeleteUserComponent,
     AddThemeComponent,
     AddMenuComponent,
+    DisplayThemeComponent,
    
   ],
   imports: [
