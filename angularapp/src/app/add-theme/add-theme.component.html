@@ -1,21 +1,21 @@
 
 		<div>
-            <form #themeform="ngForm" (ngSubmit)="getThemeForm(themeform.value)">
+            <form [formGroup]="themeForm" (ngSubmit)="getThemeForm(themeform.value)">
             
                   
-                <input type="text" id="themeName" ngModel name="themeName" placeholder="Enter theme name" >
+                <input type="text" id="themeName" formControlName="themeName" name="themeName" placeholder="Enter theme name" required>
+                
+                <input type="text" id="imageUrl" formControlName="imageUrl" name="imageUrl" placeholder="Enter the image Url" required>
             
-                <input type="text" id="imageUrl" ngModel name="imageUrl" placeholder="Enter the image Url" >
-            
-                <input type="text" id="photograpgerDetails" ngModel name="photograpgerDetails" placeholder="Enter Phographer details" >
+                <input type="text" id="photographerDetails" formControlName="photographerDetails" name="photographerDetails" placeholder="Enter Phographer details"  required>
           
-                <input type="text" id="videographerDetails" ngModel name="videographerDetails" placeholder="Enter videographer details">
+                <input type="text" id="videographerDetails" formControlName="videographerDetails" name="videographerDetails" placeholder="Enter videographer details" required>
           
-                <input type="text" id="returnGift" ngModel name="returnGift" placeholder="Enter theme return Gift" >
+                <input type="text" id="returnGift" formControlName="returnGift" name="returnGift" placeholder="Enter theme return Gift" required>
           
-                <input type="text" id="themeCost" ngModel name="themeCost" placeholder="Enter theme cost">
+                <input type="text" id="themeCost" formControlName="themeCost" name="themeCost" placeholder="Enter theme cost" required>
                
-                <input type="text" id="themeDecription" ngModel name="themeDescription" placeholder="Enter theme description">
+                <input type="text" id="themeDecription" formControlName="themeDescription" name="themeDescription" placeholder="Enter theme description" required>
               
                 <input type="submit" value="Add Theme" id="addTheme">
               </form>
