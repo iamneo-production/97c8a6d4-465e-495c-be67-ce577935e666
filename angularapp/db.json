@@ -1,24 +1,41 @@
 {
-
-    "themes":[
-
+    "themes": [
         {
-            "id":1,
-            "themeName":"All white",
-            "imageUrl":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/passion-fruit-birthday-cake-royalty-free-image-1658764165.jpg?crop=1.00xw:0.752xh;0,0&resize=980:*",
-            "PhotographerDetails":"Tuswa",
-            "returnGifts":"Cake",
-            "themCost":"3000",
-            "themDescription":"Small party"
+          "id": 1,
+          "themeName": "All-White",
+          "imageUrl": "http/img.bhhg",
+          "photograpgerDetails": "Esihle",
+          "videographerDetails": "Siko",
+          "returnGift": "Cake",
+          "themeCost": "10000",
+          "themeDecription": "Small party"
+        },
+        {
+          "themeName": "gfdtdff",
+          "imageUrl": "jhwduuwhuduwhduhj",
+          "photograpgerDetails": "EsihleTuswa",
+          "videographerDetails": "SikoTuswa",
+          "returnGift": "Cake",
+          "themeCost": "7000",
+          "themeDescription": "bhbjbjbjb",
+          "id": 2
         }
+      ],
+      "menuitems": [
       
-    ],
-
-  "users": [
-   
-  ],
-  "Foodmenu":[
-      
-  ]
+        {
+          "filename": "C:\\fakepath\\b1.jfif",
+          "itemName": "Birtheday",
+          "itemCatagory": "veg",
+          "id": 2
+        },
+        {
+          "filename": "C:\\fakepath\\b3.jfif",
+          "itemName": "Biggvhvhgv",
+          "itemCatagory": "veg",
+          "id": 3
+        }
+    ]
 }
+
 

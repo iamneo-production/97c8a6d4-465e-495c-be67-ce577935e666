@@ -18,6 +18,14 @@ export class ThemeserviceService {
   addtheme(data:any){
     return this.http.post(this.Url,data);
   }
+
+  deleteTheme(data:any){
+    return this.http.delete(this.Url+"/"+data.id,data);
+  }
+
+  updateTheme(data:any){
+    return this.http.put(this.Url+"/"+data.id,data);
+  }
   
 
 }
