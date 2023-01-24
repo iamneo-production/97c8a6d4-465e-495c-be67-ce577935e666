@@ -36,7 +36,6 @@ import { AddMenuComponent } from './add-menu/add-menu.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule,
     ReactiveFormsModule
  
   ],
