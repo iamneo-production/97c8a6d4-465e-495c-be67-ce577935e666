@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MenudataService } from '../services/menudata.service';
 
 @Component({
@@ -8,6 +9,17 @@ import { MenudataService } from '../services/menudata.service';
 })
 export class AddMenuComponent {
   active = 1;
+menuForm = new FormGroup(
+  {
+    imageFile:new FormControl('',[Validators && Validators.required]),
+    itemName:new FormControl('',[Validators && Validators.required]),
+    itemCatagory:new FormControl('',[Validators && Validators.required]),
+    itemPrice: new FormControl('',[Validators && Validators.required]),
+  }
+)
+
+
+
   constructor(private menudata:MenudataService) { }
   
   getMenuData(data:any){

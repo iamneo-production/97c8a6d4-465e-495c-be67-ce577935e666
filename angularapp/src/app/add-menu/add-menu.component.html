@@ -1,15 +1,15 @@
 
 			<div>
-                <form #formMenu="ngForm"   (ngSubmit)="getMenuData(formMenu.value)">
+                <form [formGroup]="menuForm"   (ngSubmit)="getMenuData(formMenu.value)">
 
                     <label for="image">Upload Image:</label>
-                    <input type="file" id="myFile" ngModel name="filename"  placeholder="upload"  required>
+                    <input type="file" id="myFile" formControlName="imageFile" name="imageFile"  placeholder="upload"  required>
                      <br>
                      <label for="itemname">Item Name:</label>
-                    <input type="text" id="itemName" ngModel name="itemName" placeholder="Enter item name" required>
+                    <input type="text" id="itemName" formControlName="itemName" name="itemName" placeholder="Enter item name" required>
                     <br>
                     <label for="catagory">Choose a Catagory:</label>
-                    <select name="itemCatagory" id="itemCatagory"  ngModel>
+                    <select name="itemCatagory" id="itemCatagory"  formControlName="itemCatagory">
                       <option value="veg">Veg</option>
                       <option value="Non veg">Non Veg</option>
                       
@@ -17,7 +17,7 @@
                    <br>
                    <br>
                    <label for="itemPrice">Item Price:</label>
-                   <input type="text" id="itemPrice" placeholder="Enter item price" required>
+                   <input type="text" id="itemPrice" placeholder="Enter item price" formControlName="itemPrice">
                 
                     <input type="submit" value="Add Item" id="addItem">
                   </form>
