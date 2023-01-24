@@ -59,6 +59,24 @@
       "themeCost": "",
       "themeDescription": "",
       "id": 6
+    },
+    {
+      "themeName": "",
+      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
+      "photographerDetails": "Esihle",
+      "videographerDetails": "Camagu",
+      "returnGift": "T-Shirt",
+      "themeCost": "20000",
+      "id": 7
+    },
+    {
+      "themeName": "",
+      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
+      "photographerDetails": "Esihle",
+      "videographerDetails": "Camagu",
+      "returnGift": "T-Shirt",
+      "themeCost": "20000",
+      "id": 8
     }
   ],
   "menuitems": [
