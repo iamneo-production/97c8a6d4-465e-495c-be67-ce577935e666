@@ -71,6 +71,7 @@ this.loginService.addUser(this.user).subscribe
   (users:any) => 
   {
       console.log(users);
+      this.router.navigate(['login']);
   }
 );
 }  

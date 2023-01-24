@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { Router,ActivatedRoute } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { CustomerServiceService } from 'src/app/services/customer-service.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 export class LoginComponent {
 
  // Constructor
- constructor(private loginService:LoginService, private router: Router, private route: ActivatedRoute){}
+ constructor(private loginService:LoginService, private customerService:CustomerServiceService, private router: Router, private route: ActivatedRoute){}
 
  //User Exists field 
    userExists: boolean = false;
@@ -31,11 +32,21 @@ export class LoginComponent {
     // Login Method
     login(user:any){
       this.loginService.getUsers().subscribe((users:any)=>{
-        for(let i = 0; i < users.length; i++){
-          // Check if user exists
-          if(users[i].email == user.email && users[i].password == user.password){
+        for(let i in users){
+          if(users[i].email == "admin@gmail.com" && users[i].password == "adminPassword"){
+            localStorage.setItem('usertype',"admin");
             this.userExists = true;
+            this.customerService.login();
             console.log("found");
+            this.router.navigate(['admin']);
+            return
+          }
+          if(users[i].email == user.email && users[i].password == user.password){
+            localStorage.setItem('usertype','user');
+            this.userExists = true;
+            this.customerService.login();
+            console.log("fOUND");
+            this.router.navigate(['home']);
           }
         }
       });
