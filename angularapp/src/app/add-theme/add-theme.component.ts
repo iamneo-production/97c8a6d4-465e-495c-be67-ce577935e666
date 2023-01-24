@@ -17,7 +17,7 @@ export class AddThemeComponent  {
       returnGift:new FormControl('',[Validators && Validators.required]),
       themeCost:new FormControl('',[Validators && Validators.required]),
     }
-  )
+  );
   constructor(private themedata: ThemeserviceService) { }
 
     getThemeForm(data:any){
