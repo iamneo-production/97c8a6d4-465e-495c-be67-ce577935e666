@@ -8,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthComponent } from './auth/auth.component';
-import { FormsModule} from '@angular/forms';
+
 import { LoginComponent } from './auth/login/login.component';
 import { DisplayUserComponent } from './auth/display-user/display-user.component';
 import { SearchComponent } from './auth/search/search.component';
