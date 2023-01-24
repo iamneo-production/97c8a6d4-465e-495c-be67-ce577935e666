@@ -1,4 +1,4 @@
-<button (click)="display=!display">{{display?'Hide Themes:'Show Themes}}</button><br>
+<button (click)="display=!display">{{display?'Hide themes:'Show themes}}</button><br>
 <div *ngIf="display;then template1;else template2"></div>
 <ng-template #template1>
     <ol *ngFor="let theme of Themes">
