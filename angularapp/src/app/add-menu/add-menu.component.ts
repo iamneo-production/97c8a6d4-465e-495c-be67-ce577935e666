@@ -7,7 +7,7 @@ import { MenudataService } from '../services/menudata.service';
   styleUrls: ['./add-menu.component.css']
 })
 export class AddMenuComponent {
-
+  active = 1;
   constructor(private menudata:MenudataService) { }
   
   getMenuData(data:any){

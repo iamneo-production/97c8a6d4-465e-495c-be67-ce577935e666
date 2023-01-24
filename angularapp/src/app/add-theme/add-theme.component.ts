@@ -7,7 +7,7 @@ import { ThemeserviceService } from '../services/themeservice.service';
   styleUrls: ['./add-theme.component.css']
 })
 export class AddThemeComponent  {
-
+  active = 1;
   constructor(private themedata: ThemeserviceService) { }
 
     getThemeForm(data:any){
