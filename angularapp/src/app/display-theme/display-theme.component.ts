@@ -9,8 +9,8 @@ import { ThemedisplayService } from '../services/themedisplay.service';
 export class DisplayThemeComponent  {
    display=true;
    theTheme:any;
-   them:any =[];
-   themExists:boolean = false;
+   theme:any =[];
+   themeExists:boolean = false;
   constructor(private displayThemeService:ThemedisplayService) { 
     this.displayThemeService.getTheme().subscribe((data:any)=>
     {
