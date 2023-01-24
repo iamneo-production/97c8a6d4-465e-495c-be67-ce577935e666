@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'angularapp';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   constructor(private userdata: UserService) {}
 
@@ -41,4 +42,6 @@ export class AppComponent {
 =======
   
 >>>>>>> 9e08a6970ae3cd563afff00ddf94d747e100bfae
+=======
+>>>>>>> 3d357351bf7abfb36a661702019fbff6d56da5bb
 }
