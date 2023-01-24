@@ -1,18 +1,22 @@
 import { Component} from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
+
 export class SignupComponent{
+
 // Declarations
 user: any;
 usernameTaken = false;
 emailTaken = false;
 
-constructor(private loginService:LoginService){}
+constructor(private loginService:LoginService, private router:Router){}
 
 // Register Form
 registerForm  = new FormGroup({

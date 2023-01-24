@@ -1,20 +1,22 @@
 {
-
-    "users":[
-        
-    ],
-    "themes":[
-
-    ],
-    "events":[
-
-    ],
-    "menus":[
-
-    ],
-    "addons":[
-        
-    ]
-
+  "users": [
+    {
+      "email": "thaba@gmail.com",
+      "username": "Thabang",
+      "mobileNumber": "0657330234",
+      "password": "@Password20",
+      "id": 1
+    },
+    {
+      "email": "alb@g.com",
+      "username": "ThabangMatabane",
+      "mobileNumber": "0657330234",
+      "password": "@Password20",
+      "id": 2
+    }
+  ],
+  "themes": [],
+  "events": [],
+  "menus": [],
+  "addons": []
 }
-

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
   selector: 'app-delete-user',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-user.component.css']
 })
 export class DeleteUserComponent implements OnInit {
-
-  constructor() { }
+@Input() data: any = {};
+  constructor(private userService:UserServiceService) { }
 
   ngOnInit(): void {
+  }
+
+  delete(){
+    this.userService.delete(this.data).subscribe((users:any)=>{
+        console.log("deleted");
+    });
+    
+    location.reload();
   }
 
 }
