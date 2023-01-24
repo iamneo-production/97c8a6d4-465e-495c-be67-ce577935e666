@@ -15,10 +15,6 @@ const routes: Routes = [
   {
    path:"addTheme",
    component:AddThemesComponent
-  },
-  {
-    path:"addMenu",
-    component:AddMenuComponent
   }
 
 
