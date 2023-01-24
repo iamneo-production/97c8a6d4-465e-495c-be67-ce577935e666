@@ -12,13 +12,13 @@ export class ThemedisplayService {
   getTheme(){
     return this.http.get(this.url);
   }
-  addTheme(them:any){
-    return this.http.post(this.url,them);
+  addTheme(theme:any){
+    return this.http.post(this.url,theme);
   }
-  editTheme(them:any){
-    return this.http.put(this.url+"/"+them.id,them);
+  editTheme(theme:any){
+    return this.http.put(this.url+"/"+theme.id,theme);
   }
-  DeleteTheme(them:any){
-    return this.http.delete(this.url,them);
+  DeleteTheme(theme:any){
+    return this.http.delete(this.url,theme);
   }
 }
