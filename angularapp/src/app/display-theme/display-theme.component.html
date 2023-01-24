@@ -1,1 +1,32 @@
-<p>display-theme works!</p>
+<button (click)="display=!display">{{display?'Hide users':'Show Users'}}</button><br>
+<div *ngIf="display;then template1;else template2"></div>
+<ng-template #template1>
+    <ol *ngFor="let theme of theThemes">
+        <li>{{theme.id}}</li>
+        <li>{{theme.themeName}}</li>
+        <li>{{theme.imageUrl}}</li>
+        <li>{{theme.photographerDetails}}</li>
+        <li>{{theme.videographerDetails}}</li>
+        <li>{{theme.returnGift}}</li>
+        <li>{{theme.themeDescription}}</li>
+    </ol>
+</ng-template>
+<ng-template #template2>
+    <p>Oops! No Theme Found</p>
+</ng-template>
+
+<ng-template #editTheme>
+<app-edit-theme [data]="theme"></app-edit-theme>
+</ng-template>
+
+<ng-template #noThemes>
+    No Themes to Edit
+</ng-template>
+
+<ng-template #deleteForm>
+    <app-deletetheme [data]="theme"></app-deletetheme>
+</ng-template>
+
+<ng-template #noTheme>
+    No Themes to delete
+</ng-template>
