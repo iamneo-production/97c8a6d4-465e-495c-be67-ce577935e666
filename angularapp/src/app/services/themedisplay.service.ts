@@ -12,6 +12,12 @@ export class ThemedisplayService {
   getTheme(){
     return this.http.get(this.url);
   }
+  addTheme(them:any){
+    return this.http.post(this.url,them);
+  }
+  editTheme(them:any){
+    return this.http.put(this.url+"/"+them.id,them);
+  }
   DeleteTheme(them:any){
     return this.http.delete(this.url,them);
   }
