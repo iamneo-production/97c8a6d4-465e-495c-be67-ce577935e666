@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,13 @@ import { Injectable } from '@angular/core';
 })
 export class ThemedisplayService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+  url="https://8080-bfcdbfbaaeafddfcfdeafdaadbbceeaceaecabef.examlyiopb.examly.io/themes";
+
+  getTheme(){
+    return this.http.get(this.url);
+  }
+  DeleteTheme(them:any){
+    return this.http.delete(this.url,them);
+  }
 }
