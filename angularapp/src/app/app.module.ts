@@ -7,12 +7,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { DisplaythemeComponent } from './displaytheme/displaytheme.component';
+import { DisplayUserComponent } from './auth/display-user/display-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DisplaythemeComponent
+    DisplaythemeComponent,
+    DisplayUserComponent
   ],
   imports: [
     BrowserModule,

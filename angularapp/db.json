@@ -12,31 +12,36 @@
             "usertype":"admin",
             "email":"albinah@gmail.com",
             "username":"albinah",
-            "mobileNo":"074344349"
+            "mobileNo":"074344349",
+            "password":""
           },
           {
             "usertype":"customer",
             "email":"tha@gmail.com",
             "username":"tha",
-            "mobileNo":"0765445349"
+            "mobileNo":"0765445349",
+            "password":""
           },
           {
             "usertype":"customer",
             "email":"sanele@gmail.com",
             "username":"sanele",
-            "mobileNo":"0765468969"
+            "mobileNo":"0765468969",
+            "password":""
           },
           {
             "usertype":"customer",
             "email":"gift@gmail.com",
             "username":"gift",
-            "mobileNo":"079544349"
+            "mobileNo":"079544349",
+            "password":""
           },
           {
             "usertype":"customer",
             "email":"esihle@gmail.com",
             "username":"esihle",
-            "mobileNo":"076549849"
+            "mobileNo":"076549849",
+            "password":""
           }
     ]
 }

@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserdisplayService 
 {
-  url = "https://8080-debccaffabbfcfdeafdaadbbceeaceaecabef.examlyiopb.examly.io/users";
+  url = "https://8080-defacfecfaffffdeafdaadbbceeaceaecabef.examlyiopb.examly.io/";
   constructor(private http:HttpClient) 
   { 
 
