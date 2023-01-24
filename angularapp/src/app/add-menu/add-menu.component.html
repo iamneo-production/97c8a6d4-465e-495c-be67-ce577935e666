@@ -3,18 +3,23 @@
                 <form [formGroup]="menuForm"   (ngSubmit)="getMenuData(menuForm.value)">
 
                     <label for="image">Upload Image:</label>
-                    <input type="file" id="myFile" formControlName="imageFile" name="imageFile"  placeholder="upload"  required>
+                    <input type="file" id="imageFile" formControlName="imageFile" name="imageFile"  placeholder="upload"  required>
+                     <br>
+                      <span [ngclass]="'error'" id="imageFileError" *ngIf="imageFile && imageFile.invalid && imageFile.required">Upload Image</span>
+
                      <br>
                      <label for="itemname">Item Name:</label>
                     <input type="text" id="itemName" formControlName="itemName" name="itemName" placeholder="Enter item name" required>
+                    <br>
+                    <span [ngclass]="'error'" id="itemNameError" *ngIf="itemName && itemName.invalid && itemName.touched">Field required</span>
                     <br>
                     <label for="catagory">Choose a Catagory:</label>
                     <select name="itemCatagory" id="itemCatagory"  formControlName="itemCatagory">
                       <option value="veg">Veg</option>
                       <option value="Non veg">Non Veg</option>
-                      
                     </select>
                    <br>
+                   <span [ngclass]="'error'" id="itemCatagoryError" *ngIf="itemCatagory && ite" ></span>
                    <br>
                    <label for="itemPrice">Item Price:</label>
                    <input type="text" id="itemPrice" placeholder="Enter item price" formControlName="itemPrice">
