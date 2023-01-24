@@ -48,6 +48,7 @@ export class AddThemeComponent  {
       {
         console.log(result);
         alert("Theme added successfully!");
+        this.themeForm.reset();
       });
     }
 

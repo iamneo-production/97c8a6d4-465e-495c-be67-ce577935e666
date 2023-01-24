@@ -40,6 +40,7 @@ get itemPrice(){
     {
    console.log(result);
    alert("Menu Item added successfully!!!");
+   this.menuForm.reset();
     });
   }
 
