@@ -16,7 +16,20 @@ menuForm = new FormGroup(
     itemCatagory:new FormControl('',[Validators && Validators.required]),
     itemPrice: new FormControl('',[Validators && Validators.required]),
   }
-)
+);
+
+get imageFile(){
+  return this.menuForm.get('imageFile');
+}
+get itemName(){
+  return this.menuForm.get('itemName');
+}
+get itemCatagory(){
+  return this.menuForm.get('itemCatagory');
+}
+get itemPrice(){
+  return this.menuForm.get('itemPrice');
+}
 
 
 

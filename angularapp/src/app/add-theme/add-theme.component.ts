@@ -18,6 +18,29 @@ export class AddThemeComponent  {
       themeCost:new FormControl('',[Validators && Validators.required]),
     }
   );
+
+  get themeName(){
+    return this.themeForm.get('themeName');
+  }
+  get imageUrl(){
+    return this.themeForm.get('imageUrl');
+  }
+  get photographerDetails(){
+    return this.themeForm.get('photographerDetails');
+  }
+  get videographerDetails(){
+    return this.themeForm.get('videographerDetails');
+  }
+  get returnGift(){
+    return this.themeForm.get('returnGift');
+  }
+  get themeCost(){
+    return this.themeForm.get('themeCost');
+  }
+  get themeDescription(){
+    return this.themeForm.get('themeDescription');
+  }
+  
   constructor(private themedata: ThemeserviceService) { }
 
     getThemeForm(data:any){
