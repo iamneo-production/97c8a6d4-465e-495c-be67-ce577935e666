@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddMenuComponent } from './add-menu/add-menu.component';
-import { AddThemesComponent } from './add-themes/add-themes.component';
-import { LoginComponent } from './auth/login/login.component';
+import { AddThemeComponent } from './add-theme/add-theme.component';
+
 
 
 
 const routes: Routes = [
 
   {
-    path:"login",
-    component:LoginComponent
-  },
-  {
    path:"addTheme",
-   component:AddThemesComponent
+   component:AddThemeComponent
   }
 
 
