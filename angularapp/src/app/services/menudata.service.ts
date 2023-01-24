@@ -5,14 +5,20 @@ import { HttpClient} from '@angular/common/http';
 })
 export class MenudataService {
 
-  url="";
+  url="http://localhost:3000/menuitems";
   constructor(private ht:HttpClient) { }
   items()
   {
     return this.ht.get(this.url);
   }
-  addMenu(data:any)
+  additems(data:any)
   {
-    return this.ht.delete(this.url,data);
+    return this.ht.post(this.url,data);
+  }
+  deleteitems(data:any){
+    return this.ht.delete(this.url+"/"+data.id,data);
+  }
+  updateitems(data:any){
+    return this.ht.put(this.url+"/"+data.id,data);
   }
 }
