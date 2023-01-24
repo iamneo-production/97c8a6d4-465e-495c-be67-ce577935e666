@@ -15,6 +15,7 @@ import { SearchComponent } from './auth/search/search.component';
 import { EditUserComponent } from './auth/edit-user/edit-user.component';
 import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
 import { AddThemeComponent } from './add-theme/add-theme.component';
+import { AddMenuComponent } from './add-menu/add-menu.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AddThemeComponent } from './add-theme/add-theme.component';
     EditUserComponent,
     DeleteUserComponent,
     AddThemeComponent,
+    AddMenuComponent,
   ],
   imports: [
     BrowserModule,
