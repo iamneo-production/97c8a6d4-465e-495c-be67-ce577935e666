@@ -1,7 +1,7 @@
-<button (click)="display=!display">{{display?'Hide users':'Show Users'}}</button><br>
+<button (click)="display=!display">{{display?'Hide Themes:'Show Themes}}</button><br>
 <div *ngIf="display;then template1;else template2"></div>
 <ng-template #template1>
-    <ol *ngFor="let theme of theThemes">
+    <ol *ngFor="let theme of Themes">
         <li>{{theme.id}}</li>
         <li>{{theme.themeName}}</li>
         <li>{{theme.imageUrl}}</li>
