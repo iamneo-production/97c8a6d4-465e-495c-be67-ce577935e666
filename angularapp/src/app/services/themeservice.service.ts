@@ -8,7 +8,7 @@ export class ThemeserviceService {
   //  return this.http.get<any>("http://localhost:3000/themes/"+title);
   //}
 
-  Url="http://localhost:3000/themes";
+  Url="https://8080-bfcdbfbaaeafddfcfdeafdaadbbceeaceaecabef.examlyiopb.examly.io/themes";
   constructor(private http: HttpClient) { }
 
   themes()

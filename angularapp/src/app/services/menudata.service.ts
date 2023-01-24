@@ -5,7 +5,7 @@ import { HttpClient} from '@angular/common/http';
 })
 export class MenudataService {
 
-  url="http://localhost:3000/menuitems";
+  url="https://8080-bfcdbfbaaeafddfcfdeafdaadbbceeaceaecabef.examlyiopb.examly.io/menuitems";
   constructor(private ht:HttpClient) { }
   items()
   {
