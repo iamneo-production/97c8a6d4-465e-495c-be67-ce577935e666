@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CustomerServiceService } from './services/customer-service.service';
+import { FormControl, FormGroup } from '@angular/forms';
+import { UserServiceService } from './services/user-service.service';
 
 @Component({
   selector: 'app-root',
@@ -10,33 +12,6 @@ import { CustomerServiceService } from './services/customer-service.service';
 export class AppComponent {
   title = 'angularapp';
 
-
-  constructor(private userdata: UserService) {}
-
-  myForm = new FormGroup({
-    id: new FormControl(''),
-    username: new FormControl(''),
-    password: new FormControl('')
-
-  });
-
-  get id(){
-      return this.myForm.get('id');
-  }
-  get username(){
-    return this.myForm.get('username');
-  }
-  get password(){
-  return this.myForm.get('password');
-  }
-
-    delete(item,any){
-      alert(" Are You Sure You Want To Delete User ?");
-      this.userdata.deleteUser(item).subscribe((user:any)=>{
-        console.log(user);
-
-      });
-}
   
   admin: boolean = false;
   logged : boolean = false;
@@ -55,7 +30,7 @@ export class AppComponent {
   }
 
   login(){
-    this.route.navigate(['']);
+    this.route.navigate(['login']);
   }
 
   signup(){
