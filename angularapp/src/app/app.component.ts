@@ -22,8 +22,10 @@ export class AppComponent {
         if(localStorage.getItem('usertype') == "admin"){
           this.admin = true;
           this.logged = true;
+          this.customerService.login();
         }
         else{
+          this.customerService.login();
           this.logged = true;
         }
     }
