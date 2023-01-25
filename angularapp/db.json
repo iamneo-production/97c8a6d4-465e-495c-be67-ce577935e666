@@ -1,24 +1,8 @@
 {
-<<<<<<< HEAD
-    "users":[
-<<<<<<< HEAD
-        {
-            "usertype":"admin",
-            "username":"Thabang",
-            "email":"Thabang@gmail.com",
-            "password":""
-        }
-    ]
-}
 
-=======
+    "users":[
       
     ]
 }
->>>>>>> Birthday-Event-Booking-App-MatabaneThabang
-=======
-  "users": [
-   
-  ]
-}
->>>>>>> Birthday-Event-Booking-App-MatabaneThabang
+
+
