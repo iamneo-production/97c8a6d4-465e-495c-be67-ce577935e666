@@ -1,8 +1,8 @@
 
-        <div *ngFor="let user of users">
+<div *ngFor="let user of users">
 
             <input [disabled]="true" class="btn btn-link my-2 mx-2" type="text" value="{{user.id}}" #id>
             <input [disabled]="true" class="btn btn-link my-2 mx-2" type="text" value="{{user.email}}" #id>
             <input [disabled]="true" class="btn btn-link my-2 mx-2" type="text" value="{{user.username}}" #id>
             <app-delete-user [data]="user"></app-delete-user>
-    </div>
+</div>
