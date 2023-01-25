@@ -21,6 +21,7 @@ export class AppComponent {
           this.customerService.login();
         }
         else{
+          this.customerService.login();
           this.logged = true;
           this.customerService.login();
           
