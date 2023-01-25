@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "themes": [
     {
       "id": 1,
@@ -48,8 +47,7 @@
       "itemCatagory": "veg",
       "id": 5
     }
-  ]
-=======
+  ],
   "users": [
     {
       "email": "thaba@gmail.com",
@@ -87,9 +85,8 @@
       "id": 5
     }
   ],
-  "themes": [],
+  
   "events": [],
   "menus": [],
   "addons": []
->>>>>>> 1844be9596195eb4572a620ae75c591eb818aac9
 }

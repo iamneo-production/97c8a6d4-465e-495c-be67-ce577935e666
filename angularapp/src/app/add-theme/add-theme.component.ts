@@ -10,13 +10,13 @@ import { ThemeserviceService } from '../services/themeservice.service';
 export class AddThemeComponent  {
   themeForm = new FormGroup(
     {
-      themeName:new FormControl('',[Validators && Validators.required]),
-      imageUrl:new FormControl('',[Validators && Validators.required]),
-      photographerDetails:new FormControl('',[Validators && Validators.required]),
-      videographerDetails:new FormControl('',[Validators && Validators.required]),
-      returnGift:new FormControl('',[Validators && Validators.required]),
-      themeCost:new FormControl('',[Validators && Validators.required]),
-      themeDescription:new FormControl('',[Validators && Validators.required])
+      themeName:new FormControl('',[Validators.required]),
+      imageUrl:new FormControl('',[Validators.required]),
+      photographerDetails:new FormControl('',[Validators.required]),
+      videographerDetails:new FormControl('',[Validators.required]),
+      returnGift:new FormControl('',[Validators.required]),
+      themeCost:new FormControl('',[Validators.required]),
+      themeDescription:new FormControl('',[Validators.required])
     }
   );
 
