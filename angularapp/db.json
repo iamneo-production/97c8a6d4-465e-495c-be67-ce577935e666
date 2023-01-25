@@ -56,6 +56,13 @@
       "itemName": "Salad",
       "itemCatagory": "veg",
       "id": 5
+    },
+    {
+      "imageFile": "C:\\fakepath\\code1.jfif",
+      "itemName": "Salad",
+      "itemCatagory": "Non veg",
+      "itemPrice": "300",
+      "id": 6
     }
   ],
   "users": [
