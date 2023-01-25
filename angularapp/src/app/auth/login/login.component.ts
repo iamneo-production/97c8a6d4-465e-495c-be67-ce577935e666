@@ -1,55 +1,59 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl,Validators } from '@angular/forms';
-import { ServiceService } from 'src/app/services/service.service';
-
+import { Component } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
+import { Router,ActivatedRoute } from "@angular/router";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { CustomerServiceService } from 'src/app/services/customer-service.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  users:any;
-  constructor(private userdata: ServiceService)
-  {
-    userdata.users().subscribe((data)=>
-    {
-      console.log(data);
-      this.users=data;
-    }
-    );
+ // Constructor
+ constructor(private loginService:LoginService, private customerService:CustomerServiceService, private router: Router, private route: ActivatedRoute){}
+
+ //User Exists field 
+   userExists: boolean = false;
+
+   loginForm = new FormGroup({
+       email: new FormControl('', [Validators.required, Validators.email]),
+       password: new FormControl('',[Validators.required, Validators.minLength(7), Validators.maxLength(15)])
+   });
+
+   // Get Methods
+   get email(){
+     return this.loginForm.get('email');
+   }
+   get password(){
+     return this.loginForm.get('password');
+   }
+    // Login Method
+    login(user:any){
+      this.loginService.getUsers().subscribe((users:any)=>{
+        for(let i in users){
+          if(users[i].email == "admin@gmail.com" && users[i].password == "adminPassword"){
+            localStorage.setItem('usertype',"admin");
+            this.userExists = true;
+            this.customerService.login();
+            console.log("found");
+            this.router.navigate(['admin']);
+            return
+          }
+          if(users[i].email == user.email && users[i].password == user.password){
+            localStorage.setItem('usertype','user');
+            this.userExists = true;
+            this.customerService.login();
+            console.log("fOUND");
+            this.router.navigate(['home']);
+          }
+        }
+      });
   }
 
-    // constructor(private userdata:ServiceService){}
-
-  loginform = new FormGroup(
-    {
-      email: new FormControl('',[Validators.required,Validators.email]),
-      password: new FormControl('',[Validators.required,Validators.minLength(5),Validators.maxLength(12), Validators.pattern('[a-z A-Z 1-9]+$')]),
-
-    });
-    get email()
-    {
-      return this.loginform.get('email');
-    }
-
-    get password()
-    {
-      return this.loginform.get('password');
-    }
-    loginUser()
-    {
-      // this.userdata.users().subscribe((user:any)=>{
-      //     if(user.email === this.loginform.get('email')){
-      //         console.log("Logged In");
-      //     }
-      // });
-    console.warn(this.loginform.value);
-    }
-
-
-  ngOnInit(): void {
+  register(){
+      this.router.navigate(['signup']);
   }
 
 }
