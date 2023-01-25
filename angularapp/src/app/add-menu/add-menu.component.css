@@ -1,73 +1,43 @@
-input[type=text], select {
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-  #itemCatagory{
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  input[type=submit] {
-    width: 50%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  input[type=button] {
-    width: 50%;
-    background-color:blue;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  div {
-    border-radius: 5px;
-    background-color:whitesmoke;
-    padding: 6px;
-    width: 80%;
-  }
- img{
-    border-radius: 5px;
-    padding: 0px;
-    width: 80%;
- }
- td{
-     width: 60%;
-     padding: 1px;
- }
- form{
-     background-color: navy;
-     color: white;
- }
- table{background-color: black;}
-
- label{
-   width: 100px;
- }
- span{
-   color:red;
-   background-color: whitesmoke;
- }
+form{
+  width: 450px;
+	font-size: 16px;
+	background: #495C70;
+	padding: 30px 30px 15px 30px;
+	border: 5px solid #53687E;
+}
+form input[type=submit],
+form input[type=button],
+form label{
+  font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #fff;
+}
+form label {
+	display:block;
+	margin-bottom: 10px;
+}
+form input[type=text]
+{
+	background:transparent;
+  color: #fff;
+	border: rounded;
+	border-bottom: 1px dashed #83A4C5;
+	width: 275px;
+	outline: none;
+	padding: 0px 0px 0px 0px;
+	font-style: italic;
+}
+form input[type=file]
+{
+	background: #D3D3D3;
+	border: none;
+	border-bottom: 1px dashed #83A4C5;
+	width: 275px;
+	outline: none;
+	padding: 0px 0px 0px 0px;
+	font-style: italic;
+}
+.form-center {
+  display:flex;
+  justify-content: center;
+}

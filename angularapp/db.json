@@ -11,72 +11,14 @@
       "themeDecription": "Small party"
     },
     {
-      "themeName": "gfdtdff",
-      "imageUrl": "jhwduuwhuduwhduhj",
-      "photograpgerDetails": "EsihleTuswa",
+      "themeName": "20st Birthday",
+      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
+      "photographerDetails": "Esihle",
       "videographerDetails": "SikoTuswa",
       "returnGift": "Cake",
-      "themeCost": "7000",
-      "themeDescription": "bhbjbjbjb",
+      "themeCost": "6000",
+      "themeDescription": "Small Party",
       "id": 2
-    },
-    {
-      "themeName": "Sanale's Theme",
-      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
-      "photograpgerDetails": "vyfhfyy",
-      "videographerDetails": "SikoTuswa",
-      "returnGift": "hbhbhbhb",
-      "themeCost": "20000",
-      "themeDescription": "hbyghgjjjbjubj",
-      "id": 3
-    },
-    {
-      "themeName": "",
-      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
-      "photograpgerDetails": "",
-      "videographerDetails": "",
-      "returnGift": "",
-      "themeCost": "",
-      "themeDescription": "",
-      "id": 4
-    },
-    {
-      "themeName": "",
-      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
-      "photograpgerDetails": "",
-      "videographerDetails": "",
-      "returnGift": "",
-      "themeCost": "",
-      "themeDescription": "",
-      "id": 5
-    },
-    {
-      "themeName": "",
-      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
-      "photograpgerDetails": "",
-      "videographerDetails": "",
-      "returnGift": "",
-      "themeCost": "",
-      "themeDescription": "",
-      "id": 6
-    },
-    {
-      "themeName": "",
-      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
-      "photographerDetails": "Esihle",
-      "videographerDetails": "Camagu",
-      "returnGift": "T-Shirt",
-      "themeCost": "20000",
-      "id": 7
-    },
-    {
-      "themeName": "",
-      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
-      "photographerDetails": "Esihle",
-      "videographerDetails": "Camagu",
-      "returnGift": "T-Shirt",
-      "themeCost": "20000",
-      "id": 8
     }
   ],
   "menuitems": [

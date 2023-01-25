@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddMenuComponent } from './add-menu/add-menu.component';
 import { AddThemeComponent } from './add-theme/add-theme.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { DisplayThemeComponent } from './display-theme/display-theme.component';
+
 
 
 
@@ -21,6 +23,10 @@ const routes: Routes = [
   {
     path:"displayThemes",
     component:DisplayThemeComponent
+  },
+  {
+    path:'admin',
+    component:AdminDashboardComponent
   }
 
 

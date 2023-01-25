@@ -16,6 +16,7 @@ export class AddThemeComponent  {
       videographerDetails:new FormControl('',[Validators && Validators.required]),
       returnGift:new FormControl('',[Validators && Validators.required]),
       themeCost:new FormControl('',[Validators && Validators.required]),
+      themeDescription:new FormControl('',[Validators && Validators.required])
     }
   );
 

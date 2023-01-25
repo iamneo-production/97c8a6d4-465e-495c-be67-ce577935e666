@@ -1,5 +1,5 @@
 
-		<div>
+		<div class="form-center">
             <form [formGroup]="themeForm" (ngSubmit)="getThemeForm(themeForm.value)">
             
                   
@@ -33,7 +33,9 @@
                  <span [ngclass]="'error'"  id="themeCostError" *ngIf="themeCost && themeCost.invalid && themeCost.touched" style="color: red; background-color: aliceblue;"></span>
               
                 <br>
-                <input type="text" id="themeDecription" formControlName="themeDescription" name="themeDescription" placeholder="Enter theme description" required>
+                <textarea id="themeDecription" formControlName="themeDescription" name="themeDescription" placeholder="Enter theme description" required>
+                      Enter Theme description....
+                </textarea>
                  <br>
                  <span [ngclass]="'error'" id="themeDecriptionError" *ngIf="themeDescription && themeDescription.invalid && themeDescription.touched" style="color: red; background-color: aliceblue;"></span>
                  

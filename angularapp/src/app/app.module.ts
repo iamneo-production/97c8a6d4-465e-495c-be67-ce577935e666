@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -18,6 +17,10 @@ import { AddThemeComponent } from './add-theme/add-theme.component';
 import { AddMenuComponent } from './add-menu/add-menu.component';
 import { DisplayThemeComponent } from './display-theme/display-theme.component';
 
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { DisplayThemeComponent } from './display-theme/display-theme.component';
     AddThemeComponent,
     AddMenuComponent,
     DisplayThemeComponent,
+    AdminDashboardComponent,
+  
    
   ],
   imports: [
@@ -38,9 +43,12 @@ import { DisplayThemeComponent } from './display-theme/display-theme.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
+   
  
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
