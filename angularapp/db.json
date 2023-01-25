@@ -19,6 +19,16 @@
       "themeCost": "6000",
       "themeDescription": "Small Party",
       "id": 2
+    },
+    {
+      "themeName": "Birthday party lite",
+      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
+      "photographerDetails": "Thabang",
+      "videographerDetails": "Gift",
+      "returnGift": "Cake",
+      "themeCost": "5000",
+      "themeDescription": "Small Party",
+      "id": 3
     }
   ],
   "menuitems": [
@@ -71,7 +81,6 @@
       "id": 9
     }
   ],
-  
   "events": [],
   "menus": [],
   "addons": []
