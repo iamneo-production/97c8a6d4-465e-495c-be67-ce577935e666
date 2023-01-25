@@ -8,7 +8,7 @@ import { ThemeserviceService } from '../services/themeservice.service';
   styleUrls: ['./add-theme.component.css']
 })
 export class AddThemeComponent  {
-  themeForm = new FormGroup(
+  themeform = new FormGroup(
     {
       themeName:new FormControl('',[Validators.required]),
       imageUrl:new FormControl('',[Validators.required]),
