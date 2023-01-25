@@ -16,8 +16,9 @@ import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
 import { AddThemeComponent } from './add-theme/add-theme.component';
 import { AddMenuComponent } from './add-menu/add-menu.component';
 import { DisplayThemeComponent } from './display-theme/display-theme.component';
+import { AdminComponent } from './admin/admin.component';
 
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
 
 
 
@@ -34,7 +35,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     AddThemeComponent,
     AddMenuComponent,
     DisplayThemeComponent,
-    AdminDashboardComponent,
+    AdminComponent,
   
    
   ],
