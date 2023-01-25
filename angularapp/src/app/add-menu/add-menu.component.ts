@@ -9,7 +9,7 @@ import { MenudataService } from '../services/menudata.service';
 })
 export class AddMenuComponent {
   active = 1;
-menuForm = new FormGroup(
+menuform = new FormGroup(
   {
     imageFile:new FormControl('',[Validators && Validators.required]),
     itemName:new FormControl('',[Validators && Validators.required]),
@@ -19,16 +19,16 @@ menuForm = new FormGroup(
 );
 
 get imageFile(){
-  return this.menuForm.get('imageFile');
+  return this.menuform.get('imageFile');
 }
 get itemName(){
-  return this.menuForm.get('itemName');
+  return this.menuform.get('itemName');
 }
 get itemCatagory(){
-  return this.menuForm.get('itemCatagory');
+  return this.menuform.get('itemCatagory');
 }
 get itemPrice(){
-  return this.menuForm.get('itemPrice');
+  return this.menuform.get('itemPrice');
 }
 
 
@@ -40,7 +40,7 @@ get itemPrice(){
     {
    console.log(result);
    alert("Menu Item added successfully!!!");
-   this.menuForm.reset();
+   this.menuform.reset();
     });
   }
 
