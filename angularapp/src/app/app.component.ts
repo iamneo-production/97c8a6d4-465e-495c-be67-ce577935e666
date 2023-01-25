@@ -8,7 +8,6 @@ import { CustomerServiceService } from './services/customer-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-<<<<<<< HEAD
   title = 'angularapp';
 
 
@@ -38,7 +37,6 @@ export class AppComponent {
 
       });
 }
-=======
   
   admin: boolean = false;
   logged : boolean = false;
@@ -69,6 +67,5 @@ export class AppComponent {
       this.customerService.logout();
       this.route.navigate(['login']);
   }
->>>>>>> 1844be9596195eb4572a620ae75c591eb818aac9
 
 }
