@@ -27,7 +27,9 @@ import { ViewbookingComponent } from './viewbooking/viewbooking.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule, ReactiveFormsModule, RouterModule, HttpClientModule
+    NgbModule, ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule
   ],
   
   providers: [],
