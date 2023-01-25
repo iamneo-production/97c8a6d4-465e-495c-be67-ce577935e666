@@ -19,7 +19,7 @@ export class LoginComponent {
 
    loginForm = new FormGroup({
        email: new FormControl('', [Validators.required, Validators.email]),
-       password: new FormControl('',[Validators.required, Validators.minLength(7), Validators.maxLength(15)])
+       password: new FormControl('',[Validators.required, Validators.minLength(5), Validators.maxLength(15)])
    });
 
    // Get Methods
@@ -33,7 +33,7 @@ export class LoginComponent {
     login(user:any){
       this.loginService.getUsers().subscribe((users:any)=>{
         for(let i in users){
-          if(users[i].email == "admin@gmail.com" && users[i].password == "adminPassword"){
+          if(users[i].email == "admin@gmail.com" && users[i].password == "admin"){
             localStorage.setItem('usertype',"admin");
             this.userExists = true;
             this.customerService.login();
@@ -52,7 +52,7 @@ export class LoginComponent {
       });
   }
 
-  register(){
+  signup(){
       this.router.navigate(['signup']);
   }
 
