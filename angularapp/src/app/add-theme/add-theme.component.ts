@@ -21,25 +21,25 @@ export class AddThemeComponent  {
   );
 
   get themeName(){
-    return this.themeForm.get('themeName');
+    return this.themeform.get('themeName');
   }
   get imageUrl(){
-    return this.themeForm.get('imageUrl');
+    return this.themeform.get('imageUrl');
   }
   get photographerDetails(){
-    return this.themeForm.get('photographerDetails');
+    return this.themeform.get('photographerDetails');
   }
   get videographerDetails(){
-    return this.themeForm.get('videographerDetails');
+    return this.themeform.get('videographerDetails');
   }
   get returnGift(){
-    return this.themeForm.get('returnGift');
+    return this.themeform.get('returnGift');
   }
   get themeCost(){
-    return this.themeForm.get('themeCost');
+    return this.themeform.get('themeCost');
   }
   get themeDescription(){
-    return this.themeForm.get('themeDescription');
+    return this.themeform.get('themeDescription');
   }
   
   constructor(private themedata: ThemeserviceService) { }
@@ -49,7 +49,7 @@ export class AddThemeComponent  {
       {
         console.log(result);
         alert("Theme added successfully!");
-        this.themeForm.reset();
+        this.themeform.reset();
       });
     }
 
