@@ -54,35 +54,21 @@
       "username": "Thabang",
       "mobileNumber": "0657330234",
       "password": "@Password20",
-      "id": 1
+      "id": 6
     },
     {
-      "email": "alb@g.com",
-      "username": "ThabangMatabane",
-      "mobileNumber": "0657330234",
-      "password": "@Password20",
-      "id": 2
+      "email": "admin@gmail.com",
+      "username": "admin",
+      "mobileNumber": "0839957304",
+      "password": "admin",
+      "id": 8
     },
     {
-      "email": "test@gmail.com",
-      "username": "testuser",
-      "mobileNumber": "9876543210",
-      "password": "Test@123",
-      "id": 3
-    },
-    {
-      "email": "test@gmail.com",
-      "username": "testuser",
-      "mobileNumber": "9876543210",
-      "password": "Test@123",
-      "id": 4
-    },
-    {
-      "email": "thabangmatabane@gmail.com",
-      "username": "testuser",
-      "mobileNumber": "0657330234",
-      "password": "@Password20",
-      "id": 5
+      "email": "Gift.Makhuvele@lntinfotech.com",
+      "username": "giftmak",
+      "mobileNumber": "0786651851",
+      "password": "12345gift",
+      "id": 9
     }
   ],
   

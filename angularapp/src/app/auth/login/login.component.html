@@ -20,7 +20,7 @@
                                     </div>
                                     
                                     <button [disabled]="loginForm.invalid" class="btn btn-primary mt-4 mb-4 mx-3" id="loginButton">Login</button>
-                                    New User/admin <a routerLink="signup" id="signupLink">Register Here</a>
+                                    New User/admin <a routerLink="signup" (click)="signup()" id="signupLink">Register Here</a>
                             </div>
                             </form>
                     </div>

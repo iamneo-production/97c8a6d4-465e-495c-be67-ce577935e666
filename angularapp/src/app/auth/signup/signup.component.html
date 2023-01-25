@@ -43,7 +43,7 @@
                                         
                                         <!-- Submit button to register -->
                                        <button class="btn btn-primary" [disabled] = "registerForm.invalid" type="submit" id="submitButton">Submit</button>
-                                        Already a user? <a routerLink="login" id="signinLink">Login</a>
+                                        Already a user? <a routerLink="login" (click)="login()" id="signinLink">Login</a>
                                 </form>
                                 <router-outlet></router-outlet>
                         </div>

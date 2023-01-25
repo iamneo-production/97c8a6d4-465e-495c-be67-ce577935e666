@@ -8,17 +8,23 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 })
 export class DeleteUserComponent implements OnInit {
 @Input() data: any = {};
+
   constructor(private userService:UserServiceService) { }
 
   ngOnInit(): void {
   }
 
+
   delete(){
-    this.userService.delete(this.data).subscribe((users:any)=>{
+    var confirm = window.confirm("Confirm if you want to Delete User?");
+    if(confirm){
+
+      this.userService.delete(this.data).subscribe((users:any)=>{
         console.log("deleted");
     });
     
     location.reload();
+    }
   }
 
 }

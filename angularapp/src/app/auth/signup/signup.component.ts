@@ -56,6 +56,10 @@ confirmPass(form:any){
     return true;
 }
 
+login(){
+  this.router.navigate(['login']);
+}
+
 // Register Method
 register(form:any)
 {
