@@ -1,14 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-<<<<<<< HEAD
-import { AddMenuComponent } from './add-menu/add-menu.component';
-import { AddThemeComponent } from './add-theme/add-theme.component';
-import { DisplayThemeComponent } from './display-theme/display-theme.component';
-=======
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
->>>>>>> e8e8b1629fa6321b10e9ec6ddebb12e1b54fb536
 import { AdminComponent } from './admin/admin.component';
 import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
 import { DisplayUserComponent } from './auth/display-user/display-user.component';
@@ -52,18 +46,6 @@ const routes: Routes = [
     component: HomepageComponent, canActivate:[CustomerguardGuard]
   },
   {
-<<<<<<< HEAD
-   path:"addTheme",
-   component:AddThemeComponent
-  },
-  {
-    path:"addMenu",
-    component:AddMenuComponent
-  },
-  {
-    path:"displayThemes",
-    component:DisplayThemeComponent
-=======
     path:'displayuser',
     component: DisplayUserComponent
   },
@@ -86,7 +68,6 @@ const routes: Routes = [
   {
     path: 'addon',
     component: AddonComponent
->>>>>>> e8e8b1629fa6321b10e9ec6ddebb12e1b54fb536
   }
 
 
