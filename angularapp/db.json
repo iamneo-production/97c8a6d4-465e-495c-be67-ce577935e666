@@ -15,33 +15,11 @@
       "id": 8
     },
     {
-<<<<<<< HEAD
-      "email": "test@gmail.com",
-      "username": "testuser",
-      "mobileNumber": "9876543210",
-      "password": "Test@123",
-      "id": 4
-    },
-    {
-      "email": "thabangmatabane@gmail.com",
-      "username": "testuser",
-      "mobileNumber": "0657330234",
-      "password": "@Password20",
-      "id": 5
-    },
-    {
-      "email": "albinah@gmail.com",
-      "username": "albinah",
-      "mobileNumber": "0986547876",
-      "password": "123Qwerty",
-      "id": 6
-=======
       "email": "Gift.Makhuvele@lntinfotech.com",
       "username": "giftmak",
       "mobileNumber": "0786651851",
       "password": "12345gift",
       "id": 9
->>>>>>> e8e8b1629fa6321b10e9ec6ddebb12e1b54fb536
     }
   ],
   "themes": [],
