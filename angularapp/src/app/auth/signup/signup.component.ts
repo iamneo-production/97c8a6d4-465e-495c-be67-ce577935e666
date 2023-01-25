@@ -24,8 +24,8 @@ registerForm  = new FormGroup({
   email: new FormControl('',[Validators.required, Validators.email]),
   username: new FormControl('',[Validators.required,Validators.pattern('[a-z A-Z]+$'),Validators.minLength(5)]),
   mobileNumber: new FormControl('', [Validators.maxLength(10)]),
-  password: new FormControl('',[Validators.required,Validators.maxLength(15),Validators.minLength(7)]),
-  confirmPassword: new FormControl('',[Validators.required,Validators.maxLength(15),Validators.minLength(7)])
+  password: new FormControl('',[Validators.required,Validators.maxLength(15),Validators.minLength(5)]),
+  confirmPassword: new FormControl('',[Validators.required,Validators.maxLength(15),Validators.minLength(5)])
 });
 
 // Get methods for validations
