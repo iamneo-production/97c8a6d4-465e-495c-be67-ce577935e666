@@ -18,15 +18,18 @@ export class AppComponent {
         if(localStorage.getItem('usertype') == "admin"){
           this.admin = true;
           this.logged = true;
+          this.customerService.login();
         }
         else{
           this.logged = true;
+          this.customerService.login();
+          
         }
     }
   }
 
   login(){
-    this.route.navigate(['']);
+    this.route.navigate(['login']);
   }
 
   signup(){
