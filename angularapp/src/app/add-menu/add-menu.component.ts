@@ -9,7 +9,7 @@ import { MenudataService } from '../services/menudata.service';
 })
 export class AddMenuComponent {
   active = 1;
-menuform = new FormGroup(
+  menuform = new FormGroup(
   {
     imageFile:new FormControl('',[Validators && Validators.required]),
     itemName:new FormControl('',[Validators && Validators.required]),
