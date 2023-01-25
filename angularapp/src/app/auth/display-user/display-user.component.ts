@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { UserdisplayService } from 'src/app/services/userdisplay.service';
 
 interface UserDetails
@@ -9,6 +10,9 @@ interface UserDetails
 }
 
 
+=======
+import { UserDisplayService } from 'src/app/services/user-display.service';
+>>>>>>> 1844be9596195eb4572a620ae75c591eb818aac9
 
 @Component({
   selector: 'app-display-user',
@@ -17,6 +21,7 @@ interface UserDetails
 })
 export class DisplayUserComponent implements OnInit {
 
+<<<<<<< HEAD
   searchUser:any;
   users:any;
 
@@ -27,8 +32,17 @@ export class DisplayUserComponent implements OnInit {
       console.log(data);
       this.users=data;
     })
+=======
+  users: any;
+  
+  constructor(private userService:UserDisplayService){
+    this.userService.users().subscribe((data:any)=>{
+      this.users = data;
+  });
+>>>>>>> 1844be9596195eb4572a620ae75c591eb818aac9
   }
 
+  
   ngOnInit(): void {
   }
 

@@ -1,39 +1,8 @@
 
-    
-  <div class="container">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search username" >
-        <span class="input-group-btn">
-          <button class="btn btn-search" type="button"><i class="fa fa-search fa-fw"></i> Search</button>
-        </span>
-    </div>
-  </div>
-                  
-                
+        <div *ngFor="let user of users">
 
-  <h1> List of Users</h1>  
-  <div> 
-  <table id="users">  
-    <thead>  
-        <tr>  
-          <th>Email</th>  
-          <th>Username</th>  
-          <th>Mobile Number</th> 
-          <th>Action</th>
-          
-        </tr>  
-    </thead>  
-    <tbody>  
-      <tr *ngFor="let u of users">  
-        <td>{{ u.email }}</td>  
-        <td>{{ u.username }}</td>  
-        <td>{{ u.mobileNo }}</td> 
-        <td>
-          <button id="btn1">Edit</button><br><br>
-          <button id="btn2">Delete</button>
-          
-        </td>  
-      </tr>  
-    </tbody>  
-  </table>  
-</div> 
+            <input [disabled]="true" class="btn btn-link my-2 mx-2" type="text" value="{{user.id}}" #id>
+            <input [disabled]="true" class="btn btn-link my-2 mx-2" type="text" value="{{user.email}}" #id>
+            <input [disabled]="true" class="btn btn-link my-2 mx-2" type="text" value="{{user.username}}" #id>
+            <app-delete-user [data]="user"></app-delete-user>
+    </div>

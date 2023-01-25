@@ -1,48 +1,43 @@
 {
-
-    "users":[
-        {
-            "usertype":"admin",
-            "username":"Thabang",
-            "email":"Thabang@gmail.com",
-            "password":""
-        },
-
-        {
-            "usertype":"admin",
-            "email":"albinah@gmail.com",
-            "username":"albinah",
-            "mobileNo":"074344349",
-            "password":""
-          },
-          {
-            "usertype":"customer",
-            "email":"tha@gmail.com",
-            "username":"tha",
-            "mobileNo":"0765445349",
-            "password":""
-          },
-          {
-            "usertype":"customer",
-            "email":"sanele@gmail.com",
-            "username":"sanele",
-            "mobileNo":"0765468969",
-            "password":""
-          },
-          {
-            "usertype":"customer",
-            "email":"gift@gmail.com",
-            "username":"gift",
-            "mobileNo":"079544349",
-            "password":""
-          },
-          {
-            "usertype":"customer",
-            "email":"esihle@gmail.com",
-            "username":"esihle",
-            "mobileNo":"076549849",
-            "password":""
-          }
-    ]
+  "users": [
+    {
+      "email": "thaba@gmail.com",
+      "username": "Thabang",
+      "mobileNumber": "0657330234",
+      "password": "@Password20",
+      "id": 1
+    },
+    {
+      "email": "alb@g.com",
+      "username": "ThabangMatabane",
+      "mobileNumber": "0657330234",
+      "password": "@Password20",
+      "id": 2
+    },
+    {
+      "email": "test@gmail.com",
+      "username": "testuser",
+      "mobileNumber": "9876543210",
+      "password": "Test@123",
+      "id": 3
+    },
+    {
+      "email": "test@gmail.com",
+      "username": "testuser",
+      "mobileNumber": "9876543210",
+      "password": "Test@123",
+      "id": 4
+    },
+    {
+      "email": "thabangmatabane@gmail.com",
+      "username": "testuser",
+      "mobileNumber": "0657330234",
+      "password": "@Password20",
+      "id": 5
+    }
+  ],
+  "themes": [],
+  "events": [],
+  "menus": [],
+  "addons": []
 }
-
