@@ -34,6 +34,13 @@
       "mobileNumber": "0657330234",
       "password": "@Password20",
       "id": 5
+    },
+    {
+      "email": "albinah@gmail.com",
+      "username": "albinah",
+      "mobileNumber": "0986547876",
+      "password": "123Qwerty",
+      "id": 6
     }
   ],
   "themes": [],

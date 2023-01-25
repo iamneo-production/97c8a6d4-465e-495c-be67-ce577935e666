@@ -27,13 +27,7 @@ import { ViewbookingComponent } from './viewbooking/viewbooking.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-    NgbModule,
-    ReactiveFormsModule,
-    HttpClientModule
-=======
     NgbModule, ReactiveFormsModule, RouterModule, HttpClientModule
->>>>>>> 1844be9596195eb4572a620ae75c591eb818aac9
   ],
   providers: [],
   bootstrap: [AppComponent]
