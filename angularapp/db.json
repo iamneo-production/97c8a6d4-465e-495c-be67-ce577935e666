@@ -1,24 +1,43 @@
 {
-<<<<<<< HEAD
-    "users":[
-<<<<<<< HEAD
-        {
-            "usertype":"admin",
-            "username":"Thabang",
-            "email":"Thabang@gmail.com",
-            "password":""
-        }
-    ]
-}
-
-=======
-      
-    ]
-}
->>>>>>> Birthday-Event-Booking-App-MatabaneThabang
-=======
   "users": [
-   
-  ]
+    {
+      "email": "thaba@gmail.com",
+      "username": "Thabang",
+      "mobileNumber": "0657330234",
+      "password": "@Password20",
+      "id": 1
+    },
+    {
+      "email": "alb@g.com",
+      "username": "ThabangMatabane",
+      "mobileNumber": "0657330234",
+      "password": "@Password20",
+      "id": 2
+    },
+    {
+      "email": "test@gmail.com",
+      "username": "testuser",
+      "mobileNumber": "9876543210",
+      "password": "Test@123",
+      "id": 3
+    },
+    {
+      "email": "test@gmail.com",
+      "username": "testuser",
+      "mobileNumber": "9876543210",
+      "password": "Test@123",
+      "id": 4
+    },
+    {
+      "email": "thabangmatabane@gmail.com",
+      "username": "testuser",
+      "mobileNumber": "0657330234",
+      "password": "@Password20",
+      "id": 5
+    }
+  ],
+  "themes": [],
+  "events": [],
+  "menus": [],
+  "addons": []
 }
->>>>>>> Birthday-Event-Booking-App-MatabaneThabang

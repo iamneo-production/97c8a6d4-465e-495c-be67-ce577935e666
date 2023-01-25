@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CustomerServiceService } from './services/customer-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+<<<<<<< HEAD
   title = 'angularapp';
 
 
@@ -35,5 +38,37 @@ export class AppComponent {
 
       });
 }
+=======
+  
+  admin: boolean = false;
+  logged : boolean = false;
+
+  constructor(private route:Router, private customerService:CustomerServiceService){
+
+    if(localStorage.getItem('usertype') != null){
+        if(localStorage.getItem('usertype') == "admin"){
+          this.admin = true;
+          this.logged = true;
+        }
+        else{
+          this.logged = true;
+        }
+    }
+  }
+
+  login(){
+    this.route.navigate(['']);
+  }
+
+  signup(){
+    this.route.navigate(['signup']);
+  }
+
+  logout(){
+      localStorage.clear();
+      this.customerService.logout();
+      this.route.navigate(['login']);
+  }
+>>>>>>> 1844be9596195eb4572a620ae75c591eb818aac9
 
 }

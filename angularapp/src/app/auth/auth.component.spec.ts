@@ -1,25 +1,19 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
 
-import { AuthComponent } from './auth.component';
-
-describe('AuthComponent', () => {
-  let component: AuthComponent;
-  let fixture: ComponentFixture<AuthComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ AuthComponent ]
-    })
-    .compileComponents();
-  });
-
+describe('AppComponent', () => {
+  let component: AppComponent;
+  beforeEach(()=>TestBed.configureTestingModule({
+    imports:[HttpClientTestingModule],
+    providers:[AppComponent]
+  }))
   beforeEach(() => {
-    fixture = TestBed.createComponent(AuthComponent);
+    const fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
-
-  it('should create', () => {
+  it('FE_AppTest', () => {
     expect(component).toBeTruthy();
   });
 });
