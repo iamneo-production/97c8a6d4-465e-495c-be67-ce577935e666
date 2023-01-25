@@ -35,7 +35,7 @@ import { AdminComponent } from './admin/admin.component';
     AddThemeComponent,
     AddMenuComponent,
     DisplayThemeComponent,
-    AdminComponent,
+    AdminComponent
   
    
   ],
