@@ -20,6 +20,13 @@
       "mobileNumber": "0786651851",
       "password": "12345gift",
       "id": 9
+    },
+    {
+      "email": "nande@gmail.com",
+      "username": "nandee",
+      "mobileNumber": "0986547876",
+      "password": "123Nande",
+      "id": 10
     }
   ],
   "themes": [],

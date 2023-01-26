@@ -48,3 +48,21 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+
+  #addOns
+  {
+   background-color: blueviolet;
+
+    
+  }
+
+  #gridBody
+  {
+    background-image: url("/assets/bground.jpg");
+    
+    /* background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; */
+
+
+  }
