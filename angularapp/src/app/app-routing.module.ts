@@ -7,6 +7,7 @@ import { BookingComponent } from './booking/booking.component';
 import { CustomerguardGuard } from './customerguard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MainComponent } from './main/main.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 
 const routes: Routes = [
@@ -38,7 +39,11 @@ const routes: Routes = [
   {
     path:'home',
     component: HomepageComponent, canActivate:[CustomerguardGuard]
-  }
+  },
+  {
+    path:'reviews',
+    component: ReviewsComponent, canActivate:[CustomerguardGuard]
+  },
 
 ];
 

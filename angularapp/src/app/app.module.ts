@@ -17,13 +17,15 @@ import { AdminComponent } from './admin/admin.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { BookingComponent } from './booking/booking.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
+import { AddonComponent } from './addon/addon.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, SignupComponent, LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
-    AdminComponent, HomepageComponent, BookingComponent, ViewbookingComponent
+    AdminComponent, HomepageComponent, BookingComponent, ViewbookingComponent, AddonComponent, ReviewsComponent
   ],
   imports: [
     BrowserModule,
