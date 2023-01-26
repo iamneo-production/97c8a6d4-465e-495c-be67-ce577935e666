@@ -29,6 +29,16 @@
       "themeCost": "5000",
       "themeDescription": "Small Party",
       "id": 3
+    },
+    {
+      "themeName": "Thabang",
+      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
+      "photographerDetails": "hhvhv",
+      "videographerDetails": "vhhvhv",
+      "returnGift": "vhvhhvyrd",
+      "themeCost": "8000",
+      "themeDescription": "vgvygvy",
+      "id": 4
     }
   ],
   "menuitems": [

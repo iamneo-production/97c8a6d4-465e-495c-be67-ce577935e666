@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
+import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AdminComponent } from './admin/admin.component';
 import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
@@ -68,6 +69,10 @@ const routes: Routes = [
   {
     path: 'addon',
     component: AddonComponent
+  },
+  {
+    path:'modal',
+    component:AddthemeButtonComponent
   }
 
 
