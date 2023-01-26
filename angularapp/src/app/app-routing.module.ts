@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
 import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
@@ -73,6 +74,10 @@ const routes: Routes = [
   {
     path:'modal',
     component:AddthemeButtonComponent
+  },
+  {
+    path:'modal2',
+    component:AddmenuButtonComponent
   }
 
 

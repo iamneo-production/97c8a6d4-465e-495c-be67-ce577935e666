@@ -19,6 +19,7 @@ import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
 import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
+import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.compo
     AdminComponent, HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
-     AddthemeButtonComponent
+     AddthemeButtonComponent,
+     AddmenuButtonComponent
   ],
   imports: [
     BrowserModule,
