@@ -9,6 +9,8 @@ import { UserDisplayService } from 'src/app/services/user-display.service';
 export class DisplayUserComponent implements OnInit {
 
   users: any;
+  theUser:any = [];
+  editClicked = false;
   
   constructor(private userService:UserDisplayService){
     this.userService.users().subscribe((data:any)=>{
@@ -16,6 +18,10 @@ export class DisplayUserComponent implements OnInit {
   });
   }
 
+  edit(user:any){
+    this.editClicked = true;
+      this.theUser.push(user);
+  }
   
   ngOnInit(): void {
   }

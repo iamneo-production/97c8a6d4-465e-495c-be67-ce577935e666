@@ -13,5 +13,8 @@ export class UserServiceService {
       return this.http.delete(this.url + "/" + user.id,user);
   }
 
+  edit(user:any){
+    return this.http.put(this.url + "/" + user.id,user);
+  }
   
 }

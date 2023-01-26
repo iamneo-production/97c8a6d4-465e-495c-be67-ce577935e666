@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "email": "thaba@gmail.com",
-      "username": "Thabang",
-      "mobileNumber": "0657330234",
-      "password": "@Password20",
-      "id": 6
-    },
-    {
       "email": "admin@gmail.com",
       "username": "admin",
       "mobileNumber": "0839957304",

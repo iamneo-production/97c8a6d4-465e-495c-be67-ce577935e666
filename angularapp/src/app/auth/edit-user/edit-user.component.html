@@ -1,33 +1,20 @@
-<ng-template #content let-modal>
-	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-	</div>
-	<div class="modal-body">
-		<form>
-			<div class="mb-3">
-				<label for="dateOfBirth">Date of birth</label>
-				<div class="input-group">
-					<input
-						id="dateOfBirth"
-						class="form-control"
-						placeholder="yyyy-mm-dd"
-						name="dp"
-						ngbDatepicker
-						#dp="ngbDatepicker"
-					/>
-					<button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
-				</div>
-			</div>
-		</form>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-	</div>
-</ng-template>
+<div *ngFor="let user of data">
+    <form [formGroup]="editForm" (ngSubmit)="editUser(editForm.value)">
+        <div>
+            <input disabled type="text" name="id" id="id" value="{{user.id}}" formControlName="id">
+        </div>
+        <div>
+            <input type="text" name="username" id="username" value="{{user.username}}" formControlName="username">
+        </div>
+        <div>
+            <input type="text" name="email" id="email" value="{{user.email}}" formControlName="email">
+        </div>
+        <div>
+            <input type="text" name="username" id="username" value="{{user.password}}" fromControlName="password">
+        </div>
+        <button class="btn btn-primary">Edit</button>
+    </form>
+</div>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+ 
 
-<hr />
-
-<pre>{{ closeResult }}</pre>
