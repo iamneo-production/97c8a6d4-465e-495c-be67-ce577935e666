@@ -25,8 +25,7 @@ import { AddonComponent } from './addon/addon.component';
     AppComponent, SignupComponent, LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, HomepageComponent, ViewbookingComponent, 
-    BookingComponent, AddthemeComponent, AddmenuComponent,
-     AddonComponent
+    BookingComponent, AddthemeComponent, AddmenuComponent
   ],
   imports: [
     BrowserModule,
