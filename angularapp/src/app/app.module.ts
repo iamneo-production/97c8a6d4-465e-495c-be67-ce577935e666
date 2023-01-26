@@ -20,7 +20,7 @@ import { AddonComponent } from './addon/addon.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
-import { AddonComponent } from './addon/addon.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,14 +28,14 @@ import { AddonComponent } from './addon/addon.component';
     AppComponent, SignupComponent, LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, HomepageComponent, BookingComponent, ViewbookingComponent, AddonComponent, ReviewsComponent
-    AdminComponent, HomepageComponent, ViewbookingComponent, 
+    , HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule, ReactiveFormsModule, RouterModule, HttpClientModule
+    NgbModule, ReactiveFormsModule, RouterModule, HttpClientModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
