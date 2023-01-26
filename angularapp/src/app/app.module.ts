@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -32,9 +31,13 @@ import { AddonComponent } from './addon/addon.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule, ReactiveFormsModule, RouterModule, HttpClientModule
+    NgbModule, ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

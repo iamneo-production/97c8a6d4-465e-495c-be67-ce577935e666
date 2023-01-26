@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { Router,ActivatedRoute } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
@@ -9,10 +9,11 @@ import { CustomerServiceService } from 'src/app/services/customer-service.servic
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent{
 
  // Constructor
- constructor(private loginService:LoginService, private customerService:CustomerServiceService, private router: Router, private route: ActivatedRoute){}
+ constructor(private loginService:LoginService, private customerService:CustomerServiceService, private router: Router, private route: ActivatedRoute){
+ }
 
  //User Exists field 
    userExists: boolean = false;
@@ -47,6 +48,7 @@ export class LoginComponent {
             this.customerService.login();
             console.log("fOUND");
             this.router.navigate(['home']);
+            location.reload();
           }
         }
       });
