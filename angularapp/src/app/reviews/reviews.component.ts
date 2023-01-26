@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ReviewsService } from '../services/reviews.service';
 
 @Component({
   selector: 'app-reviews',
@@ -31,12 +32,23 @@ export class ReviewsComponent implements OnInit {
     {
       return this.reviewsform.get('reviews');
     }
-    userReview()
-    {
-    console.warn(this.reviewsform.value);
-    }
+    // userReview()
+    // {
+    // console.warn(this.reviewsform.value);
+    // }
 
-  constructor() { }
+      active = 1;  
+    constructor(private reviewdata: ReviewsService) { }   
+      userReview(data:any)
+    {
+            this.reviewdata.addReviews(data).subscribe((result:any)=>   
+         {       
+         console.log(result);  
+               alert("Review added successfully!");    
+          });  
+        }
+
+
 
   ngOnInit(): void {
   }

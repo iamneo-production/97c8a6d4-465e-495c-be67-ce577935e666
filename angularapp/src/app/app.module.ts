@@ -21,6 +21,9 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewreviewsComponent } from './viewreviews/viewreviews.component';
+import { EditreviewsComponent } from './reviews/editreviews/editreviews.component';
+import { DeletereviewsComponent } from './reviews/deletereviews/deletereviews.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdminComponent, HomepageComponent, BookingComponent, ViewbookingComponent, AddonComponent, ReviewsComponent
     , HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
-     AddonComponent
+     AddonComponent,
+     ViewreviewsComponent,
+     EditreviewsComponent,
+     DeletereviewsComponent
   ],
   imports: [
     BrowserModule,
