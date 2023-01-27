@@ -35,6 +35,13 @@
       "itemCatagory": "veg",
       "itemPrice": "60",
       "id": 8
+    },
+    {
+      "imageFile": "C:\\fakepath\\profile.jfif",
+      "itemName": "Burger",
+      "itemCatagory": "Non veg",
+      "itemPrice": "2000",
+      "id": 9
     }
   ],
   "users": [
