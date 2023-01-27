@@ -13,13 +13,6 @@
   ],
   "menuitems": [
     {
-      "filename": "C:\\fakepath\\b1.jfif",
-      "itemName": "Birtheday",
-      "itemCatagory": "veg",
-      "itemPrice:": "300",
-      "id": 2
-    },
-    {
       "imageFile": "C:\\fakepath\\code1.jfif",
       "itemName": "Salad",
       "itemCatagory": "Non veg",
@@ -34,18 +27,11 @@
       "id": 7
     },
     {
-      "imageFile": "C:\\fakepath\\b5.jfif",
-      "itemName": "Salad",
+      "imageFile": "C:\\fakepath\\code1.jfif",
+      "itemName": "",
       "itemCatagory": "veg",
-      "itemPrice": "70",
+      "itemPrice": "60",
       "id": 8
-    },
-    {
-      "imageFile": "C:\\fakepath\\nemocake.jpg",
-      "itemName": "cake",
-      "itemCatagory": "Non veg",
-      "itemPrice": "5700",
-      "id": 9
     }
   ],
   "users": [
