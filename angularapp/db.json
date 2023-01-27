@@ -1,4 +1,70 @@
 {
+  "themes": [
+    {
+      "id": 1,
+      "themeName": "All-White",
+      "imageUrl": "http/img.bhhg",
+      "photograpgerDetails": "Esihle",
+      "videographerDetails": "Siko",
+      "returnGift": "Cake",
+      "themeCost": "10000",
+      "themeDecription": "Small party"
+    },
+    {
+      "themeName": "20st Birthday",
+      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
+      "photographerDetails": "Esihle",
+      "videographerDetails": "SikoTuswa",
+      "returnGift": "Cake",
+      "themeCost": "6000",
+      "themeDescription": "Small Party",
+      "id": 2
+    },
+    {
+      "themeName": "Birthday party lite",
+      "imageUrl": "https://www.pluralsight.com/courses/introduction-to-sql",
+      "photographerDetails": "Thabang",
+      "videographerDetails": "Gift",
+      "returnGift": "Cake",
+      "themeCost": "5000",
+      "themeDescription": "Small Party",
+      "id": 3
+    }
+  ],
+  "menuitems": [
+    {
+      "filename": "C:\\fakepath\\b1.jfif",
+      "itemName": "Birtheday",
+      "itemCatagory": "veg",
+      "itemPrice:": "300",
+      "id": 2
+    },
+    {
+      "filename": "C:\\fakepath\\b3.jfif",
+      "itemName": "Biggvhvhgv",
+      "itemCatagory": "veg",
+      "id": 3
+    },
+    {
+      "filename": "C:\\fakepath\\b1.jfif",
+      "itemName": "Salad",
+      "itemCatagory": "veg",
+      "id": 4
+    },
+    {
+      "filename": "C:\\fakepath\\code1.jfif",
+      "itemName": "Salad",
+      "itemCatagory": "veg",
+      "id": 5
+    },
+    {
+      "imageFile": "C:\\fakepath\\code1.jfif",
+      "itemName": "Salad",
+      "itemCatagory": "Non veg",
+      "itemPrice": "300",
+      "id": 6
+    }
+  ],
   "users": [
     {
       "email": "thaba@gmail.com",
@@ -22,7 +88,6 @@
       "id": 9
     }
   ],
-  "themes": [],
   "events": [],
   "menus": [],
   "addons": [],
