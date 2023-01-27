@@ -70,10 +70,7 @@ const routes: Routes = [
     component: AddonComponent
   },
   
-    {
-      path:'deletemenu', 
-      component:DeleteMenuComponent
-    }
+  
   ];
 
 
