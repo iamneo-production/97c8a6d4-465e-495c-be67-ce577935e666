@@ -12,7 +12,6 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { DisplayUserComponent } from './auth/display-user/display-user.component';
 import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
 import { AdminComponent } from './admin/admin.component';
-import { HomepageComponent } from './homepage/homepage.component';
 import { BookingComponent } from './booking/booking.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
@@ -22,26 +21,29 @@ import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.compo
 import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 import { DeletethemeComponent } from './deletetheme/deletetheme.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     AppComponent, SignupComponent, LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
-    AdminComponent, HomepageComponent, ViewbookingComponent, 
+    AdminComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
      AddthemeButtonComponent,
      AddmenuButtonComponent,
      ViewthemeComponent,
-     DeletethemeComponent
+     DeletethemeComponent, HomepageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule, ReactiveFormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   
   providers: [],
