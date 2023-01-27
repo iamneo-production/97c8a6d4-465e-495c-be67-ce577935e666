@@ -1,0 +1,26 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Item Catagory</th>
+        <th scope="col">Price</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of items">
+            <tr scope="row">
+                    <td>{{item.id}}</td>
+                    <td><img style="width: fit-content; height: 50px;" src="{{item.imageFile}}" alt="Oops! can't show image"></td>
+                    <td>{{item.itemName</td>
+                    <td>{{item.itemCatagory</td>
+                    <td>{{item.itemPrice}}</td>
+                    <td><button>Edit</button></td>
+                    <td><app-deletemenu [data]="item">Delete</app-deletemenu></td>
+            </tr>
+    </tbody>
+  </table>
+
+

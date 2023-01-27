@@ -20,29 +20,32 @@
       "id": 2
     },
     {
-      "filename": "C:\\fakepath\\b3.jfif",
-      "itemName": "Biggvhvhgv",
-      "itemCatagory": "veg",
-      "id": 3
-    },
-    {
-      "filename": "C:\\fakepath\\b1.jfif",
-      "itemName": "Salad",
-      "itemCatagory": "veg",
-      "id": 4
-    },
-    {
-      "filename": "C:\\fakepath\\code1.jfif",
-      "itemName": "Salad",
-      "itemCatagory": "veg",
-      "id": 5
-    },
-    {
       "imageFile": "C:\\fakepath\\code1.jfif",
       "itemName": "Salad",
       "itemCatagory": "Non veg",
       "itemPrice": "300",
       "id": 6
+    },
+    {
+      "imageFile": "C:\\fakepath\\b1.jfif",
+      "itemName": "Salad",
+      "itemCatagory": "veg",
+      "itemPrice": "300",
+      "id": 7
+    },
+    {
+      "imageFile": "C:\\fakepath\\b5.jfif",
+      "itemName": "Salad",
+      "itemCatagory": "veg",
+      "itemPrice": "70",
+      "id": 8
+    },
+    {
+      "imageFile": "C:\\fakepath\\nemocake.jpg",
+      "itemName": "cake",
+      "itemCatagory": "Non veg",
+      "itemPrice": "5700",
+      "id": 9
     }
   ],
   "users": [

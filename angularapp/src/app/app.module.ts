@@ -22,6 +22,9 @@ import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.compo
 import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 import { DeletethemeComponent } from './deletetheme/deletetheme.component';
+import { DeletemenuComponent } from './deletemenu/deletemenu.component';
+import { ViewmenuComponent } from './viewmenu/viewmenu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -33,15 +36,17 @@ import { DeletethemeComponent } from './deletetheme/deletetheme.component';
      AddonComponent,
      AddthemeButtonComponent,
      AddmenuButtonComponent,
-     ViewthemeComponent,
-     DeletethemeComponent
+     ViewthemeComponent,ViewmenuComponent,
+     DeletethemeComponent,
+     DeletemenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule, ReactiveFormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   
   providers: [],
