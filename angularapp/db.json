@@ -58,6 +58,13 @@
       "mobileNumber": "0786651851",
       "password": "12345gift",
       "id": 9
+    },
+    {
+      "email": "admin@gmail.com",
+      "username": "Esihle",
+      "mobileNumber": "0662179422",
+      "password": "admin",
+      "id": 10
     }
   ],
   "events": [],
