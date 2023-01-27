@@ -11,7 +11,7 @@ export class ReviewsComponent implements OnInit {
   
   ratings = 5;
 
-  reviewsform = new FormGroup(
+  reviewsForm = new FormGroup(
     {
       name: new FormControl('',[Validators.required,]),
       email: new FormControl('',[Validators.required,Validators.email]),
@@ -20,17 +20,17 @@ export class ReviewsComponent implements OnInit {
     });
     get name()
     {
-      return this.reviewsform.get('name');
+      return this.reviewsForm.get('name');
     }
 
     get email()
     {
-      return this.reviewsform.get('email');
+      return this.reviewsForm.get('email');
     }
 
     get reviews()
     {
-      return this.reviewsform.get('reviews');
+      return this.reviewsForm.get('reviews');
     }
     // userReview()
     // {

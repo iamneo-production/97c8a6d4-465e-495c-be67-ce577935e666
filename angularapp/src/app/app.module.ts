@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbRatingModule  } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './auth/login/login.component';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -18,8 +18,7 @@ import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +26,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
-     AddonComponent
+     AddonComponent, ReviewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule, ReactiveFormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule, NgbRatingModule 
   ],
   
   providers: [],
