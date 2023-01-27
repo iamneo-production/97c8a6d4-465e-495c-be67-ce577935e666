@@ -55,7 +55,7 @@ import {MatToolbarModule} from '@angular/material/toolbar'
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    NavbarComponent
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
