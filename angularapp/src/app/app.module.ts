@@ -18,6 +18,10 @@ import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
+import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
+import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
+import { ViewthemeComponent } from './viewtheme/viewtheme.component';
+import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 
 
 @NgModule({
@@ -25,14 +29,23 @@ import { AddonComponent } from './addon/addon.component';
     AppComponent, SignupComponent, LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, HomepageComponent, ViewbookingComponent, 
-    BookingComponent, AddthemeComponent, AddmenuComponent
+    BookingComponent, AddthemeComponent, AddmenuComponent,
+     AddonComponent,
+     AddthemeButtonComponent,
+     AddmenuButtonComponent,
+     ViewthemeComponent,
+     DeletethemeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule, ReactiveFormsModule, RouterModule, HttpClientModule
+    NgbModule, ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

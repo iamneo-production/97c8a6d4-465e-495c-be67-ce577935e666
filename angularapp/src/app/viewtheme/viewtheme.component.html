@@ -1,0 +1,31 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Theme Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Photographer details</th>
+        <th scope="col">Videographer details</th>
+        <th scope="col">Return Gift</th>
+        <th scope="col">Them Cost</th>
+        <th scope="col">Theme Description</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let theme of themes">
+            <tr scope="row">
+                    <td>{{theme.id}}</td>
+                    <td>{{theme.themeName}}</td>
+                    <td><img style="width: fit-content; height: 50px;" src="{{theme.imageUrl}}" alt="Oops! can't show image"></td>
+                    <td>{{theme.photographerDetails}}</td>
+                    <td>{{theme.videographerDetails}}</td>
+                    <td>{{theme.returnGift}}</td>
+                    <td>{{theme.themeCost}}</td>
+                    <td>{{theme.themeDescription}}</td>
+                    <td>Edit</td>
+                    <td><app-deletetheme [data]="theme"></app-deletetheme></td>
+            </tr>
+    </tbody>
+  </table>
+
