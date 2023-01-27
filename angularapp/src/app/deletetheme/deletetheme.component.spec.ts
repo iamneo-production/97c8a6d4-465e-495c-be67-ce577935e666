@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DisplayThemeComponent } from './display-theme.component';
+import { DeletethemeComponent } from './deletetheme.component';
 
-describe('DisplayThemeComponent', () => {
-  let component: DisplayThemeComponent;
-  let fixture: ComponentFixture<DisplayThemeComponent>;
+describe('DeletethemeComponent', () => {
+  let component: DeletethemeComponent;
+  let fixture: ComponentFixture<DeletethemeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplayThemeComponent ]
+      declarations: [ DeletethemeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DisplayThemeComponent);
+    fixture = TestBed.createComponent(DeletethemeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
