@@ -18,6 +18,10 @@ import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
+import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
+import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
+import { ViewthemeComponent } from './viewtheme/viewtheme.component';
+import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 
 
 @NgModule({
@@ -26,7 +30,11 @@ import { AddonComponent } from './addon/addon.component';
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
-     AddonComponent
+     AddonComponent,
+     AddthemeButtonComponent,
+     AddmenuButtonComponent,
+     ViewthemeComponent,
+     DeletethemeComponent
   ],
   imports: [
     BrowserModule,
