@@ -4,6 +4,7 @@ import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminguardGuard } from './adminguard.guard';
 import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
 import { DisplayUserComponent } from './auth/display-user/display-user.component';
 import { EditUserComponent } from './auth/edit-user/edit-user.component';
@@ -30,10 +31,6 @@ const routes: Routes = [
     component:MainComponent
   },
   {
-    path: 'admin',
-    component: AdminComponent
-  },
-  {
     path: 'booking',
     component: BookingComponent, canActivate:[CustomerguardGuard]
   },
@@ -47,27 +44,31 @@ const routes: Routes = [
   },
   {
     path:'displayuser',
-    component: DisplayUserComponent
+    component: DisplayUserComponent, canActivate:[AdminguardGuard]
   },
   {
     path: 'edituser',
-    component: EditUserComponent
+    component: EditUserComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path: 'admin',
+    component: AdminComponent, canActivate:[AdminguardGuard]
   },
   {
     path:'deleteuser',
-    component: DeleteUserComponent
+    component: DeleteUserComponent, canActivate:[AdminguardGuard]
   },
   {
     path:'addtheme',
-    component: AddthemeComponent
+    component: AddthemeComponent, canActivate:[AdminguardGuard]
   },
   {
     path: 'addmenu',
-    component: AddmenuComponent
+    component: AddmenuComponent, canActivate:[AdminguardGuard]
   },
   {
     path: 'addon',
-    component: AddonComponent
+    component: AddonComponent, canActivate:[AdminguardGuard]
   }
 
 

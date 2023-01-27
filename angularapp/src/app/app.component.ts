@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminServiceService } from './services/admin-service.service';
 import { CustomerServiceService } from './services/customer-service.service';
 
 @Component({
@@ -11,17 +12,19 @@ export class AppComponent {
   
   admin: boolean = false;
   logged : boolean = false;
+  customer: boolean = false;
 
-  constructor(private route:Router, private customerService:CustomerServiceService){
+  constructor(private route:Router, private customerService:CustomerServiceService, private adminService:AdminServiceService){
 
-    if(localStorage.getItem('usertype') != null){
+    if(localStorage.getItem("usertype") != null){
+      
+      console.log(localStorage.getItem("usertype"));
+
         if(localStorage.getItem('usertype') == "admin"){
           this.admin = true;
           this.logged = true;
-          this.customerService.login();
         }
         else{
-          this.customerService.login();
           this.logged = true;
         }
     }
@@ -36,9 +39,16 @@ export class AppComponent {
   }
 
   logout(){
-      localStorage.clear();
-      this.customerService.logout();
-      this.route.navigate(['login']);
+    if(localStorage.getItem('usertype') == "admin"){
+          localStorage.clear();
+          this.adminService.logout();
+          this.route.navigate(['login']);
+    }
+    else if(localStorage.getItem('usertype') == "user"){
+         localStorage.clear();
+         this.customerService.logout();
+         this.route.navigate(['login']);
+    }
   }
 
 }
