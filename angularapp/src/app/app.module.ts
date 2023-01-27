@@ -21,21 +21,33 @@ import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.compo
 import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 import { DeletethemeComponent } from './deletetheme/deletetheme.component';
+<<<<<<< HEAD
 import { HomepageComponent } from './homepage/homepage.component';
+=======
+import { DeletemenuComponent } from './deletemenu/deletemenu.component';
+import { ViewmenuComponent } from './viewmenu/viewmenu.component';
+>>>>>>> 011da31697ff5f28df9072b92c7dd4f8df10d75e
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
-    AppComponent, SignupComponent, LoginComponent, MainComponent,
+    AppComponent, SignupComponent,LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
      AddthemeButtonComponent,
+<<<<<<< HEAD
      AddmenuButtonComponent,
      ViewthemeComponent,
      DeletethemeComponent, HomepageComponent
+=======
+     AddmenuButtonComponent,HomepageComponent,
+     ViewthemeComponent,ViewmenuComponent,
+     DeletethemeComponent,
+     DeletemenuComponent
+>>>>>>> 011da31697ff5f28df9072b92c7dd4f8df10d75e
   ],
   imports: [
     BrowserModule,

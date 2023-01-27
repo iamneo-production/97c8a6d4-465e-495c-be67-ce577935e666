@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DisplayThemeComponent } from './display-theme.component';
+import { DeletemenuComponent } from './deletemenu.component';
 
-describe('DisplayThemeComponent', () => {
-  let component: DisplayThemeComponent;
-  let fixture: ComponentFixture<DisplayThemeComponent>;
+describe('DeletemenuComponent', () => {
+  let component: DeletemenuComponent;
+  let fixture: ComponentFixture<DeletemenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplayThemeComponent ]
+      declarations: [ DeletemenuComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DisplayThemeComponent);
+    fixture = TestBed.createComponent(DeletemenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
