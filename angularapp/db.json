@@ -23,20 +23,6 @@
   ],
   "menuitems": [
     {
-      "imageFile": "C:\\fakepath\\b1.jfif",
-      "itemName": "Salad",
-      "itemCatagory": "veg",
-      "itemPrice": "300",
-      "id": 7
-    },
-    {
-      "imageFile": "C:\\fakepath\\code1.jfif",
-      "itemName": "",
-      "itemCatagory": "veg",
-      "itemPrice": "60",
-      "id": 8
-    },
-    {
       "imageFile": "C:\\fakepath\\profile.jfif",
       "itemName": "Burger",
       "itemCatagory": "Non veg",
