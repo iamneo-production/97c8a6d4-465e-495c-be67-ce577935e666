@@ -29,7 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent, SignupComponent, LoginComponent, MainComponent,
+    AppComponent, SignupComponent,LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,

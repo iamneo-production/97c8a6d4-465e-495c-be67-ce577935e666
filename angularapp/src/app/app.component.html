@@ -13,9 +13,6 @@
   <div class="col-md-3 text-end">
     <a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()">Logout</a>
   </div>
-  <div *ngIf="!logged" class="col-md-3 text-end">
-    <a class="btn btn-outline-primary me-2" (click)= "login()">Login</a>
-  </div>
 </header>
 <router-outlet></router-outlet>
 
@@ -32,9 +29,6 @@
   </ul>
   <div class="col-md-3 text-end">
     <a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()">Logout</a>
-  </div>
-  <div *ngIf="!logged" class="col-md-3 text-end">
-    <a class="btn btn-outline-primary me-2" (click)= "login()">Login</a>
   </div>
 </header>
 <router-outlet></router-outlet>
