@@ -1,45 +1,18 @@
-form{
-    width: 450px;
-      font-size: 16px;
-      background:plum;
-      padding: 30px 30px 15px 30px;
-      border: 5px solid #bec9d4;
-  }
-  form input[type=submit],
-  form input[type=button],
-  form label{
-    font-family: Georgia, "Times New Roman", Times, serif;
-      font-size: 16px;
-      color: black;
-  }
-  form label {
-      display:block;
-      margin-bottom: 10px;
-  }
-  form input[type=text]
-  {
-      background: transparent;
-      border: rounded;
-      border-bottom: 1px dashed #83A4C5;
-      width: 275px;
-      outline: none;
-      padding: 0px 0px 0px 0px;
-      font-style: italic;
-  }
-  form textarea{
-      font-style: italic;
-      padding: 0px 0px 0px 0px;
-      background: white;
-      outline: none;
-      border: round;
-      border-bottom: 1px dashed #ebf0f4;
-      width: 275px;
-      overflow: hidden;
-      resize:none;
-      height:70px;
-  } 
-  .form-center {
-    display:flex;
-    justify-content: center;
-  }
-  
+input[type=text],select,
+textarea{
+  width: 100%;
+  border-radius:4px;
+  border:1px solid #ccc;
+  padding:12px
+}
+input[type=submit]{
+  background-color: lightseagreen;
+  color:white;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  padding: 12px 20px;
+}
+input[type=submit] {
+  width: 100%;
+  margin-top: 0;}

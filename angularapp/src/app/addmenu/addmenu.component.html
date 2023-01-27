@@ -6,7 +6,7 @@
                     <input type="file" id="imageFile" formControlName="imageFile" name="imageFile"  placeholder="upload"  required>
                      <br>
                       <span [ngclass]="'error'"  *ngIf="imageFile && imageFile.invalid && imageFile.touched">Upload Image</span>
-
+                      
                      <br>
                      <label for="itemname">Item Name:</label>
                     <input type="text" id="itemName" formControlName="itemName" name="itemName" placeholder="Enter item name" required>
@@ -23,7 +23,7 @@
                    <br>
                    <label for="itemPrice">Item Price:</label>
                    <input type="text" id="itemPrice" placeholder="Enter item price" formControlName="itemPrice">
-                   <span [ngclass]="'error'"  *ngIf="itemPrice && itemPrice.invalid && itemPrice.touched">Invalid Field</span>
+                   <span [ngclass]="'error'"  *ngIf="itemPrice && itemPrice.invalid && itemPrice.touched">Numeric value Required</span><br>
                     <input type="submit" value="Add Item" id="addItem">
                   </form>
             </div>
