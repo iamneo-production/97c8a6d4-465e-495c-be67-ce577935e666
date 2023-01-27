@@ -20,6 +20,8 @@ import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditThemeComponent } from './Components/edit-theme/edit-theme.component';
+import { EditthemeComponent } from './edittheme/edittheme.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
-     AddonComponent
+     AddonComponent,
+     EditThemeComponent,
+     EditthemeComponent
   ],
   imports: [
     BrowserModule,
