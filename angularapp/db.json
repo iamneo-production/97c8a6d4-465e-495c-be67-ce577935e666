@@ -9,7 +9,6 @@
       "themeCost": "2000",
       "themeDescription": "Small party",
       "id": 5
-<<<<<<< HEAD
     },
     {
       "themeName": "21st Birtday",
@@ -20,8 +19,6 @@
       "themeCost": "7000",
       "themeDescription": "Games",
       "id": 6
-=======
->>>>>>> 95c6cfaa5ad6affe3b06e79d63d62d335066b7fd
     }
   ],
   "menuitems": [
