@@ -23,6 +23,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewreviewsComponent } from './viewreviews/viewreviews.component';
 import { EditreviewsComponent } from './reviews/editreviews/editreviews.component';
 import { DeletereviewsComponent } from './reviews/deletereviews/deletereviews.component';
+import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
+import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
+import { ViewthemeComponent } from './viewtheme/viewtheme.component';
+import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 
 
 @NgModule({
@@ -36,6 +40,10 @@ import { DeletereviewsComponent } from './reviews/deletereviews/deletereviews.co
      ViewreviewsComponent,
      EditreviewsComponent,
      DeletereviewsComponent
+     AddthemeButtonComponent,
+     AddmenuButtonComponent,
+     ViewthemeComponent,
+     DeletethemeComponent
   ],
   imports: [
     BrowserModule,
