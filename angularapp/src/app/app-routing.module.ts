@@ -68,9 +68,15 @@ const routes: Routes = [
   {
     path: 'addon',
     component: AddonComponent
-  }
+  },
+  
+    {
+      path:'deletemenu', 
+      component:DeleteMenuComponent
+    }
+  ];
 
-];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
