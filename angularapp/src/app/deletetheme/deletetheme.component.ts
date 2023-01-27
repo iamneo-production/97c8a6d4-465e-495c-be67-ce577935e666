@@ -18,6 +18,7 @@ export class DeletethemeComponent implements OnInit {
       {
      console.log("deleted");
       });
+      location.reload();
     }
   }
 
