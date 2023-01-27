@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
+import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminguardGuard } from './adminguard.guard';
@@ -73,7 +75,15 @@ const routes: Routes = [
   },
   {
     path: 'addon',
-    component: AddonComponent, canActivate:[AdminguardGuard]
+    component: AddonComponent
+  },
+  {
+    path:'modal',
+    component:AddthemeButtonComponent
+  },
+  {
+    path:'modal2',
+    component:AddmenuButtonComponent
   }
 
 

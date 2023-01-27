@@ -18,7 +18,11 @@ import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
-import { ReviewsComponent } from './reviews/reviews.component';
+import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
+import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
+import { ViewthemeComponent } from './viewtheme/viewtheme.component';
+import { DeletethemeComponent } from './deletetheme/deletetheme.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { ReviewsComponent } from './reviews/reviews.component';
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
-     AddonComponent, ReviewsComponent
+     AddonComponent,
+     AddthemeButtonComponent,
+     AddmenuButtonComponent,
+     ViewthemeComponent,
+     DeletethemeComponent
   ],
   imports: [
     BrowserModule,
