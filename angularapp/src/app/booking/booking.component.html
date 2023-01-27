@@ -9,33 +9,42 @@
                 <div class="col-md-4">  
                     <div class="col-md-2"></div>
                     <div class="my-3">
+                    <span [ngClass]="'error'" *ngIf="eventName && eventName.invalid && eventName.touched">Invalid Event Name</span>
                     <input type="text" class="form-control" name="eventName" id="eventName" placeholder="Event Name" formControlName="eventName">
                     </div>
                     <div>
+                        <span [ngClass]="'error'" *ngIf="applicantName & applicantName.invalid && applicantName.touched">Invalid Applicant Name</span>
                         <input type="text" class="form-control" name="applicantName" id="applicantName" placeholder="Applicant Name" formControlName="applicantName">
                     </div>
                     <div class="my-3">
-                            <input type="text" class="form-control" name="applicantAddress" id="applicantAddress" placeholder="Applicant Address" formControlName="applicantAddress">
+                        <span [ngClass]="'error'" *ngIf="applicantAddress && applicantAddress.invalid && applicantAddress.touched">Invalid Applicant Address</span>
+                        <input type="text" class="form-control" name="applicantAddress" id="applicantAddress" placeholder="Applicant Address" formControlName="applicantAddress">
                     </div>
                     <div>
-                            <input type="tel" class="form-control" name="applicantMobileNo" id="applicantMobileNo" placeholder="Mobile No" formControlName="applicantMobileNo">
+                        <span [ngClass]="'error'" *ngIf="applicantMobileNo && applicantMobileNo.invalid && applicantMobileNo.touched">Invalid Applicant Mobile</span>
+                        <input type="tel" class="form-control" name="applicantMobileNo" id="applicantMobileNo" placeholder="Mobile No" formControlName="applicantMobileNo">
                     </div>
                     <div class="my-3">
+                        <span [ngClass]="'error'" *ngIf="applicantEmailId && applicantEmailId.invalid && applicantEmailId.touched">Invalid Applicant Email</span>
                         <input type="email" class="form-control" name="applicantEmailId" id="applicantEmailId" placeholder="Email" formControlName="applicantEmailId">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="my-3">
+                        <span [ngClass]="'error'" *ngIf="eventAddress && eventAddress.invalid && eventAddress.touched">Invalid Event Address</span>
                         <input type="text" class="form-control" name="eventAddress" id="eventAddress" placeholder="Event Address" formControlName="eventAddress">
                     </div>
                     <div>
-                            <input type="date" class="form-control" name="eventDate" id="eventDate" placeholder="Event Date" formControlName="eventDate">
+                        <span [ngClass]="'error'" *ngIf="eventDate && eventDate.invalid && eventDate.touched">Invalid Event Date</span>
+                        <input type="date" class="form-control" name="eventDate" id="eventDate" placeholder="Event Date" formControlName="eventDate">
                     </div>
                     <div class="my-3">
-                            <input type="time" class="form-control" name="eventTime" id="eventTime" placeholder="Event Time" formControlName="eventTime">
+                        <span [ngClass]="'error'" *ngIf="eventTime && eventTime.invalid && eventTime.touched">Invalid Event Time</span>
+                        <input type="time" class="form-control" name="eventTime" id="eventTime" placeholder="Event Time" formControlName="eventTime">
                     </div>
                     <div>
-                            <input type="number" class="form-control" name="noOfPeople" id="noOfPeople" placeholder="Number of people" formConntrolName="noOfPeople">
+                        <span [ngClass]="'error'" *ngIf="noOfPeople && noOfPeoples.invalid && noOfPeople.touched">Invalid No Of People</span>
+                        <input type="number" class="form-control" name="noOfPeople" id="noOfPeople" placeholder="Number of people" formConntrolName="noOfPeople">
                     </div>
                 </div>
                 <div class="col-md-2"></div>
@@ -44,7 +53,7 @@
                 <div class="col-4"></div>
                 <div class="col-4"></div>
                 <div class="col-4">
-                    <button class="btn btn-primary" (click)="nextPage()" id="nextPageButton">Next Page</button>
+                    <button [disabled]="bookingForm.invalid" class="btn btn-primary" (click)="nextPage()" id="nextPageButton">Next Page</button>
                 </div>
             </div>
         </div>
@@ -60,7 +69,7 @@
                     <div class="my-3">
                         Food Type
                         <select name="selectFoodCategory" class="form-control" formControlName="selectCategory" id="selectFoodCategory">
-                            <optgroup>
+                            <optgroup *ngFor="">
                                 <option value=""></option>
                             </optgroup>
                         </select>

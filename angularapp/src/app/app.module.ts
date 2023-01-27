@@ -22,19 +22,20 @@ import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.compo
 import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 import { DeletethemeComponent } from './deletetheme/deletetheme.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, SignupComponent, LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
-    AdminComponent, HomepageComponent, ViewbookingComponent, 
-    BookingComponent, AddthemeComponent, AddmenuComponent,
+     AdminComponent, HomepageComponent, ViewbookingComponent, 
+     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
      AddthemeButtonComponent,
      AddmenuButtonComponent,
      ViewthemeComponent,
-     DeletethemeComponent
+     DeletethemeComponent, ReviewsComponent
   ],
   imports: [
     BrowserModule,
