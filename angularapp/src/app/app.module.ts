@@ -19,6 +19,7 @@ import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { AddonComponent } from './addon/addon.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule, ReactiveFormsModule, RouterModule, HttpClientModule
+    NgbModule, ReactiveFormsModule, RouterModule, HttpClientModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
