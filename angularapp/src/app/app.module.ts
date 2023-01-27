@@ -36,7 +36,7 @@ import {MatToolbarModule} from '@angular/material/toolbar'
     AdminComponent, HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
-     DeleteMenuComponent,
+     
 
      
   ],
