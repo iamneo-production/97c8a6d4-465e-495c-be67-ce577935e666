@@ -36,7 +36,7 @@
                     <div class="col-md-4"> 
                         <!-- menu -->
                         <div class="example-container">
-                                <h2>MENU-LIST</h2>
+                                <h2 class="head-title">MENU-LIST <span *ngIf="menus.length > 0">-{{menus.length}</span> </h2>
                             
                                 <div cdkDropList [cdkDropListData]="menus" class="example-list" (cdkDropListDropped)="drop($event)">
                                   <div class="example-box" *ngFor="let item of menus " cdkDrag>{{item.description}}</div>
@@ -50,7 +50,7 @@
                     <div class="col-md-4"> 
                         <!-- Inprogress -->
                             <div class="example-container">
-                                    <h2>MENU-INPROGRESS</h2>
+                                    <h2 class="head-title">MENU-INPROGRESS <span *ngIf="inprogress.length > 0 ">-{{menus.length}</span> </h2>
                                 
                                     <div cdkDropList [cdkDropListData]="inprogress" class="example-list" (cdkDropListDropped)="drop($event)">
                                       <div class="example-box" *ngFor="let item of inprogress" cdkDrag>{{item.description}}</div>
@@ -62,10 +62,14 @@
                     <div class="col-md-4"> 
                         <!-- done -->
                         <div class="example-container">
-                                <h2>MENU-COMPLETED</h2>
+                                <h2 class="head-title">MENU-COMPLETED <span *ngIf="done.length > 0">-{{menus.length}</span></h2>
                             
                                 <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
                                   <div class="example-box" *ngFor="let item of done" cdkDrag>{{item.description}}</div>
+                                  <div class="box">
+                                    <button mat-icon-button color="warn" (click)="daleteMenu()"><mat-icon >chech_circle</mat-icon></button>
+                                    
+                                </div>
                                 </div>
                               </div>
                     </div>

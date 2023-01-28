@@ -60,3 +60,13 @@
       grid-auto-flow: column;
       grid-column-gap: 20px ;
   }
+  .head-title{
+    margin: 0;
+    padding: 0;
+    background-color: #777272;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  span{
+    font-weight: 600;
+  }
