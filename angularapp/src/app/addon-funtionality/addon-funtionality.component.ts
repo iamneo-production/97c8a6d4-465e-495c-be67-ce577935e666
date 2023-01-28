@@ -5,7 +5,7 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './addon-funtionality.component.html',
   styleUrls: ['./addon-funtionality.component.css']
 })
-export class AddonFuntionalityComponent implements OnInit {
+export class AddonFuntionalityComponent  {
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
 		// customize default values of modals used by this component tree
 		config.backdrop = 'static';
