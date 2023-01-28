@@ -29,7 +29,7 @@ import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -43,8 +43,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
      AddonComponent,
      ViewreviewsComponent,
      EditreviewsComponent,
-     DeletereviewsComponent
-     AddthemeButtonComponent,
+     DeletereviewsComponent,
+    AddthemeButtonComponent,
      AddmenuButtonComponent,HomepageComponent,
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
@@ -57,7 +57,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule, ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
-    BrowserAnimationsModule
+   
   ],
   
   providers: [],
