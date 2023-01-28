@@ -2,7 +2,7 @@
 <h6 id="fh6">Your review will help us to improve our web hosting and customer services.</h6>
 
 
-<form id="feedback" [formGroup] = "reviewsForm" (ngSubmit)= "userReview(reviewsForm.value)"ng>
+<form id="feedback" [formGroup] = "reviewsForm" (ngSubmit)= "userReview(reviewsForm.value)">
   <div class="pinfo">Your personal info</div>
   <label>Full name</label><br>
   
@@ -22,7 +22,7 @@
       </div>
 
   <div class="pinfo">Rate our overall services.</div>
-      <div class="form-group">
+  <div class="form-group">
       <!-- <ngb-rating [(rate)]="ratings"></ngb-rating>
       <pre>Ratings: <b>{{ratings}}</b></pre> -->
   </div>

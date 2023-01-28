@@ -2,9 +2,10 @@
         <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Mobile Number</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                   </tr>
@@ -14,9 +15,11 @@
                                 <td>{{user.id}}</td>
                                 <td>{{user.email}}</td>
                                 <td>{{user.username}}</td>
-                                <td><button class="btn btn-primary" (click)="edit(user)">Edit</button></td>
+                                <td>{{user.mobileNumber}}</td>
+                                <app-edit-user [data]="user"></app-edit-user>
                                 <td><app-delete-user [data]="user"></app-delete-user></td>
                         </tr>
                 </tbody>
               </table>
+              
 

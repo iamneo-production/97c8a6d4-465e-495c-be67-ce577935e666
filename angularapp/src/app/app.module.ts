@@ -25,20 +25,22 @@ import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { EditUserComponent } from './auth/edit-user/edit-user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, SignupComponent,LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
-    AdminComponent, ViewbookingComponent, 
+    AdminComponent, ViewbookingComponent, EditUserComponent,
     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
      AddthemeButtonComponent,
      AddmenuButtonComponent,HomepageComponent,
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
-     DeletemenuComponent
+     DeletemenuComponent, ReviewsComponent
   ],
   imports: [
     BrowserModule,

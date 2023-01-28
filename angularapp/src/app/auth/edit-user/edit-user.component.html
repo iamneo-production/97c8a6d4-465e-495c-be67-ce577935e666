@@ -1,20 +1,31 @@
-<div *ngFor="let user of data">
-    <form [formGroup]="editForm" (ngSubmit)="editUser(editForm.value)">
-        <div>
-            <input disabled type="text" name="id" id="id" value="{{user.id}}" formControlName="id">
-        </div>
-        <div>
-            <input type="text" name="username" id="username" value="{{user.username}}" formControlName="username">
-        </div>
-        <div>
-            <input type="text" name="email" id="email" value="{{user.email}}" formControlName="email">
-        </div>
-        <div>
-            <input type="text" name="username" id="username" value="{{user.password}}" fromControlName="password">
-        </div>
-        <button class="btn btn-primary">Edit</button>
-    </form>
-</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Edit User Here</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
+	</div>
+	<div class="modal-body">
+            <span style="color:crimson" class="my-2">User id</span><br>
+            <input disabled type="text" class="form-control mb-3" value="{{data.id}}" #id>
+            <span style="color: aqua;">Email</span><br>
+            <input type="text" class="form-control my-3" value="{{data.email}}" #email>
+            <span style="color: aqua;">Username</span><br>
+            <input type="text" class="form-control" value="{{data.username}}" #username>
+            <span style="color: aqua;" class="my-2">Mobile Number</span><br>
+            <input type="text" class="form-control" value="{{data.mobileNumber}}" #mobileNumber> 
+            <span style="color: aqua;" class="my-2">Password</span><br> 
+            <input disabled type="text" class="form-control my-3" value="{{data.password}}" #password>  
+	</div>
+	<div class="modal-footer">
+		<button type="submit" class="btn btn-danger" (click)="update(id.value,email.value,username.value,mobile.value,password.value)">Update User</button>
+	</div>
+</ng-template>
+<button class="btn btn-primary mx-3 my-2" (click)="open(content)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+  </svg></button>
+
+
+
 
  
 

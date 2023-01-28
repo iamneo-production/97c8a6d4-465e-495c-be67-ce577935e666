@@ -1,17 +1,13 @@
-
 		<div class="form-center">
             <form [formGroup]="themeform" (ngSubmit)="getThemeForm(themeform.value)">
-            
-                  
-                <input type="text" id="themeName" class="form-control" formControlName="themeName" name="themeName" placeholder="Enter theme name" required>
+                <input type="text" id="themeName" class="form-control" formControlName="themeName" name="themeName" placeholder="Enter theme name">
                 <br>
                 <span [ngclass]="'error'" id="themeNameError" *ngIf="themeName && themeName.invalid && themeName.touched" style="color: red; background-color: aliceblue;">Invalid Field</span>
 
                 <br>
                 <input type="text" id="imageUrl" class="form-control" formControlName="imageUrl" name="imageUrl" placeholder="Enter the image Url" required>
                 <br> 
-                 <span [ngclass]="'error'" id="imageUrlError" class="form-control"  *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched" style="color: red; background-color: aliceblue;">Invalid Field</span>
-
+                 <span [ngclass]="'error'" id="imageUrlError" class="form-control"  *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched" style="color: red;">Invalid Field</span>
                  <br>
                 <input type="text" id="photographerDetails" class="form-control" formControlName="photographerDetails" name="photographerDetails" placeholder="Enter Phographer details"  required>
                  <br>

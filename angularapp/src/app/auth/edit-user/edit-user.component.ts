@@ -1,6 +1,6 @@
 import { Component, Input} from '@angular/core';
-import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
@@ -13,38 +13,26 @@ export class EditUserComponent{
 
 @Input() data:any;
 
-  constructor(private userService:UserServiceService, private router: Router){}
+user:any;
 
-  editForm = new FormGroup({
-    id: new FormControl(''),
-    username: new FormControl('',[Validators.pattern('[a-z A-Z]')]),
-    email: new FormControl('',[Validators.email]),
-    password: new FormControl('',[Validators.minLength(5),Validators.maxLength(15)])
-  });
+constructor(config: NgbModalConfig, private modalService: NgbModal, private userService:UserServiceService
+  , private router: Router) {
+  // customize default values of modals used by this component tree
+  config.backdrop = 'static';
+  config.keyboard = false;
+}
 
-  get id(){
-    return this.editForm.get('id');
-  }
-  get username(){
-    return this.editForm.get('username');
-  }
-  get email(){
-    return this.editForm.get('email');
-  }
-  get password(){
-    return this.editForm.get('password');
-  }
+open(content:any) {
+  this.modalService.open(content);
+}
 
-  editUser(user:any){
-    var confirm = window.confirm("Confirm If you want to update");
-    if(confirm){
-      this.userService.edit(user).subscribe((users:any)=>{
-          this.router.navigate(['displayuser']);
-          location.reload();
-      });
-    }
-   
-  }
+update(theId:any,theEmail:any,theUsername:any,mobile:any,thePassword:any){
+    var user = {id:theId,email:theEmail,username:theUsername,mobileNumber:mobile,password:thePassword}
+    this.userService.edit(user).subscribe((result:any)=>{
+      console.log("updated");
+      this.router.navigate(['displayuser']);
+    });
+}
 
 }
 
