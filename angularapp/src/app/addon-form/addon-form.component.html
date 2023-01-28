@@ -1,17 +1,19 @@
-<form [formGroup]="addonForm" (ngSubmit)=" getAddonSata(addonForm.value)">
-    <input type="text" id="AddOnsName" placeholder="Enter the Add ons name" formControlName="AddOnsName" required><br>
-    
-        <br>
-        <br>
-        <input type="number" id="AddOnsPrice" placeholder="Enter the Add ons Price" formControlName="AddOnsPrice" required><br>
-       
-        <br>
-        <br>
-        <input type="text" id="AddOnsImageurl" placeholder="Enter the Image Url" formControlName="AddOnsImageurl" required><br>
+<div>
+    <form [formGroup]="addonForm" (ngSubmit)=" getAddonSata(addonForm.value)">
+        <input type="text" id="AddOnsName" placeholder="Enter the Add ons name" formControlName="AddOnsName" required><br>
         
-        <br>
-        <br>
-        <input type="submit" value="Submit">
-        <br>
-        <br>
-</form>
+            <br>
+            <br>
+            <input type="number" id="AddOnsPrice" placeholder="Enter the Add ons Price" formControlName="AddOnsPrice" required><br>
+           
+            <br>
+            <br>
+            <input type="text" id="AddOnsImageurl" placeholder="Enter the Image Url" formControlName="AddOnsImageurl" required><br>
+            
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+            <br>
+    </form>
+</div>
