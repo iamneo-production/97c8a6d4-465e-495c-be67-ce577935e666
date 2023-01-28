@@ -25,7 +25,7 @@ import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DeleteAddOnsComponent } from './delete-add-ons/delete-add-ons.component';
+
 
 
 @NgModule({
@@ -40,7 +40,7 @@ import { DeleteAddOnsComponent } from './delete-add-ons/delete-add-ons.component
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
      DeletemenuComponent,
-     DeleteAddOnsComponent,
+     
      
   ],
   imports: [
