@@ -1,0 +1,6 @@
+<form [formFroup]="addonForm" (ngSubmit)=" getAddonSata(addonForm.value)">
+    <input type="text" id="AddOnsName" placeholder="Enter the Add ons name" formControlName="AddOnsName"><br>
+        <input type="number" id="AddOnsPrice" placeholder="Enter the Add ons Price" formControlName="AddOnsPrice"><br>
+        <input type="text" id="AddOnsImageurl" placeholder="Enter the Image Url" formControlName="AddOnsImageurl"><br>
+        <input type="submit" value="Submit">
+</form>

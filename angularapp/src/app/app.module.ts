@@ -26,6 +26,7 @@ import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddonbuttonComponent } from './addonbutton/addonbutton.component';
+import { AddonFormComponent } from './addon-form/addon-form.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { AddonbuttonComponent } from './addonbutton/addonbutton.component';
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
      DeletemenuComponent,
-     AddonbuttonComponent
+     AddonbuttonComponent,
+     AddonFormComponent
   ],
   imports: [
     BrowserModule,

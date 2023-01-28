@@ -4,12 +4,10 @@
 		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
 	</div>
 	<div class="modal-body">
-		<input type="text" id="AddOnsName" placeholder="Enter the Add ons name" #name><br>
-        <input type="number" id="AddOnsPrice" placeholder="Enter the Add ons Price" #price><br>
-        <input type="text" id="AddOnsImageurl" placeholder="Enter the Image Url" #image><br>
+		<app-addon-form></app-addon-form>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="add(name.value,price.value,image.value)">Submit</button>
+		<button type="button" class="btn btn-outline-dark" (click)="add(name.value,price.value,image.value)">Close Form</button>
 	</div>
 </ng-template>
 
