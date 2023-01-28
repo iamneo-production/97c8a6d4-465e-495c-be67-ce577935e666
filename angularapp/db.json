@@ -47,16 +47,25 @@
     }
   ],
   "events": [],
-  "menus": [
-    
-  ],
+  "menus": [],
   "addons": [
     {
-      "id":1,
-      "AddOnsName":"dj",
-      "AddOnsPrice":7000,
-      "AddOnsImageUrl":"https://fiverr-res.cloudinary.com/image/upload/w_880/f_auto,q_auto/v1/attachments/generic_asset/asset/18dab679d0ea68cf6c6430d77c213230-1664872016381/shutterstock_415922566.jpg"
-  }
-   
+      "id": 1,
+      "AddOnsName": "dj",
+      "AddOnsPrice": 7000,
+      "AddOnsImageUrl": "https://fiverr-res.cloudinary.com/image/upload/w_880/f_auto,q_auto/v1/attachments/generic_asset/asset/18dab679d0ea68cf6c6430d77c213230-1664872016381/shutterstock_415922566.jpg"
+    },
+    {
+      "AddOnsName": "3D Games",
+      "AddOnsPrice": 7000,
+      "AddOnsImageUrl": "",
+      "id": 2
+    },
+    {
+      "AddOnsName": null,
+      "AddOnsPrice": null,
+      "AddOnsImageUrl": null,
+      "id": 3
+    }
   ]
 }

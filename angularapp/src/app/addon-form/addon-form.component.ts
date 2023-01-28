@@ -30,7 +30,8 @@ AddOnsImageUrl:new FormControl('',[Validators.required])
     this.AddonService.addAddon(data).subscribe((result)=>
     {
       console.log(result);
-      this.addonForm.reset()
+      this.addonForm.reset();
+      
     });
   }
 
