@@ -38,10 +38,7 @@
     "@angular/compiler-cli": "~10.1.3",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
-<<<<<<< HEAD
-=======
     "@types/jest": "^29.4.0",
->>>>>>> 011da31697ff5f28df9072b92c7dd4f8df10d75e
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
