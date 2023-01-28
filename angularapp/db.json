@@ -66,6 +66,12 @@
       "AddOnsPrice": null,
       "AddOnsImageUrl": null,
       "id": 3
+    },
+    {
+      "AddOnsName": "Adventure",
+      "AddOnsPrice": 5000,
+      "AddOnsImageUrl": "",
+      "id": 4
     }
   ]
 }
