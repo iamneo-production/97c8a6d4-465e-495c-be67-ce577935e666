@@ -12,9 +12,6 @@
   <div class="col-md-3 text-end">
     <a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()">Logout</a>
   </div>
-  <div *ngIf="!logged" class="col-md-3 text-end">
-    <a class="btn btn-outline-primary me-2" (click)= "login()">Login</a>
-  </div>
 </header>
 <router-outlet></router-outlet>
 
@@ -25,15 +22,12 @@
 
   <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
     <li><a routerLink="displayuser" class="nav-link px-2 link-secondary">Users</a></li>
-    <li><a routerLink="addtheme" class="nav-link px-2 link-dark">Theme</a></li>
-    <li><a routerLink="addmenu" class="nav-link px-2 link-dark">Food Menu</a></li>
+    <li><a routerLink="modal" class="nav-link px-2 link-dark">Theme</a></li>
+    <li><a routerLink="modal2" class="nav-link px-2 link-dark">Food Menu</a></li>
     <li><a routerLink="addon" class="nav-link px-2 link-dark">Add Addons</a></li>
   </ul>
   <div class="col-md-3 text-end">
     <a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()">Logout</a>
-  </div>
-  <div *ngIf="!logged" class="col-md-3 text-end">
-    <a class="btn btn-outline-primary me-2" (click)= "login()">Login</a>
   </div>
 </header>
 <router-outlet></router-outlet>

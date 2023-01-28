@@ -22,27 +22,31 @@ import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.compo
 import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 import { DeletethemeComponent } from './deletetheme/deletetheme.component';
-import { ReviewsComponent } from './reviews/reviews.component';
+import { DeletemenuComponent } from './deletemenu/deletemenu.component';
+import { ViewmenuComponent } from './viewmenu/viewmenu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
-    AppComponent, SignupComponent, LoginComponent, MainComponent,
+    AppComponent, SignupComponent,LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
-     AdminComponent, HomepageComponent, ViewbookingComponent, 
-     BookingComponent, AddthemeComponent, AddmenuComponent,
+    AdminComponent, ViewbookingComponent, 
+    BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
      AddthemeButtonComponent,
-     AddmenuButtonComponent,
-     ViewthemeComponent,
-     DeletethemeComponent, ReviewsComponent
+     AddmenuButtonComponent,HomepageComponent,
+     ViewthemeComponent,ViewmenuComponent,
+     DeletethemeComponent,
+     DeletemenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule, ReactiveFormsModule,
     RouterModule,
-    HttpClientModule, NgbRatingModule 
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   
   providers: [],

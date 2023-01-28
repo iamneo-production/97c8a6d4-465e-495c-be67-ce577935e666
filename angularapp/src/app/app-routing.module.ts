@@ -31,7 +31,7 @@ const routes: Routes = [
   ,
   {
     path: '',
-    component:MainComponent
+    component:LoginComponent
   },
   {
     path: 'booking',
