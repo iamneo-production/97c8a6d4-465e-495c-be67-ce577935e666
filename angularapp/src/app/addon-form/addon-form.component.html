@@ -1,11 +1,14 @@
 <form [formGroup]="addonForm" (ngSubmit)=" getAddonSata(addonForm.value)">
-    <input type="text" id="AddOnsName" placeholder="Enter the Add ons name" formControlName="AddOnsName">
+    <input type="text" id="AddOnsName" placeholder="Enter the Add ons name" formControlName="AddOnsName"><br>
+    <span [ngClass]="'error'" *ngIf="AddOnsName && AddOnsName.invalid && AddOnsName.touched"><em>Invalid name</em></span>
         <br>
         <br>
-        <input type="number" id="AddOnsPrice" placeholder="Enter the Add ons Price" formControlName="AddOnsPrice">
+        <input type="number" id="AddOnsPrice" placeholder="Enter the Add ons Price" formControlName="AddOnsPrice"><br>
+        <span [ngClass]="'error'" *ngIf="AddOnsPrice && AddOnsPrice.invalid && AddOnsPrice.touched"><em>Invalid, Numerical value required</em></span>
         <br>
         <br>
-        <input type="text" id="AddOnsImageurl" placeholder="Enter the Image Url" formControlName="AddOnsImageurl">
+        <input type="text" id="AddOnsImageurl" placeholder="Enter the Image Url" formControlName="AddOnsImageurl"><br>
+        <span [ngClass]="'error'" *ngIf="AddOnsImageurl && AddOnsImageurl.invalid && AddOnsImageurl.touched"><em>Invalid Url</em></span>
         <br>
         <br>
         <input type="submit" value="Submit">
