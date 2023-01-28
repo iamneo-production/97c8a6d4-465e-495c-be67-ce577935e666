@@ -1,30 +1,17 @@
-<div>
-	<ng-template #content let-c="close" let-d="dismiss">
-		<div class="modal-header">
-			<h4 class="modal-title" id="modal-basic-title">AddOn Form</h4>
-			<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
-		</div>
-		<div class="modal-body">
-			<app-addon-form></app-addon-form>
-		</div>
-		<div class="modal-footer">
-			<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Close Form</button>
-		</div>
-	</ng-template>	
-</div>
-<div>
-
-	<div class="card" style="width: 18rem;">
-		<img class="card-img-top" src="..." alt="Card image cap">
-		<div class="card-body">
-		  <h5 class="card-title">Card title</h5>
-		  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		  <a href="#" class="btn btn-primary">Go somewhere</a>
-		</div>
-	  </div>
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
+	</div>
+	<div class="modal-body">
+		<app-addon-form></app-addon-form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+	</div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">AddOn</button>
 
 
 
-
-</div>
 
