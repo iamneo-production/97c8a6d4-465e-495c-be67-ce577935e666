@@ -26,7 +26,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar'
+import {MatToolbarModule} from '@angular/material/toolbar';
+
+
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import {MatToolbarModule} from '@angular/material/toolbar'
     AdminComponent, HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
+     
+     
      
 
      
