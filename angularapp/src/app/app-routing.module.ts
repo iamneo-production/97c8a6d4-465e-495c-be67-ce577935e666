@@ -71,15 +71,6 @@ const routes: Routes = [
     path: 'addon',
     component: AddonComponent
   },
-<<<<<<< HEAD
-  // {
-  //   path:'',
-  //   component:DeleteMenuComponent
-  // }
-  ];
-
-
-=======
   {
     path:'modal',
     component:AddthemeButtonComponent
@@ -91,7 +82,6 @@ const routes: Routes = [
 
 
 ];
->>>>>>> 011da31697ff5f28df9072b92c7dd4f8df10d75e
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
