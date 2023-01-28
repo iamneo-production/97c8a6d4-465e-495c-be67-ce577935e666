@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
-import { AddonFormComponent } from './addon-form/addon-form.component';
+
+import { AddonFuntionalityComponent } from './addon-funtionality/addon-funtionality.component';
 import { AddonComponent } from './addon/addon.component';
-import { AddonbuttonComponent } from './addonbutton/addonbutton.component';
+
 import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AdminComponent } from './admin/admin.component';
@@ -83,7 +84,7 @@ const routes: Routes = [
   },
   {
     path:'modal3',
-    component:AddonbuttonComponent
+    component:AddonFuntionalityComponent
   }
 
 
