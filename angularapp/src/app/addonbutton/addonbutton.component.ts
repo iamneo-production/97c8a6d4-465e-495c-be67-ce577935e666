@@ -16,4 +16,8 @@ export class AddonbuttonComponent{
    this.modalService.open(content);
  }
 
+add(theName,theprice,theimage){
+    var addon= {name:theName,price:theprice,image:theimage};
+}
+
 }
