@@ -40,7 +40,7 @@ import { DeleteThemeComponent } from './delete-theme/delete-theme.component';
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
      DeletemenuComponent,
-     DeleteThemeComponent
+     
   ],
   imports: [
     BrowserModule,
