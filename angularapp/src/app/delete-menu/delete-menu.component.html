@@ -1,0 +1,76 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div  style="background: purple; height: 93vh;" class="col-md-3">
+           <div>
+               <mat-card class=" mt-3">
+                   <form [formGroup]="menuForm">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Outline form field</mat-label>
+                        <input formControlName="item" matInput placeholder="Enter Menu">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Add Menu</mat-hint>
+                      </mat-form-field>
+                      <button (click)="addMenu()" mat-raised-button [disabled]="menuForm.invalid" color="primary">ADD</button> 
+                   </form>
+               </mat-card>
+           </div> 
+        </div>
+        <div class="col-md-9">
+            <div  cdkDropListGroup>
+                <div class="row">
+                    <div class="col-md-4"> 
+                        <!-- menu -->
+                        <div class="example-container">
+                                <h2>MENU-LIST</h2>
+                            
+                                <div cdkDropList [cdkDropListData]="menus" class="example-list" (cdkDropListDropped)="drop($event)">
+                                  <div class="example-box" *ngFor="let item of menus " cdkDrag>{{item.description}}</div>
+                                    <div class="box">
+                                        <button mat-icon-button color="warn" (click)="daleteMenu()"><mat-icon >delete</mat-icon></button>
+                                        
+                                    </div>
+                                </div>
+                              </div>
+                    </div>
+                    <div class="col-md-4"> 
+                        <!-- Inprogress -->
+                            <div class="example-container">
+                                    <h2>MENU-INPROGRESS</h2>
+                                
+                                    <div cdkDropList [cdkDropListData]="inprogress" class="example-list" (cdkDropListDropped)="drop($event)">
+                                      <div class="example-box" *ngFor="let item of inprogress" cdkDrag>{{item.description}}</div>
+                                      <button mat-icon-button color="primary" (click)="editMenu()"><mat-icon >edit</mat-icon></button>
+                                    </div>
+                                  </div>
+                        
+                    </div>
+                    <div class="col-md-4"> 
+                        <!-- done -->
+                        <div class="example-container">
+                                <h2>MENU-COMPLETED</h2>
+                            
+                                <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
+                                  <div class="example-box" *ngFor="let item of done" cdkDrag>{{item.description}}</div>
+                                </div>
+                              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

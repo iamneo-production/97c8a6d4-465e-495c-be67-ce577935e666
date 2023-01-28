@@ -27,6 +27,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { DeleteMenuComponent } from './delete-menu/delete-menu.component';
+
 
 
 
@@ -38,6 +40,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AdminComponent, HomepageComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
      AddonComponent,
+     DeleteMenuComponent,
+     
      
      
      
