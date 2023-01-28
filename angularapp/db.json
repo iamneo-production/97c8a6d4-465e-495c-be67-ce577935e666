@@ -47,6 +47,16 @@
     }
   ],
   "events": [],
-  "menus": [],
-  "addons": []
+  "menus": [
+    
+  ],
+  "addons": [
+    {
+      "id":1,
+      "name":"dj",
+      "price":7000,
+      "image":"https://fiverr-res.cloudinary.com/image/upload/w_880/f_auto,q_auto/v1/attachments/generic_asset/asset/18dab679d0ea68cf6c6430d77c213230-1664872016381/shutterstock_415922566.jpg"
+  }
+   
+  ]
 }
