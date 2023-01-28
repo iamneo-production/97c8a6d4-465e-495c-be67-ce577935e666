@@ -15,4 +15,10 @@ export class AddonServiceService {
   addAddon(data:any){
     return this.http.post(this.url,data);
   }
+  editAddon(data:any){
+    return this.http.put(this.url+"/"+data.id,data);
+  }
+  deleteAddon(data:any){
+    return this.http.delete(this.url,data);
+  }
 }

@@ -16,9 +16,4 @@ export class AddonbuttonComponent{
    this.modalService.open(content);
  }
 
-
-   
-
-
-
 }
