@@ -25,7 +25,7 @@ import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddonbuttonComponent } from './addonbutton/addonbutton.component';
+
 import { AddonFormComponent } from './addon-form/addon-form.component';
 import { AddonFuntionalityComponent } from './addon-funtionality/addon-funtionality.component';
 
@@ -42,7 +42,7 @@ import { AddonFuntionalityComponent } from './addon-funtionality/addon-funtional
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
      DeletemenuComponent,
-     AddonbuttonComponent,
+     
      AddonFormComponent,
      AddonFuntionalityComponent
   ],
