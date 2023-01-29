@@ -25,7 +25,7 @@ import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddMenuComponent } from './add-menu/add-menu.component';
+
 
 
 
@@ -41,7 +41,7 @@ import { AddMenuComponent } from './add-menu/add-menu.component';
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
      DeletemenuComponent,
-     AddMenuComponent,
+  
      
      
   ],
