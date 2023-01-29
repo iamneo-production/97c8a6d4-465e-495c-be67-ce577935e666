@@ -58,10 +58,10 @@ const routes: Routes = [
     path:'about',
     component: AboutComponent, canActivate:[CustomerguardGuard]
   },
-  // {
-  //   path:'contact',
-  //   component: ContactComponent, canActivate:[CustomerguardGuard]
-  // },
+  {
+    path:'contact',
+    component: ContactComponent, canActivate:[CustomerguardGuard]
+  },
   {
     path:'displayuser',
     component: DisplayUserComponent
