@@ -9,8 +9,8 @@ export class DeletethemeComponent implements OnInit {
  @Input() data:any;
   constructor(private themeService:ThemeserviceService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+  
   delete(){
     var confirm = window.confirm("Confirm if you want to delete theme?");
     if(confirm){
