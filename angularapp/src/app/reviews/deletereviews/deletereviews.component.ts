@@ -13,7 +13,7 @@ export class DeletereviewsComponent implements OnInit {
 
   ngOnInit(): void { }
   
-  deleteviews(){
+  deletevi(){
     var confirm = window.confirm("Confirm if you want to delete theme?");
     if(confirm){
       this.themeService.deleteTheme(this.data).subscribe((theme:any)=>
