@@ -1,3 +1,5 @@
+
+
 <header *ngIf="!admin" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
   <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
     <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
@@ -8,6 +10,9 @@
     <li><a routerLink="booking" class="nav-link px-2 link-dark">Book Event</a></li>
     <li><a routerLink="viewbooking" class="nav-link px-2 link-dark">View Booked Events</a></li>
     <li><a routerLink="reviews" class="nav-link px-2 link-dark">Reviews</a></li>
+    <li><a routerLink="about" class="nav-link px-2 link-dark">About-Us</a></li>
+    <!-- <li><a routerLink="contact" class="nav-link px-2 link-dark">Contact-Us</a></li> -->
+
 
   </ul>
   <div class="col-md-3 text-end">
@@ -15,6 +20,8 @@
   </div>
 </header>
 <router-outlet></router-outlet>
+
+<app-timer></app-timer>
 
 <header *ngIf="admin" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
   <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -33,6 +40,8 @@
   </div>
 </header>
 <router-outlet></router-outlet>
+
+
 
 
 

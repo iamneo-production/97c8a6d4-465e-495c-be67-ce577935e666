@@ -29,6 +29,9 @@ import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
+import { AboutComponent } from './about/about.component';
+import { TimerComponent } from './timer/timer.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -48,7 +51,10 @@ import { ViewmenuComponent } from './viewmenu/viewmenu.component';
      AddmenuButtonComponent,HomepageComponent,
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
-     DeletemenuComponent
+     DeletemenuComponent,
+     AboutComponent,
+     TimerComponent,
+     ContactComponent
   ],
   imports: [
     BrowserModule,
