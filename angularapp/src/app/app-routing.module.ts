@@ -13,7 +13,6 @@ import { EditUserComponent } from './auth/edit-user/edit-user.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { BookingComponent } from './booking/booking.component';
-import { ContactComponent } from './contact/contact.component';
 import { CustomerguardGuard } from './customerguard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MainComponent } from './main/main.component';
@@ -57,10 +56,6 @@ const routes: Routes = [
   {
     path:'about',
     component: AboutComponent, canActivate:[CustomerguardGuard]
-  },
-  {
-    path:'contact',
-    component: ContactComponent, canActivate:[CustomerguardGuard]
   },
   {
     path:'displayuser',

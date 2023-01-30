@@ -31,7 +31,6 @@ import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { AboutComponent } from './about/about.component';
 import { TimerComponent } from './timer/timer.component';
-import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -54,7 +53,7 @@ import { ContactComponent } from './contact/contact.component';
      DeletemenuComponent,
      AboutComponent,
      TimerComponent,
-     ContactComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -71,3 +70,4 @@ import { ContactComponent } from './contact/contact.component';
 })
 export class AppModule { }
 
+ 
