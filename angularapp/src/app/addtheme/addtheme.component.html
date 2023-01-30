@@ -1,47 +1,31 @@
-
-		<div class="form-center">
-            <form [formGroup]="themeform" (ngSubmit)="getThemeForm(themeform.value)">
+<ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Add Theme</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
+      </div>
+      <div class="modal-body">
+            <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" required>
+      <br>
+      <input type="text" id="imageUrl" class="form-control" #imageUrl name="imageUrl" placeholder="Enter the image Url" required>
+      <br> 
+     <input type="text" id="photographerDetails" class="form-control" #photographerDetails name="photographerDetails" placeholder="Enter Phographer details" required>
+     <br>
+    <input type="text" id="videographerDetails" class="form-control" #videographerDetails name="videographerDetails" placeholder="Enter videographer details">
+    <br>
+    <input type="text" id="returnGift" class="form-control" #returnGift name="returnGift" placeholder="Enter theme return Gift" required>
+     <br>
+    <input type="number" id="themeCost" class="form-control" #themeCost name="themeCost" placeholder="Enter theme cost" required>
+    <br>
+    <textarea id="themeDecription" class="form-control" #themeDescription name="themeDescription" placeholder="Enter theme description" required>
+       Enter Theme description....
+    </textarea>
+     <br>
+      <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="saveTheme(themeName.value,imageUrl.value,photographerDetails.value,videographerDetails.value,returnGift.value,themeCost.value,themeDescription.value)">Save</button>
+      </div>
+</div>
+</ng-template>     
+            <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Theme</button>
+            <hr>
+            <app-viewtheme></app-viewtheme>
             
-                  
-                <input type="text" id="themeName" class="form-control" formControlName="themeName" name="themeName" placeholder="Enter theme name" required>
-                <br>
-                <span [ngclass]="'error'" id="themeNameError" *ngIf="themeName && themeName.invalid && themeName.touched" style="color: red; background-color: aliceblue;">Invalid Field</span>
-
-                <br>
-                <input type="text" id="imageUrl" class="form-control" formControlName="imageUrl" name="imageUrl" placeholder="Enter the image Url" required>
-                <br> 
-                 <span [ngclass]="'error'" id="imageUrlError" class="form-control"  *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched" style="color: red; background-color: aliceblue;">Invalid Field</span>
-
-                 <br>
-                <input type="text" id="photographerDetails" class="form-control" formControlName="photographerDetails" name="photographerDetails" placeholder="Enter Phographer details"  required>
-                 <br>
-                 <span [ngclass]="'error'" id="photographerDetailsError" class="form-control"  *ngIf="photographerDetails && photographerDetails.invalid && photographerDetails.touched" style="color: red; background-color: aliceblue;">Invalid Field</span>
-
-                 <br>
-                <input type="text" id="videographerDetails" class="form-control" formControlName="videographerDetails" name="videographerDetails" placeholder="Enter videographer details">
-                <br>
-                <span [ngclass]="'error'"  id="videographerDetailsError" *ngIf="videographerDetails && videographerDetails.invalid && videographerDetails.touched">Invalid Field</span>
-
-                 <br>
-                <input type="text" id="returnGift" class="form-control" formControlName="returnGift" name="returnGift" placeholder="Enter theme return Gift" required>
-                 <br>
-                 <span [ngclass]="'error'" id="returnGiftError" *ngIf="returnGift && returnGift.invalid && returnGift.touched" style="color: red; background-color: aliceblue;">Invalid Field</span>
-
-                 <br>
-                <input type="text" id="themeCost" class="form-control" formControlName="themeCost" name="themeCost" placeholder="Enter theme cost" required>
-                <br>
-                 <span [ngclass]="'error'"  id="themeCostError" *ngIf="themeCost && themeCost.invalid && themeCost.touched" style="color: red; background-color: aliceblue;"></span>
-              
-                <br>
-                <textarea id="themeDecription" class="form-control" formControlName="themeDescription" name="themeDescription" placeholder="Enter theme description" required>
-                      Enter Theme description....
-                </textarea>
-                 <br>
-                 <span [ngclass]="'error'" id="themeDecriptionError" *ngIf="themeDescription && themeDescription.invalid && themeDescription.touched" style="color: red; background-color: aliceblue;"></span>
-                 <br>
-                <input type="submit" class="btn btn-primary" value="submit" id="addTheme">
-              </form>
-              
-        </div>
-                
-		

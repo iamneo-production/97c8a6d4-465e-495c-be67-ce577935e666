@@ -1,39 +1,47 @@
-<div *ngIf="next; then secondPage; else firstPage;"></div>
-
+<div *ngIf="!next;then firstPage; else secondPage;"></div>
 <ng-template #firstPage>
-    <form [formGroup]="bookingForm">
+    <form [formGroup]="bookingForm" (ngSubmit)="nextPage(bookingForm.value)">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">  
                     <div class="col-md-2"></div>
                     <div class="my-3">
+                      <span *ngIf="eventName && eventName.invalid && eventName.touched" style="color: red;">Invalid Event Name</span>
                     <input type="text" class="form-control" name="eventName" id="eventName" placeholder="Event Name" formControlName="eventName">
                     </div>
                     <div>
+                        <span *ngIf="applicantName && applicantName.invalid && applicantName.touched" style="color: red;" >Invalid Applicant Name</span>
                         <input type="text" class="form-control" name="applicantName" id="applicantName" placeholder="Applicant Name" formControlName="applicantName">
                     </div>
                     <div class="my-3">
-                            <input type="text" class="form-control" name="applicantAddress" id="applicantAddress" placeholder="Applicant Address" formControlName="applicantAddress">
+                        <span *ngIf="applicantAddress && applicantAddress.invalid && applicantAddress.touched" style="color: red;">Invalid Applicant Address</span>
+                        <input type="text" class="form-control" name="applicantAddress" id="applicantAddress" placeholder="Applicant Address" formControlName="applicantAddress">
                     </div>
                     <div>
-                            <input type="tel" class="form-control" name="applicantMobileNo" id="applicantMobileNo" placeholder="Mobile No" formControlName="applicantMobileNo">
+                        <span *ngIf="applicantMobileNo && applicantMobileNo.invalid && applicantMobileNo.touched" style="color: red;">Invalid Applicant Mobile</span>
+                        <input type="tel" class="form-control" name="applicantMobileNo" id="applicantMobileNo" placeholder="Mobile No" formControlName="applicantMobileNo">
                     </div>
                     <div class="my-3">
+                        <span *ngIf="applicantEmailId && applicantEmailId.invalid && applicantEmailId.touched" style="color: red;">Invalid Applicant Email</span>
                         <input type="email" class="form-control" name="applicantEmailId" id="applicantEmailId" placeholder="Email" formControlName="applicantEmailId">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="my-3">
+                        <span *ngIf="eventAddress && eventAddress.invalid && eventAddress.touched" style="color: red;">Invalid Event Address</span>
                         <input type="text" class="form-control" name="eventAddress" id="eventAddress" placeholder="Event Address" formControlName="eventAddress">
                     </div>
-                    <div>
-                            <input type="date" class="form-control" name="eventDate" id="eventDate" placeholder="Event Date" formControlName="eventDate">
+                    <div class="">
+                        <span *ngIf="eventDate && eventDate.invalid && eventDate.touched" style="color: red;">Invalid Event Date</span>
+                        <input type="date" class="form-control" name="eventDate" id="eventDate" placeholder="Event Date" formControlName="eventDate">
                     </div>
                     <div class="my-3">
-                            <input type="time" class="form-control" name="eventTime" id="eventTime" placeholder="Event Time" formControlName="eventTime">
+                        <span *ngIf="eventTime && eventTime.invalid && eventTime.touched" style="color: red;">Invalid Event Time</span>
+                        <input type="time" class="form-control" name="eventTime" id="eventTime" placeholder="Event Time" formControlName="eventTime">
                     </div>
                     <div>
-                            <input type="number" class="form-control" name="noOfPeople" id="noOfPeople" placeholder="Number of people" formConntrolName="noOfPeople">
+                        <span *ngIf="noOfPeople && noOfPeople.invalid && noOfPeople.touched" style="color: red;">Invalid No Of People</span>
+                        <input type="number" class="form-control" name="noOfPeople" id="noOfPeople" placeholder="Number of people" formConntrolName="noOfPeople">
                     </div>
                 </div>
                 <div class="col-md-2"></div>
@@ -42,25 +50,26 @@
                 <div class="col-4"></div>
                 <div class="col-4"></div>
                 <div class="col-4">
-                    <button class="btn btn-primary" (click)="nextPage()" id="nextPageButton">Next Page</button>
+                    <button type="submit" class="btn btn-primary" id="nextPageButton">Next Page</button>
                 </div>
             </div>
         </div>
     </form>
 </ng-template>
+    
 
 <ng-template #secondPage>
-    <form [formGroup]="bookingForm">
+    <form [formGroup]="bookingForm2" (ngSubmit)="bookEvent(bookingForm2.value,selectAddOnsCategory.value)">
         <div class="container">
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-4">
                     <div class="my-3">
                         Food Type
-                        <select name="selectFoodCategory" class="form-control" formControlName="selectCategory" id="selectFoodCategory">
-                            <optgroup>
-                                <option value=""></option>
-                            </optgroup>
+                        <select  name="selectFoodCategory" class="form-control" formControlName="selectCategory" id="selectFoodCategory">
+                          <optgroup *ngFor="let item of items">
+                            <option value="{{item.itemCategory}}">{{item.itemCategory}}</option>
+                          </optgroup>  
                         </select>
                     </div>
                     <div>
@@ -72,15 +81,13 @@
                 </div>
                 <div class="col-md-4">
                     <div class="my-3">
-                        Select Add ons
-                        <select name="selectAddOnsCategory" class="form-control" formControlName="selectAddOnsCategory" id="selectAddOnsCategory">
-                            <optgroup>
-                                <option value=""></option>
-                            </optgroup>
-                        </select>
+                           SELECT ADDONS
+                           <div *ngFor="let addon of addons">
+                            <input type="checkbox" #selectAddOnsCategory name="selectAddOnsCategory" formControlName="selectAddOnsCategory" name="selectAddOnsCategory" id="selectAddOnsCategory" value="{{addon.addOnPrice}}"> {{addon.addOnName}} {{addon.addOnPrice | currency:US}}
+                           </div>
                     </div>
                     <div class="mt-4">
-                        <button class="btn btn-primary" (click)="bookEvent()" id="bookEvent">Book Event</button>
+                        <button class="btn btn-primary" id="bookEvent">Book Event</button>
                     </div>
                 </div>
             </div>
@@ -89,3 +96,11 @@
         </div>
     </form>
 </ng-template>
+
+<ng-template #button1>
+    <button type="submit" class="btn btn-primary" id="nextPageButton">Next Page</button>
+</ng-template>
+<ng-template #button2>
+    <button type="submit" [disabled]="true" class="btn btn-secondary" style="cursor: not-allowed;">Next Page</button>
+</ng-template>
+

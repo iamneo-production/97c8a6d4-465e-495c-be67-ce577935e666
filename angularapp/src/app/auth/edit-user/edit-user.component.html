@@ -1,33 +1,33 @@
-<ng-template #content let-modal>
+
+<ng-template #content let-c="close" let-d="dismiss">
 	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+		<h4 class="modal-title" id="modal-basic-title">Edit User Here</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
 	</div>
 	<div class="modal-body">
-		<form>
-			<div class="mb-3">
-				<label for="dateOfBirth">Date of birth</label>
-				<div class="input-group">
-					<input
-						id="dateOfBirth"
-						class="form-control"
-						placeholder="yyyy-mm-dd"
-						name="dp"
-						ngbDatepicker
-						#dp="ngbDatepicker"
-					/>
-					<button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button>
-				</div>
-			</div>
-		</form>
+            <span style="color:crimson" class="mt-2">User id</span><br>
+            <input disabled type="text" class="form-control mb-3" #id value="{{data.id}}">
+            <span style="color:crimson" class="">Email</span><br>
+            <input type="email" class="form-control mb-3" #email placeholder="{{data.email}}">
+            <span style="color:crimson" class="mt-2">Username</span><br>
+            <input type="text" class="form-control mb-3" placeholder="{{data.username}}" #username>
+            <span style="color:crimson">Mobile Number</span><br>
+            <input type="text" class="form-control mb-3"  placeholder="{{data.mobileNumber}}" #mobileNumber> 
+            <span style="color:crimson" class="my-2">Password</span><br> 
+            <input disabled type="text" class="form-control mb-3" id="password" value="{{data.password}}" #password>  
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+		<button type="submit" class="btn btn-danger" (click)="update(email.value,id.value,username.value,mobileNumber.value)">Update User</button>
 	</div>
 </ng-template>
+<button class="btn btn-primary mx-3 my-2" (click)="open(content)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+</svg></button>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
 
-<hr />
 
-<pre>{{ closeResult }}</pre>
+
+
+
+ 
+

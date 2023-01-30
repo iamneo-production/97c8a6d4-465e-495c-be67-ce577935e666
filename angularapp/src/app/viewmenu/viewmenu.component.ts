@@ -6,11 +6,11 @@ import { MenudataService} from '../services/menudata.service';
   styleUrls: ['./viewmenu.component.css']
 })
 export class ViewmenuComponent  {
-  items:any;
+  theitems:any;
   constructor(private menuService:MenudataService) {
     this.menuService.items().subscribe((data:any)=>
     {
-      this.items = data;
+      this.theitems = data;
     });
    }
 

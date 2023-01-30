@@ -4,11 +4,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ThemeserviceService {
- // getProductByName(title: any){
-  //  return this.http.get<any>("http://localhost:3000/themes/"+title);
-  //}
 
-  Url="https://8080-bfcdbfbaaeafddfcfdeafdaadbbceeaceaecabef.examlyiopb.examly.io/themes";
+  Url="https://8080-baafadfefdeafdaadbbceeaceaecabef.examlyiopb.examly.io/themes";
   constructor(private http: HttpClient) { }
 
   themes()
@@ -27,5 +24,4 @@ export class ThemeserviceService {
     return this.http.put(this.Url+"/"+data.id,data);
   }
   
-
 }

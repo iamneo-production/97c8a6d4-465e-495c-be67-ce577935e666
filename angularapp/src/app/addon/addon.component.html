@@ -1,206 +1,46 @@
-<div class="col-md-12 text-center">
-
-  <button type="button" class="btn btn-success" id="addOns"> + Add-On</button>
-</div>
-<br>
-
-
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Add Menu Item</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
+	</div>
+	<div class="modal-body">
+		<label for="image">Addons Name</label>
+                    <input type="text" class="form-control" id="addOnsName" name="addOnsName"  placeholder="Add On Name" #addOnsName  required>
+                    <br>
+                     <br>
+                     <label for="itemname">Addons Price</label>
+                    <input type="number" id="addOnsPrice" class="form-control" #addOnsPrice name="addOnsPrice" placeholder="Price" required>
+				           <br>
+                   <br>
+                   <label for="addOnsImageUrl">Addons Image Url</label>
+                   <input type="url" id="addOnsImageUrl" #addOnsImageUrl class="form-control" placeholder="Image Url" required>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="addAddOn(addOnsName.value,addOnsPrice.value,addOnsImageUrl.value)">Save</button>
+	</div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Addon</button>
 
 <div class="album py-5 bg-light" id="gridBody">
-    <div class="container album py-5 bg-light" id="gridBody" >
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
+    <div class="container album py-5 bg-light" id="gridBody">
+      <div  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
+        <div *ngFor="let addon of theAddOns">
         <div class="col" >
           <div class="card shadow-sm">
-            <img src="../assets/mehandi.jfif" alt="mehandi" id="addOnsGrid1" >
+            <img src="{{addon.imageUrl}}" alt="Oops! Loadin Picture" id="addOnsGrid{{addon.id}}" >
              <div class="card-body">
-              <h3>Mehandi</h3> 
+              <h3>{{addon.addOnName}}</h3> 
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" id="editOns1" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns1" class="btn btn-danger">Delete</button>
+                  <app-edit-addon [data]="addon"></app-edit-addon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <app-delete-addon [data]="addon"></app-delete-addon>
                 </div>
-                <small class="text-muted"><strong>Price : </strong> $400</small>
+                <small class="text-muted"><strong>Price : </strong>{{addon.addOnPrice}}</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/painting.jfif" alt="painting" id="addOnsGrid2">
-            <div class="card-body">
-              <h3>Face Painting</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns2" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns2" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong> $280</small>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/magic.jfif" alt="magic" id="addOnsGrid3">
-            <div class="card-body">
-              <h3>Magic Show</h3>
-            
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns3" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns3" class="btn btn-danger">Delete</button>
-                </div>
-                
-                <small class="text-muted"><strong>Price : </strong>$500</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/dj.jpg" alt="dj" id="addOnsGrid4">
-            <div class="card-body">
-              <h3>Party DJ</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns4" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns4" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong> $800</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/invitation.jpg" alt="Invitation" id="addOnsGrid5">
-            <div class="card-body">
-              <h3>Invitations</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns5" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns5" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong>$200</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/nemocake.jpg" alt="nemocake" id="addOnsGrid6">
-            <div class="card-body">
-              <h3>Personalized Cakes</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns6" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns6" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong>$750</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/icecream.jpg" alt="Candy Station" id="addOnsGrid7">
-            <div class="card-body">
-              <h3>Ice Cream Package</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns7" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns7" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong> $600</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/gameroom.jpg" alt="gameroom" id="addOnsGrid8">
-            <div class="card-body">
-              <h3>Gameroom Package</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns8" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns8" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong> $2 600</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/karaoke.webp" alt="Karaoke" id="addOnsGrid9">
-            <div class="card-body">
-              <h3>Karaoke</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns9" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns9" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong>$2 100</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/cadies.jpeg" alt="Candy Station" id="addOnsGrid10">
-            <div class="card-body">
-              <h3>Candy Station</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns10" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns10" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong> $1 600</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/bottom.jpg" alt="Bottomless Bar" id="addOnsGrid11">
-            <div class="card-body">
-              <h3>Bottomless Bar</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns11" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns11" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong> $4 600</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col" >
-          <div class="card shadow-sm">
-            <img src="../assets/fountain.jpg" alt="Savoury Fountain" id="addOnsGrid12">
-            <div class="card-body">
-              <h3>Savoury Fountain</h3>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" id="editOns12" class="btn btn-info">Edit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" id="deleteOns12" class="btn btn-danger">Delete</button>
-                </div>
-                <small class="text-muted"><strong>Price : </strong>$3 400</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div>  
     </div>
   </div>

@@ -1,30 +1,32 @@
-
-			<div class="form-center">
-                <form [formGroup]="menuform"   (ngSubmit)="getMenuData(menuform.value)">
-
-                    <label for="image">Upload Image:</label>
-                    <input type="file" id="imageFile" formControlName="imageFile" name="imageFile"  placeholder="upload"  required>
-                     <br>
-                      <span [ngclass]="'error'"  *ngIf="imageFile && imageFile.invalid && imageFile.touched">Upload Image</span>
-                      
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Add Menu Item</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
+	</div>
+	<div class="modal-body">
+		<label for="image">Image Url</label>
+                    <input type="url" class="form-control" id="imageUrl" name="imageUrl"  placeholder="Image Url" #img  required>
+                    <br>
                      <br>
                      <label for="itemname">Item Name:</label>
-                    <input type="text" id="itemName" formControlName="itemName" name="itemName" placeholder="Enter item name" required>
-                    <br>
-                    <span [ngclass]="'error'" *ngIf="itemName && itemName.invalid && itemName.touched">Field required</span>
-                    <br>
+                    <input type="text" id="itemName" class="form-control" #theName name="itemName" placeholder="Enter item name" required>
+					<br>
+					<br>
                     <label for="catagory">Choose a Catagory:</label>
-                    <select name="itemCatagory" id="itemCatagory"  formControlName="itemCatagory">
-                      <option value="veg">Veg</option>
+                    <select name="itemCatagory" id="itemCatagory" class="form-control" #theItemCategory required>
+                      <option value="veg" >Veg</option>
                       <option value="Non veg">Non Veg</option>
                     </select>
-                   <br>
-                   <span [ngclass]="'error'"  *ngIf="itemCatagory && itemCatagory.touched">Invalid Field</span>
-                   <br>
+					<br>
+				   <br>
                    <label for="itemPrice">Item Price:</label>
-                   <input type="text" id="itemPrice" placeholder="Enter item price" formControlName="itemPrice">
-                   <span [ngclass]="'error'"  *ngIf="itemPrice && itemPrice.invalid && itemPrice.touched">Numeric value Required</span><br>
-                    <input type="submit" value="Add Item" id="addItem">
-                  </form>
-            </div>
-		
+                   <input type="number" id="itemPrice" #thePrice class="form-control" placeholder="Enter item price" required>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="saveMenu(img.value,theName.value,theItemCategory.value,thePrice.value)">Save</button>
+	</div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Menu</button>
+<hr>
+<app-viewmenu></app-viewmenu>
