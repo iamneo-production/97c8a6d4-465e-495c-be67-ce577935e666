@@ -43,11 +43,13 @@ export class AppComponent {
           localStorage.clear();
           this.adminService.logout();
           this.route.navigate(['login']);
+          location.reload();
     }
     else if(localStorage.getItem('usertype') == "user"){
          localStorage.clear();
          this.customerService.logout();
          this.route.navigate(['login']);
+         location.reload();
     }
   }
 

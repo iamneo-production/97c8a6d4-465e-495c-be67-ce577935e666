@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddthemeButtonComponent } from './addtheme-button.component';
+import { DeleteAddonComponent } from './delete-addon.component';
 
-describe('AddthemeButtonComponent', () => {
-  let component: AddthemeButtonComponent;
-  let fixture: ComponentFixture<AddthemeButtonComponent>;
+describe('DeleteAddonComponent', () => {
+  let component: DeleteAddonComponent;
+  let fixture: ComponentFixture<DeleteAddonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddthemeButtonComponent ]
+      declarations: [ DeleteAddonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddthemeButtonComponent);
+    fixture = TestBed.createComponent(DeleteAddonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

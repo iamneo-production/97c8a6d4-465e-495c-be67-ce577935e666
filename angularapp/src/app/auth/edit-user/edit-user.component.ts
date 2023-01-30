@@ -26,12 +26,14 @@ open(content:any) {
   this.modalService.open(content);
 }
 
-update(theId:any,theEmail:any,theUsername:any,mobile:any,thePassword:any){
-    var user = {id:theId,email:theEmail,username:theUsername,mobileNumber:mobile,password:thePassword}
-    this.userService.edit(user).subscribe((result:any)=>{
-      console.log("updated");
-      this.router.navigate(['displayuser']);
+update(theEmail:any,theId:any,theUsername:any,theMobile:any,thePassword:any){
+    var user = {email:theEmail,username:theUsername,mobileNumber:theMobile,password:thePassword,id:theId};
+    this.userService.edit(user).subscribe((users:any)=>{
+      console.log("Updated");
     });
+    
+    this.modalService.dismissAll();
+    location.reload();
 }
 
 }

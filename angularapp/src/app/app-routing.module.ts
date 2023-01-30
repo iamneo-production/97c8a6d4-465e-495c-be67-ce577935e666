@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
-import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminguardGuard } from './adminguard.guard';
@@ -14,6 +12,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { BookingComponent } from './booking/booking.component';
 import { CustomerguardGuard } from './customerguard.guard';
+import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MainComponent } from './main/main.component';
 import { ReviewsComponent } from './reviews/reviews.component';
@@ -75,15 +74,11 @@ const routes: Routes = [
   },
   {
     path: 'addon',
-    component: AddonComponent
+    component: AddonComponent, canActivate:[AdminguardGuard]
   },
   {
-    path:'modal',
-    component:AddthemeButtonComponent
-  },
-  {
-    path:'modal2',
-    component:AddmenuButtonComponent
+    path: 'edit-booking',
+    component: EditBookingComponent, canActivate:[CustomerguardGuard]
   }
 
 

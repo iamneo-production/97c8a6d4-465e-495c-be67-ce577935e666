@@ -10,14 +10,14 @@
         <th scope="col">Delete</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of items">
+    <tbody *ngFor="let item of theitems">
             <tr scope="row">
                     <td>{{item.id}}</td>
-                    <td><img style="width: fit-content; height: 50px;" src="{{item.imageFile}}" alt="Oops! can't show image"></td>
+                    <td><img style="width: fit-content; height: 50px;" src="{{item.imageUrl}}" alt="Oops! can't show image"></td>
                     <td>{{item.itemName}}</td>
-                    <td>{{item.itemCatagory}}</td>
-                    <td>{{item.itemPrice}}</td>
-                    <td><button class="btn btn-primary">Edit</button></td>
+                    <td>{{item.itemCategory}}</td>
+                    <td>{{item.price}}</td>
+                    <app-edit-menu [data]="item"></app-edit-menu>
                     <td><app-deletemenu [data]="item">Delete</app-deletemenu></td>
             </tr>
     </tbody>
