@@ -17,7 +17,71 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:"signup",
+    component:SignupComponent
+  },
+  {
+    path:"login",
+    component:LoginComponent
+  }
+  ,
+  {
+    path: '',
+    component:LoginComponent
+  },
+  {
+    path: 'booking',
+    component: BookingComponent, canActivate:[CustomerguardGuard]
+  },
+  {
+    path: 'reviews',
+    component: ReviewsComponent, canActivate:[CustomerguardGuard]
+  },
+  {
+    path:'viewbooking',
+    component: ViewbookingComponent, canActivate:[CustomerguardGuard]
+  },
+  {
+    path:'home',
+    component: HomepageComponent, canActivate:[CustomerguardGuard]
+  },
+  {
+    path:'displayuser',
+    component: DisplayUserComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path: 'edituser',
+    component: EditUserComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path: 'admin',
+    component: AdminComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path:'deleteuser',
+    component: DeleteUserComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path:'addtheme',
+    component: AddthemeComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path: 'addmenu',
+    component: AddmenuComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path: 'addon',
+    component: AddonComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path: 'edit-booking',
+    component: EditBookingComponent, canActivate:[CustomerguardGuard]
+  }
+
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

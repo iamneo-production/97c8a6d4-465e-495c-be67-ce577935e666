@@ -13,8 +13,7 @@ export class SignupComponent{
 
 // Declarations
 user: any;
-usernameTaken = false;
-emailTaken = false;
+userTaken = false;
 
 constructor(private loginService:LoginService, private router:Router){}
 
@@ -63,21 +62,29 @@ login(){
 // Register Method
 register(form:any)
 {
-  var confirm : boolean = window.confirm("Do you want to submit this user.");
-  console.log(confirm);
+  this.user = {email:form.email, username: form.username, mobileNumber: form.mobileNumber, password: form.password};
 
-if(confirm){
-this.user = 
-{email:form.email, username: form.username, mobileNumber: form.mobileNumber, password: form.password};
+  this.loginService.getUsers().subscribe((theUsers:any)=>{
+        for(let i in theUsers){
+            if(theUsers[i].username == this.user.username){
+              console.log("taken");
+            }
+        }
+  });
 
-this.loginService.addUser(this.user).subscribe
-(
-  (users:any) => 
-  {
-      console.log(users);
-      this.router.navigate(['login']);
-  }
-);
-}  
+  // var confirm : boolean = window.confirm("Do you want to submit this user.");
+  // console.log(confirm);
+
+// if(confirm){
+
+// this.loginService.addUser(this.user).subscribe
+// (
+//   (users:any) => 
+//   {
+//       console.log(users);
+//       this.router.navigate(['login']);
+//   }
+// );
+// }  
 }
 }
