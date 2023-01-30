@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './auth/login/login.component';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -52,6 +53,7 @@ import {MatIconModule} from '@angular/material/icon';
     NgbModule, ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
+    MatButtonModule,
     BrowserAnimationsModule,
     MatIconModule
   ],
