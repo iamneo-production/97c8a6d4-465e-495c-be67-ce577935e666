@@ -17,7 +17,7 @@ import { BookingComponent } from './booking/booking.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
-import { AddonComponent } from './addon/addon.component';
+
 import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
 import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { ViewthemeComponent } from './viewtheme/viewtheme.component';
@@ -26,8 +26,7 @@ import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AddonFormComponent } from './addon-form/addon-form.component';
-import { AddonFuntionalityComponent } from './addon-funtionality/addon-funtionality.component';
+
 
 
 @NgModule({
@@ -36,15 +35,13 @@ import { AddonFuntionalityComponent } from './addon-funtionality/addon-funtional
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, ViewbookingComponent, 
     BookingComponent, AddthemeComponent, AddmenuComponent,
-     AddonComponent,
+
      AddthemeButtonComponent,
      AddmenuButtonComponent,HomepageComponent,
      ViewthemeComponent,ViewmenuComponent,
      DeletethemeComponent,
      DeletemenuComponent,
-     
-     AddonFormComponent,
-     AddonFuntionalityComponent
+
   ],
   imports: [
     BrowserModule,
