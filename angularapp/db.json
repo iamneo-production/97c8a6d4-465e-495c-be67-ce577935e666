@@ -36,17 +36,8 @@
       "themeCost": "7000",
       "themeDescription": "Games",
       "id": 6
-    },
-    {
-      "themeName": "SecondTheme",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScY7mTpbNSMwWCAhwiImkeQT0vXilHlRoZ58d2odRpZg&s",
-      "photographerDetails": "Thabang",
-      "videographerDetails": "Thabang Matabane",
-      "returnGift": "Wine",
-      "themeCost": "13000",
-      "themeDescription": "Thabang's Event ",
-      "id": 7
     }
+   
   ],
   "menuitems": [
     {
