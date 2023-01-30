@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddthemeButtonComponent } from './addtheme-button.component';
+import { EditBookingComponent } from './edit-booking.component';
 
-describe('AddthemeButtonComponent', () => {
-  let component: AddthemeButtonComponent;
-  let fixture: ComponentFixture<AddthemeButtonComponent>;
+describe('EditBookingComponent', () => {
+  let component: EditBookingComponent;
+  let fixture: ComponentFixture<EditBookingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddthemeButtonComponent ]
+      declarations: [ EditBookingComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddthemeButtonComponent);
+    fixture = TestBed.createComponent(EditBookingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
