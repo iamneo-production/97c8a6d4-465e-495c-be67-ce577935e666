@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import {EditreviewsService } from '../services/editreviews.service';
 
 @Component({
   selector: 'app-editreviews',
@@ -8,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class EditreviewsComponent implements OnInit {
 
   @Input() data:any;
-  viewsService: any;
-  constructor(private viewService:DeleteviewsService) { }
+  reviewsService: any;
+  constructor(private reviewService:EditreviewsService) { }
 
   ngOnInit(): void {}
   
-  deletevi(){
-    var confirm=window.confirm("Are you sure you want to edit views ?");
+  editreviews(){
+    var confirm=window.confirm("Are you sure you want to edit reviews ?");
     if(confirm){
-      this.viewsService.deleteTheme(this.data).subscribe((views:any)=>
+      this.reviewsService.editreviews(this.data).subscribe((reviews:any)=>
       {
      console.log("edited");
       });
