@@ -11,7 +11,7 @@ export class DeletemenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  delete(){
+  deletemenu(){
     var confirm = window.confirm("confirm if you want to delete Food Menu");
     if(confirm){
       this.menuService.deleteitems(this.data).subscribe((menu:any)=>
