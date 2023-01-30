@@ -1,18 +1,12 @@
-<ng-template #content let-c="close" let-d="dismiss">
-      <div class="modal-header">
-            <h4 class="modal-title" id="modal-basic-title">Add Theme</h4>
-            <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
-      </div>
-      <div class="modal-body">
-        
-            <app-addtheme-form></app-addtheme-form>
-        
-      <div class="modal-footer">
-           
-      </div>
-</div>
-</ng-template>     
-            <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Theme</button>
-            <hr>
-            <app-viewtheme></app-viewtheme>
-            
+<mat-tab-group dynamicHeight>
+      <mat-tab label="Short tab">
+        <div class="example-small-box mat-elevation-z4">
+          Small content
+        </div>
+      </mat-tab>
+      <mat-tab label="Long tab">
+        <div class="example-large-box mat-elevation-z4">
+          Large content
+        </div>
+      </mat-tab>
+    </mat-tab-group>
