@@ -58,7 +58,6 @@
 
   #gridBody
   {
-    /* background-image: url("/assets/bground.jpg"); */
     
     /* background-repeat: no-repeat;
     background-position: center center;
@@ -66,26 +65,4 @@
 
     background-color: #F2D4D6;
 
-
-
-  }
-
-  .album
-  {
-    background-color: #F2D4D6;
-  }
-
- /* html
-  {
-    background-color: #F2D4D6;
-  } */
-
-  /* .col
-  {
-    padding-bottom:
-  } */
-
-  .card
-  {
-    padding-bottom: 20px;
   }
