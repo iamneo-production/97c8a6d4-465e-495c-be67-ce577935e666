@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- 
         <div *ngFor="let user of users">
 
@@ -6,13 +7,16 @@
             <input [disabled]="true" class="btn btn-link my-2 mx-2" type="text" value="{{user.username}}" #id>
         </div> 
 -->
+=======
+>>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
 
         <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Mobile Number</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                   </tr>
@@ -22,8 +26,14 @@
                                 <td>{{user.id}}</td>
                                 <td>{{user.email}}</td>
                                 <td>{{user.username}}</td>
-                                <td><app-edit-user [data]="user"></app-edit-user></td>
+                                <td>{{user.mobileNumber}}</td>
+                                <app-edit-user [data]="user"></app-edit-user>
                                 <td><app-delete-user [data]="user"></app-delete-user></td>
                         </tr>
                 </tbody>
               </table>
+<<<<<<< HEAD
+=======
+              
+
+>>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1

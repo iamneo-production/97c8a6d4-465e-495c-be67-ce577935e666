@@ -17,13 +17,13 @@ interface UserDetails
 export class DisplayUserComponent implements OnInit {
 
   users: any;
+ 
   
   constructor(private userService:UserdisplayService){
     this.userService.users().subscribe((data:any)=>{
       this.users = data;
   });
   }
-
   
   ngOnInit(): void {
   }

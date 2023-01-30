@@ -5,8 +5,9 @@ import { HttpClient} from '@angular/common/http';
 })
 export class MenudataService {
 
-  url="https://8080-bfcdbfbaaeafddfcfdeafdaadbbceeaceaecabef.examlyiopb.examly.io/menuitems";
+  url="https://8080-baafadfefdeafdaadbbceeaceaecabef.examlyiopb.examly.io/cart";
   constructor(private ht:HttpClient) { }
+  
   items()
   {
     return this.ht.get(this.url);

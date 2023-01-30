@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
-import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { MenudataService } from '../services/menudata.service';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-addmenu',
@@ -9,40 +9,22 @@ import { MenudataService } from '../services/menudata.service';
 })
 export class AddmenuComponent  {
 
-  menuform = new FormGroup(
-    {
-      imageFile:new FormControl('',[Validators && Validators.required]),
-      itemName:new FormControl('',[Validators && Validators.required]),
-      itemCatagory:new FormControl('',[Validators && Validators.required]),
-      itemPrice: new FormControl('',[Validators && Validators.required]),
+    constructor(private menuService:MenudataService,config: NgbModalConfig, private modalService: NgbModal){}
+
+
+    open(content:any) {
+      this.modalService.open(content);
     }
-  );
-  
-  get imageFile(){
-    return this.menuform.get('imageFile');
-  }
-  get itemName(){
-    return this.menuform.get('itemName');
-  }
-  get itemCatagory(){
-    return this.menuform.get('itemCatagory');
-  }
-  get itemPrice(){
-    return this.menuform.get('itemPrice');
-  }
-  
-  
-  
-    constructor(private menudata:MenudataService) { }
-    
-    getMenuData(data:any){
-      this.menudata.additems(data).subscribe((result)=>
-      {
-     console.log(result);
-     alert("Menu Item added successfully!!!");
-     this.menuform.reset();
-      });
+
+    saveMenu(img:any,theItemName:any,theItemCatagory:any,thePrice:any){
+        var menu = {imageUrl:img,itemName:theItemName,itemCategory:theItemCatagory,price:thePrice}
+
+        this.menuService.additems(menu).subscribe((data:any)=>{
+          console.log("added");
+        });
+
+        this.modalService.dismissAll();
+        location.reload();
     }
-  
 
 }
