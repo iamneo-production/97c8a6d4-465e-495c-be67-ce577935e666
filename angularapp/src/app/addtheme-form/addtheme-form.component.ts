@@ -17,7 +17,7 @@ export class AddthemeFormComponent  {
       themeCost:new FormControl('',[Validators.required]),
       themeCostDescription:new FormControl('',[Validators.required])
     }
-  )
+  );
   get ThemeName(){
     return this.themeForm.get('themeName');
   }
