@@ -1,7 +1,7 @@
 form{
     width: 450px;
       font-size: 16px;
-      background:plum;
+      background:#F2D4D6;
       padding: 30px 30px 15px 30px;
       border: 5px solid #bec9d4;
   }
@@ -41,5 +41,6 @@ form{
   .form-center {
     display:flex;
     justify-content: center;
+    background-color: #213F99;
   }
   

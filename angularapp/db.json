@@ -60,18 +60,18 @@
       "id": 9
     },
     {
-<<<<<<< HEAD
-      "email": "nande@gmail.com",
-      "username": "nandee",
-      "mobileNumber": "0986547876",
-      "password": "123Nande",
-=======
       "email": "admin@gmail.com",
       "username": "Esihle",
       "mobileNumber": "0662179422",
       "password": "admin",
->>>>>>> 011da31697ff5f28df9072b92c7dd4f8df10d75e
       "id": 10
+    },
+    {
+      "email": "albi@gmail.com",
+      "username": "AlbiAlby",
+      "mobileNumber": "0986547876",
+      "password": "Qwerty123",
+      "id": 11
     }
   ],
   "events": [],

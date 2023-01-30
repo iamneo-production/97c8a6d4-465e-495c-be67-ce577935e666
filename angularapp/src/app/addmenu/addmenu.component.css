@@ -16,3 +16,19 @@ input[type=submit]{
 input[type=submit] {
   width: 100%;
   margin-top: 0;}
+
+  #addItem
+  {
+    color: whitesmoke;
+    background-color: #213F99;
+  }
+
+  .form-center
+  {
+    
+  }
+
+div
+  {
+    background-color:#F2D4D6;
+  }

@@ -14,8 +14,6 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { BookingComponent } from './booking/booking.component';
 import { CustomerguardGuard } from './customerguard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
-import { MainComponent } from './main/main.component';
-import { ReviewsComponent } from './reviews/reviews.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 
 const routes: Routes = [

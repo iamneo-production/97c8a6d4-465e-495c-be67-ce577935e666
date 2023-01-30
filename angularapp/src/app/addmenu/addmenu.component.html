@@ -1,6 +1,6 @@
 
 			<div class="form-center">
-                <form [formGroup]="menuform"   (ngSubmit)="getMenuData(menuform.value)">
+                <form [formGroup]="menuform"  id="addMenu" (ngSubmit)="getMenuData(menuform.value)">
 
                     <label for="image">Upload Image:</label>
                     <input type="file" id="imageFile" formControlName="imageFile" name="imageFile"  placeholder="upload"  required>
@@ -23,7 +23,7 @@
                    <br>
                    <label for="itemPrice">Item Price:</label>
                    <input type="text" id="itemPrice" placeholder="Enter item price" formControlName="itemPrice">
-                   <span [ngclass]="'error'"  *ngIf="itemPrice && itemPrice.invalid && itemPrice.touched">Numeric value Required</span><br>
+                   <span [ngclass]="'error'"  *ngIf="itemPrice && itemPrice.invalid && itemPrice.touched">Numeric value Required</span><br><br>
                     <input type="submit" value="Add Item" id="addItem">
                   </form>
             </div>
