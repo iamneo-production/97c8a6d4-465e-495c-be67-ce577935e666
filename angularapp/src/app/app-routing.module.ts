@@ -84,17 +84,8 @@ const routes: Routes = [
     component: AddonComponent, canActivate:[AdminguardGuard]
   },
   {
-<<<<<<< HEAD
-    path:'modal2',
-    component:AddmenuButtonComponent
-  },
-  {
-    path:'modal3',
-    component:AddonFuntionalityComponent
-=======
     path: 'edit-booking',
     component: EditBookingComponent, canActivate:[CustomerguardGuard]
->>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
   }
 
 
