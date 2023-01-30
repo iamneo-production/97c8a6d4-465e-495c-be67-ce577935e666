@@ -1,5 +1,6 @@
 
-   <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
+  <div>
+  <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
       <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
       <br>
       <input type="text" id="imageUrl" class="form-control" #imageUrl name="imageUrl" placeholder="Enter the image Url"  formControlName="imageUrl"    required>
