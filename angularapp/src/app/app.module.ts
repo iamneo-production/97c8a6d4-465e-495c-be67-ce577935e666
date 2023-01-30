@@ -25,6 +25,7 @@ import { DeletethemeComponent } from './deletetheme/deletetheme.component';
 import { DeletemenuComponent } from './deletemenu/deletemenu.component';
 import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -51,7 +52,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule, ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   
   providers: [],
