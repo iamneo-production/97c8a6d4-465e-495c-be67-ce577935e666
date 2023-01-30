@@ -13,6 +13,7 @@ export class SignupComponent{
 
 // Declarations
 user: any;
+users:any;
 userTaken = false;
 
 constructor(private loginService:LoginService, private router:Router){}
@@ -65,26 +66,35 @@ register(form:any)
   this.user = {email:form.email, username: form.username, mobileNumber: form.mobileNumber, password: form.password};
 
   this.loginService.getUsers().subscribe((theUsers:any)=>{
-        for(let i in theUsers){
-            if(theUsers[i].username == this.user.username){
-              console.log("taken");
-            }
-        }
+            this.users = theUsers;
   });
 
-  // var confirm : boolean = window.confirm("Do you want to submit this user.");
-  // console.log(confirm);
+  for(let i in this.users){
+      if(this.users[i].email == this.user.email){
+        this.userTaken = true;
+      }
+  }
 
-// if(confirm){
+  if(this.userTaken){
+    alert("Oops! User Already exists, try another email");
+  }
+  else{
+    var confirm : boolean = window.confirm("Do you want to submit this user.");
+  console.log(confirm);
 
-// this.loginService.addUser(this.user).subscribe
-// (
-//   (users:any) => 
-//   {
-//       console.log(users);
-//       this.router.navigate(['login']);
-//   }
-// );
-// }  
+if(confirm){
+
+this.loginService.addUser(this.user).subscribe
+(
+  (users:any) => 
+  {
+      console.log(users);
+      this.router.navigate(['login']);
+  }
+);
+} 
+  }
+
+   
 }
 }

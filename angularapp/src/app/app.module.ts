@@ -47,7 +47,7 @@ import { AdminheaderComponent } from './adminheader/adminheader.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,ReactiveFormsModule, FormsModule,RouterModule, NgbModule,BrowserAnimationsModule
+    AppRoutingModule,ReactiveFormsModule, FormsModule,RouterModule, NgbModule,BrowserAnimationsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
