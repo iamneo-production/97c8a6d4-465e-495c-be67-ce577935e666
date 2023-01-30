@@ -1,18 +1,23 @@
-<ng-template #content let-c="close" let-d="dismiss">
-      <div class="modal-header">
-            <h4 class="modal-title" id="modal-basic-title">Add Theme</h4>
-            <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
-      </div>
-      <div class="modal-body">
-        
-            <app-addtheme-form></app-addtheme-form>
-        
-      <div class="modal-footer">
-           
-      </div>
-</div>
-</ng-template>     
-            <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Theme</button>
-            <hr>
-            <app-viewtheme></app-viewtheme>
-            
+
+  <div>
+    <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
+        <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
+        <br>
+        <input type="text" id="imageUrl" class="form-control" #imageUrl name="imageUrl" placeholder="Enter the image Url"  formControlName="imageUrl"    required>
+        <br> 
+       <input type="text" id="photographerDetails" class="form-control" #photographerDetails name="photographerDetails" placeholder="Enter Phographer details" formControlName="photographerDetails"  required>
+       <br>
+      <input type="text" id="videographerDetails" class="form-control" #videographerDetails name="videographerDetails" placeholder="Enter videographer details" formControlName="videographerDetails" required>
+      <br>
+      <input type="text" id="returnGift" class="form-control" #returnGift name="returnGift" placeholder="Enter theme return Gift"      formControlName="returnGift" required>
+       <br>
+      <input type="number" id="themeCost" class="form-control" #themeCost name="themeCost" placeholder="Enter theme cost"   formControlName="themeCost" required>
+      <br>
+      <textarea id="themeDecription" class="form-control" #themeDescription name="themeDescription" placeholder="Enter theme description"   formControlName="themeDescription"    required>
+         Enter Theme description....
+      </textarea>
+       <br>
+       <input type="submit" value="submit">
+    
+    </form>
+   </div>
