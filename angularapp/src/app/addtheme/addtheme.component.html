@@ -1,8 +1,5 @@
 <table border="0" class="Themestable">
 <tr>
-   <th>Fill the Form Bellow to Add Themes</th><th style="background-color: blueviolet;"> Themes</th>
-</tr>
-<tr>
    <td>
       <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
          <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
