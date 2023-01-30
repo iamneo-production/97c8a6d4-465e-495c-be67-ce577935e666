@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddonComponent } from './addon.component';
+import { AddthemeFormComponent } from './addtheme-form.component';
 
-describe('AddonComponent', () => {
-  let component: AddonComponent;
-  let fixture: ComponentFixture<AddonComponent>;
+describe('AddthemeFormComponent', () => {
+  let component: AddthemeFormComponent;
+  let fixture: ComponentFixture<AddthemeFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddonComponent ]
+      declarations: [ AddthemeFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddonComponent);
+    fixture = TestBed.createComponent(AddthemeFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,7 +11,7 @@
       
                       <form class="mx-1 mx-md-4" [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
                         <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                <em class="fas fa-user fa-lg me-3 fa-fw"></em>
                                 <div class="form-outline flex-fill mb-0">
                                         <select class="form-control" name="admin/user" id="admin/user" formControlName="userType">
                                                 <option value="admin">Admin</option>
@@ -21,7 +21,7 @@
                         </div>
                         
                         <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                          <em class="fas fa-user fa-lg me-3 fa-fw"></em>
                           <div class="form-outline flex-fill mb-0">
                                 <span [ngClass]="'error'" *ngIf="email && email.invalid && email.touched"><em>Invalid Email</em></span>
                                 <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">   
@@ -29,7 +29,7 @@
                         </div>
       
                         <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                          <em class="fas fa-envelope fa-lg me-3 fa-fw"></em>
                           <div class="form-outline flex-fill mb-0">
                                 <span [ngClass]="'error'" id="usernameError" *ngIf="username && username.invalid && username.touched">Invalid Username</span>       
                                 <input type="text" class="form-control" name="username" id="username" placeholder="Username" formControlName="username">
@@ -37,7 +37,7 @@
                         </div>
       
                         <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                          <em class="fas fa-lock fa-lg me-3 fa-fw"></em>
                           <div class="form-outline flex-fill mb-0">
                                 <span [ngClass]="'error'" *ngIf="mobileNumber && mobileNumber.invalid && mobileNumber.touched">Invalid Mobile Number</span>      
                                 <input type="tel" class="form-control" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number" formControlName="mobileNumber">
@@ -45,7 +45,7 @@
                         </div>
       
                         <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <em class="fas fa-key fa-lg me-3 fa-fw"></em>
                           <div class="form-outline flex-fill mb-0">
                                 <span [ngClass]="'error'" *ngIf="password && password.invalid && password.touched">Invalid Password</span>
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" formControlName="password">
@@ -53,7 +53,7 @@
                         </div>
       
                         <div class="d-flex flex-row align-items-center mb-4">
-                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <em class="fas fa-key fa-lg me-3 fa-fw"></em>
                         <div class="form-outline flex-fill mb-0">
                                 <span [ngClass]="'error'" *ngIf="confirmPassword && confirmPassword.invalid && confirmPass(registerForm.value) && confirmPassword.touched">Passwords Don't Match</span>    
                                 <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" formControlName="confirmPassword">  
