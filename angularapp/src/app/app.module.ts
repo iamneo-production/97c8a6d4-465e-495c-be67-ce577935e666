@@ -29,18 +29,20 @@ import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { EditAddonComponent } from './edit-addon/edit-addon.component';
 import { DeleteAddonComponent } from './delete-addon/delete-addon.component';
 import { FooterComponent } from './footer/footer.component';
+import { CustomerheaderComponent } from './customerheader/customerheader.component';
+import { AdminheaderComponent } from './adminheader/adminheader.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, SignupComponent,LoginComponent, MainComponent,
-    DeleteUserComponent, DisplayUserComponent,
+    AppComponent,SignupComponent,LoginComponent, MainComponent,
+    DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, ViewbookingComponent, EditUserComponent,
     BookingComponent, AddmenuComponent,AddonComponent,
     HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
-   AddthemeComponent, EditBookingComponent, DeletethemeComponent, EditAddonComponent, DeleteAddonComponent, FooterComponent
-    
+    AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
+    CustomerheaderComponent, AdminheaderComponent
   ],
   imports: [
     BrowserModule,
