@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditreviewsComponent implements OnInit {
 
-  constructor() { }
+  @Input() data:any;
+  viewsService: any;
+  constructor(private viewService:DeleteviewsService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  
+  deletevi(){
+    var confirm=window.confirm("Are you sure you want to edit views ?");
+    if(confirm){
+      this.viewsService.deleteTheme(this.data).subscribe((views:any)=>
+      {
+     console.log("edited");
+      });
+      location.reload();
+    }
   }
 
 }

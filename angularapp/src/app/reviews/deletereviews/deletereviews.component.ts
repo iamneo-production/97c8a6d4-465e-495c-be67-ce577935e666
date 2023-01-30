@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import {DeleteviewsService } from '../services/deleteviews.service';
+import {DeletereviewsService } from '../services/deletereviews.service';
 
 @Component({
   selector: 'app-deletereviews',
@@ -10,14 +10,14 @@ export class DeletereviewsComponent implements OnInit {
 
   @Input() data:any;
   viewsService: any;
-  constructor(private viewService:DeleteviewsService) { }
+  constructor(private viewService:DeletereviewsService) { }
 
   ngOnInit(): void {}
   
   deletevi(){
     var confirm=window.confirm("Are you sure you want to delete views ?");
     if(confirm){
-      this.viewsService.deleteTheme(this.data).subscribe((views:any)=>
+      this.viewsService.deletereviews(this.data).subscribe((reviews:any)=>
       {
      console.log("deleted");
       });
