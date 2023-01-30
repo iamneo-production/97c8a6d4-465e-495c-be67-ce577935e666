@@ -1,20 +1,41 @@
-<form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
-    <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
-    <br>
-    <input type="text" id="imageUrl" class="form-control" #imageUrl name="imageUrl" placeholder="Enter the image Url"  formControlName="imageUrl"    required>
-    <br> 
-   <input type="text" id="photographerDetails" class="form-control" #photographerDetails name="photographerDetails" placeholder="Enter Phographer details" formControlName="photographerDetails"  required>
-   <br>
-  <input type="text" id="videographerDetails" class="form-control" #videographerDetails name="videographerDetails" placeholder="Enter videographer details" formControlName="videographerDetails" required>
-  <br>
-  <input type="text" id="returnGift" class="form-control" #returnGift name="returnGift" placeholder="Enter theme return Gift"      formControlName="returnGift" required>
-   <br>
-  <input type="number" id="themeCost" class="form-control" #themeCost name="themeCost" placeholder="Enter theme cost"   formControlName="themeCost" required>
-  <br>
-  <textarea id="themeDecription" class="form-control" #themeDescription name="themeDescription" placeholder="Enter theme description"   formControlName="themeDescription"    required>
-     Enter Theme description....
-  </textarea>
-   <br>
-   <input type="submit" value="submit">
+<h3>No animation</h3>
 
-</form>
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="First">Add Themes</mat-tab>
+  <mat-tab label="Second">View Themes</mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>
+
+<h3>Very slow animation</h3>
+<mat-tab-group animationDuration="2000ms">
+  <mat-tab label="First">
+ <div>
+   <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
+      <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
+      <br>
+      <input type="text" id="imageUrl" class="form-control" #imageUrl name="imageUrl" placeholder="Enter the image Url"  formControlName="imageUrl"    required>
+      <br> 
+     <input type="text" id="photographerDetails" class="form-control" #photographerDetails name="photographerDetails" placeholder="Enter Phographer details" formControlName="photographerDetails"  required>
+     <br>
+    <input type="text" id="videographerDetails" class="form-control" #videographerDetails name="videographerDetails" placeholder="Enter videographer details" formControlName="videographerDetails" required>
+    <br>
+    <input type="text" id="returnGift" class="form-control" #returnGift name="returnGift" placeholder="Enter theme return Gift"      formControlName="returnGift" required>
+     <br>
+    <input type="number" id="themeCost" class="form-control" #themeCost name="themeCost" placeholder="Enter theme cost"   formControlName="themeCost" required>
+    <br>
+    <textarea id="themeDecription" class="form-control" #themeDescription name="themeDescription" placeholder="Enter theme description"   formControlName="themeDescription"    required>
+       Enter Theme description....
+    </textarea>
+     <br>
+     <input type="submit" value="submit">
+  
+  </form>
+ </div>
+
+  </mat-tab>
+  <mat-tab label="Second">
+     <app-viewtheme></app-viewtheme>
+  </mat-tab>
+  <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>
+
