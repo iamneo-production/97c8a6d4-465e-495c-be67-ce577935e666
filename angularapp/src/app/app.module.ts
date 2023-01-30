@@ -28,6 +28,7 @@ import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import { DeleteviewsComponent } from './deleteviews/deleteviews.component';
+import { DeleteaddonComponent } from './deleteaddon/deleteaddon.component';
 
 
 
@@ -45,6 +46,7 @@ import { DeleteviewsComponent } from './deleteviews/deleteviews.component';
      DeletethemeComponent,
      DeletemenuComponent,
      DeleteviewsComponent,
+     DeleteaddonComponent,
   
      
      

@@ -10,7 +10,7 @@ export class DeleteviewsComponent implements OnInit {
   @Input() data:any;
   constructor(private deleteviewsService:DeleteviewsService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
   
   deleteviews(){
     var confirm = window.confirm("Are you sure if you want to delete Views?");

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DeleteAddonService } from './delete-addon.service';
+import { DeleteaddonService } from './deleteaddon.service';
 
-describe('DeleteAddonService', () => {
-  let service: DeleteAddonService;
+describe('DeleteaddonService', () => {
+  let service: DeleteaddonService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DeleteAddonService);
+    service = TestBed.inject(DeleteaddonService);
   });
 
   it('should be created', () => {
