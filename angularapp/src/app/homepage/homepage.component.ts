@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EventserviceService } from '../services/eventservice.service';
 
 
 @Component({
@@ -7,8 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent  {
-constructor(){
- 
+  events:any;
+constructor(private eventsService:EventserviceService){
+  
+    this.eventsService.view().subscribe((theEvents:any)=>{
+      this.events = theEvents;
+    });
+
   }
 
 

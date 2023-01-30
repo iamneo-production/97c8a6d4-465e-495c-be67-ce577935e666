@@ -1,25 +1,40 @@
-
-        <table class="table table-bordered">
-                <thead>
+              <table class="table align-middle mb-0 bg-white">
+                <thead class="bg-light">
                   <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Mobile Number</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Mobile Number</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody *ngFor="let user of users">
-                        <tr scope="row">
-                                <td>{{user.id}}</td>
-                                <td>{{user.email}}</td>
-                                <td>{{user.username}}</td>
-                                <td>{{user.mobileNumber}}</td>
-                                <app-edit-user [data]="user"></app-edit-user>
-                                <td><app-delete-user [data]="user"></app-delete-user></td>
-                        </tr>
+                  <tr >
+                    <td>
+                      <div class="d-flex align-items-center">
+                        {{user.email}}
+                      </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                          {{user.username}}
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          {{user.mobileNumber}}
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                         <app-edit-user [data]="user"></app-edit-user>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                        <app-delete-user [data]="user"></app-delete-user>
+                        </div>
+                      </td>
+                    </tr>
                 </tbody>
               </table>
-              
-
