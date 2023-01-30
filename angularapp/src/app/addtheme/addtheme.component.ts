@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ThemeserviceService } from '../services/themeservice.service';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -9,22 +8,14 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AddthemeComponent  {
 
- constructor(private themeService:ThemeserviceService,config: NgbModalConfig, private modalService: NgbModal){}
+  constructor(config: NgbModalConfig, private modalService: NgbModal) {
+		// customize default values of modals used by this component tree
+		config.backdrop = 'static';
+		config.keyboard = false;
+	}
 
- open(content:any) {
-  this.modalService.open(content);
-  }
-
-  saveTheme(theThemeName:any,theImageUrl:any,thePhotographerDetails:any,theVideographerDetails:any,theReturnGift:any,theThemeCost:any,theThemeDescription:any){
-      var theme = {themeName:theThemeName,imageUrl:theImageUrl,photographerDetails:thePhotographerDetails,
-                  videographerDetails:theVideographerDetails,returnGift:theReturnGift,themeCost:theThemeCost,themeDescription:theThemeDescription};
-      
-      this.themeService.addtheme(theme).subscribe(()=>{
-          console.log("added");
-      });
-      
-      this.modalService.dismissAll();
-      location.reload();
-  }
+	open(content:any) {
+		this.modalService.open(content);
+	}
 
 }
