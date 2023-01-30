@@ -31,7 +31,7 @@ import { DeleteAddonComponent } from './delete-addon/delete-addon.component';
 import { FooterComponent } from './footer/footer.component';
 import { CustomerheaderComponent } from './customerheader/customerheader.component';
 import { AdminheaderComponent } from './adminheader/adminheader.component';
-import { AddthemeFormComponent } from './addtheme-form/addtheme-form.component';
+
 
 
 @NgModule({
@@ -43,7 +43,7 @@ import { AddthemeFormComponent } from './addtheme-form/addtheme-form.component';
     HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent, AddthemeFormComponent
+    CustomerheaderComponent, AdminheaderComponent
   ],
   imports: [
     BrowserModule,
