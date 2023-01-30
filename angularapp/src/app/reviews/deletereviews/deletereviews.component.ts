@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import {EditviewsService } from '../services/editviews.service';
+import {DeleteviewsService } from '../services/deleteviews.service';
 
 @Component({
   selector: 'app-deletereviews',
@@ -9,14 +9,15 @@ import {EditviewsService } from '../services/editviews.service';
 export class DeletereviewsComponent implements OnInit {
 
   @Input() data:any;
-  constructor(private themeService:EditviewsService) { }
+  viewsService: any;
+  constructor(private viewService:DeleteviewsService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
   
   deletevi(){
-    var confirm = window.confirm("Confirm if you want to delete theme?");
+    var confirm=window.confirm("Are you sure you want to delete views ?");
     if(confirm){
-      this.themeService.deleteTheme(this.data).subscribe((theme:any)=>
+      this.viewsService.deleteTheme(this.data).subscribe((views:any)=>
       {
      console.log("deleted");
       });
