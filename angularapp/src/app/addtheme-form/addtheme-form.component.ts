@@ -2,7 +2,7 @@ import { Component} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {ThemeserviceService } from '../services/themeservice.service';
 @Component({
-  selector: 'app-addtheme-form',
+  selector: '',
   templateUrl: './addtheme-form.component.html',
   styleUrls: ['./addtheme-form.component.css']
 })

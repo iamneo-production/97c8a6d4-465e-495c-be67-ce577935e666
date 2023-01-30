@@ -1,26 +1,6 @@
-<ng-template #content let-c="close" let-d="dismiss">
-	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Add Menu Item</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
-	</div>
-	<div class="modal-body">
-		<label for="image">Addons Name</label>
-                    <input type="text" class="form-control" id="addOnsName" name="addOnsName"  placeholder="Add On Name" #addOnsName  required>
-                    <br>
-                     <br>
-                     <label for="itemname">Addons Price</label>
-                    <input type="number" id="addOnsPrice" class="form-control" #addOnsPrice name="addOnsPrice" placeholder="Price" required>
-				           <br>
-                   <br>
-                   <label for="addOnsImageUrl">Addons Image Url</label>
-                   <input type="url" id="addOnsImageUrl" #addOnsImageUrl class="form-control" placeholder="Image Url" required>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="addAddOn(addOnsName.value,addOnsPrice.value,addOnsImageUrl.value)">Save</button>
-	</div>
-</ng-template>
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Addon</button>
 
+
+<hr>
 <div class="album py-5 bg-light" id="gridBody">
     <div class="container album py-5 bg-light" id="gridBody">
       <div  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
