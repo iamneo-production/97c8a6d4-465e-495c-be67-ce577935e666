@@ -1,14 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddmenuComponent } from './addmenu/addmenu.component';
-
-import { AddonFuntionalityComponent } from './addon-funtionality/addon-funtionality.component';
 import { AddonComponent } from './addon/addon.component';
-<<<<<<< HEAD
-
-import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
-=======
->>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminguardGuard } from './adminguard.guard';
@@ -21,7 +14,6 @@ import { BookingComponent } from './booking/booking.component';
 import { CustomerguardGuard } from './customerguard.guard';
 import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { MainComponent } from './main/main.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 
