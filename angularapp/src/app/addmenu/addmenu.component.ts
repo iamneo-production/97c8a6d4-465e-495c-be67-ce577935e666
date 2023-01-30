@@ -17,7 +17,8 @@ export class AddmenuComponent  {
     }
 
     saveMenu(img:any,theItemName:any,theItemCatagory:any,thePrice:any){
-        var menu = {imageUrl:img,itemName:theItemName,itemCategory:theItemCatagory,price:thePrice}
+
+        var menu = {imageUrl:img,itemName:theItemName,itemCategory:theItemCatagory,price:thePrice};
 
         this.menuService.additems(menu).subscribe((data:any)=>{
           console.log("added");

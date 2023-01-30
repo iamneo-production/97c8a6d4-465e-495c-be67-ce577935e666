@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddOnsServiceService } from '../services/add-ons-service.service';
 
+
 @Component({
   selector: 'app-addon',
   templateUrl: './addon.component.html',
