@@ -27,10 +27,7 @@ const routes: Routes = [
     component:LoginComponent
   }
   ,
-  {
-    path: '',
-    component:LoginComponent
-  },
+  
   {
     path: 'booking',
     component: BookingComponent, canActivate:[CustomerguardGuard]
