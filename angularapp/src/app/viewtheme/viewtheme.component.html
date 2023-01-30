@@ -1,7 +1,6 @@
 <table class="table table-bordered">
     <thead>
       <tr>
-        <th scope="col">#</th>
         <th scope="col">Theme Name</th>
         <th scope="col">Image</th>
         <th scope="col">Photographer details</th>
@@ -15,7 +14,6 @@
     </thead>
     <tbody *ngFor="let theme of themes">
             <tr scope="row">
-                    <td>{{theme.id}}</td>
                     <td>{{theme.themeName}}</td>
                     <td><img style="width: fit-content; height: 50px;" src="{{theme.imageUrl}}" alt="Oops! can't show image"></td>
                     <td>{{theme.photographerDetails}}</td>
@@ -23,7 +21,11 @@
                     <td>{{theme.returnGift}}</td>
                     <td>{{theme.themeCost}}</td>
                     <td>{{theme.themeDescription}}</td>
+<<<<<<< HEAD
                     <td><button class="btn btn-primary">Edit</button></td>
+=======
+                    <app-edit-theme [data]="theme"></app-edit-theme>
+>>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
                     <td><app-deletetheme [data]="theme"></app-deletetheme></td>
             </tr>
     </tbody>

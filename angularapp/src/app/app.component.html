@@ -8,16 +8,11 @@
     <li><a routerLink="booking" class="nav-link px-2 link-dark">Book Event</a></li>
     <li><a routerLink="viewbooking" class="nav-link px-2 link-dark">View Booked Events</a></li>
     <li><a routerLink="reviews" class="nav-link px-2 link-dark">Reviews</a></li>
-
   </ul>
   <div class="col-md-3 text-end">
     <a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()">Logout</a>
   </div>
-  <div *ngIf="!logged" class="col-md-3 text-end">
-    <a class="btn btn-outline-primary me-2" (click)= "login()">Login</a>
-  </div>
 </header>
-<router-outlet></router-outlet>
 
 <header *ngIf="admin" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
   <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -26,18 +21,18 @@
 
   <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
     <li><a routerLink="displayuser" class="nav-link px-2 link-secondary">Users</a></li>
+<<<<<<< HEAD
     <li><a routerLink="modal" class="nav-link px-2 link-dark">Theme</a></li>
     <li><a routerLink="modal2" class="nav-link px-2 link-dark">Food Menu</a></li>
     <li><a routerLink="modal3" class="nav-link px-2 link-dark">Add Addons</a></li>
+=======
+    <li><a routerLink="addtheme" class="nav-link px-2 link-dark">Theme</a></li>
+    <li><a routerLink="addmenu" class="nav-link px-2 link-dark">FoodMenu</a></li>
+    <li><a routerLink="addon" class="nav-link px-2 link-dark">Addons</a></li>
+>>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
   </ul>
   <div class="col-md-3 text-end">
     <a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()">Logout</a>
   </div>
-  <div *ngIf="!logged" class="col-md-3 text-end">
-    <a class="btn btn-outline-primary me-2" (click)= "login()">Login</a>
-  </div>
 </header>
 <router-outlet></router-outlet>
-
-
-

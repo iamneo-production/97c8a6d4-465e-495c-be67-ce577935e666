@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators,FormGroup } from '@angular/forms';
 import { ThemeserviceService } from '../services/themeservice.service';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-addtheme',
@@ -9,50 +9,22 @@ import { ThemeserviceService } from '../services/themeservice.service';
 })
 export class AddthemeComponent  {
 
-  themeform = new FormGroup(
-    {
-      themeName:new FormControl('',[Validators.required]),
-      imageUrl:new FormControl('',[Validators.required]),
-      photographerDetails:new FormControl('',[Validators.required]),
-      videographerDetails:new FormControl('',[Validators.required]),
-      returnGift:new FormControl('',[Validators.required]),
-      themeCost:new FormControl('',[Validators.required]),
-      themeDescription:new FormControl('',[Validators.required])
-    }
-  );
+ constructor(private themeService:ThemeserviceService,config: NgbModalConfig, private modalService: NgbModal){}
 
-  get themeName(){
-    return this.themeform.get('themeName');
+ open(content:any) {
+  this.modalService.open(content);
   }
-  get imageUrl(){
-    return this.themeform.get('imageUrl');
-  }
-  get photographerDetails(){
-    return this.themeform.get('photographerDetails');
-  }
-  get videographerDetails(){
-    return this.themeform.get('videographerDetails');
-  }
-  get returnGift(){
-    return this.themeform.get('returnGift');
-  }
-  get themeCost(){
-    return this.themeform.get('themeCost');
-  }
-  get themeDescription(){
-    return this.themeform.get('themeDescription');
-  }
-  
-  constructor(private themedata: ThemeserviceService) { }
 
-    getThemeForm(data:any){
-      this.themedata.addtheme(data).subscribe((result:any)=>
-      {
-        console.log(result);
-        alert("Theme added successfully!");
-        this.themeform.reset();
+  saveTheme(theThemeName:any,theImageUrl:any,thePhotographerDetails:any,theVideographerDetails:any,theReturnGift:any,theThemeCost:any,theThemeDescription:any){
+      var theme = {themeName:theThemeName,imageUrl:theImageUrl,photographerDetails:thePhotographerDetails,
+                  videographerDetails:theVideographerDetails,returnGift:theReturnGift,themeCost:theThemeCost,themeDescription:theThemeDescription};
+      
+      this.themeService.addtheme(theme).subscribe(()=>{
+          console.log("added");
       });
-    }
-
+      
+      this.modalService.dismissAll();
+      location.reload();
+  }
 
 }

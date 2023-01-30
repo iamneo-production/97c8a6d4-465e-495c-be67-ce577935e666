@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddmenuButtonComponent } from './addmenu-button/addmenu-button.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 
 import { AddonFuntionalityComponent } from './addon-funtionality/addon-funtionality.component';
 import { AddonComponent } from './addon/addon.component';
+<<<<<<< HEAD
 
 import { AddthemeButtonComponent } from './addtheme-button/addtheme-button.component';
+=======
+>>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
 import { AddthemeComponent } from './addtheme/addtheme.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminguardGuard } from './adminguard.guard';
 import { DeleteUserComponent } from './auth/delete-user/delete-user.component';
 import { DisplayUserComponent } from './auth/display-user/display-user.component';
 import { EditUserComponent } from './auth/edit-user/edit-user.component';
@@ -16,8 +19,10 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { BookingComponent } from './booking/booking.component';
 import { CustomerguardGuard } from './customerguard.guard';
+import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MainComponent } from './main/main.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 
 const routes: Routes = [
@@ -32,15 +37,15 @@ const routes: Routes = [
   ,
   {
     path: '',
-    component:MainComponent
-  },
-  {
-    path: 'admin',
-    component: AdminComponent
+    component:LoginComponent
   },
   {
     path: 'booking',
     component: BookingComponent, canActivate:[CustomerguardGuard]
+  },
+  {
+    path: 'reviews',
+    component: ReviewsComponent, canActivate:[CustomerguardGuard]
   },
   {
     path:'viewbooking',
@@ -52,39 +57,44 @@ const routes: Routes = [
   },
   {
     path:'displayuser',
-    component: DisplayUserComponent
+    component: DisplayUserComponent, canActivate:[AdminguardGuard]
   },
   {
     path: 'edituser',
-    component: EditUserComponent
+    component: EditUserComponent, canActivate:[AdminguardGuard]
+  },
+  {
+    path: 'admin',
+    component: AdminComponent, canActivate:[AdminguardGuard]
   },
   {
     path:'deleteuser',
-    component: DeleteUserComponent
+    component: DeleteUserComponent, canActivate:[AdminguardGuard]
   },
   {
     path:'addtheme',
-    component: AddthemeComponent
+    component: AddthemeComponent, canActivate:[AdminguardGuard]
   },
   {
     path: 'addmenu',
-    component: AddmenuComponent
+    component: AddmenuComponent, canActivate:[AdminguardGuard]
   },
   {
     path: 'addon',
-    component: AddonComponent
+    component: AddonComponent, canActivate:[AdminguardGuard]
   },
   {
-    path:'modal',
-    component:AddthemeButtonComponent
-  },
-  {
+<<<<<<< HEAD
     path:'modal2',
     component:AddmenuButtonComponent
   },
   {
     path:'modal3',
     component:AddonFuntionalityComponent
+=======
+    path: 'edit-booking',
+    component: EditBookingComponent, canActivate:[CustomerguardGuard]
+>>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
   }
 
 

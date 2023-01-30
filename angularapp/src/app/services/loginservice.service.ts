@@ -13,7 +13,7 @@ export class LoginserviceService {
   getUsers()
   { 
     return this.http.get(this.url);
-    }
+   }
 
       updateUser(data: any){
             return this.http.put(this.url+"/"+ data.id,data); 

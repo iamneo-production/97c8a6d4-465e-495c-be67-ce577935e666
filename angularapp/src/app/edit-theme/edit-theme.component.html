@@ -1,0 +1,46 @@
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Edit Theme</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
+	</div>
+	<div class="modal-body">
+
+            <span style="color:crimson" class="mt-2">Theme ID</span><br>
+            <input disabled type="number" class="form-control mb-3" value="{{data.id}}" #id>
+
+            <span style="color:crimson" class="">Theme Name</span><br>
+            <input type="text" class="form-control mb-3" name="themeName"  placeholder="{{data.themeName}}" #themeName>
+
+            <span style="color:crimson" class="mt-2">Image Url</span><br>
+            <input type="url" class="form-control mb-3" name="imageUrl"  placeholder="Image Url" #imageUrl>
+
+            <span style="color:crimson">Photographer Details</span><br>
+            <input type="text" class="form-control mb-3" name="photographerDetails" placeholder="{{data.photographerDetails}}" #photographer> 
+            
+            <span style="color:crimson" class="my-2">Videographer Details</span><br> 
+            <input  type="text" class="form-control mb-3" name="videographerDetails" placeholder="{{data.videographerDetails}}" #videographer > 
+            
+            <span style="color:crimson" class="my-2">Return Gift</span><br> 
+            <input  type="text" class="form-control mb-3" name="returnGift" #returnGift placeholder="{{data.returnGift}}" >   
+            
+            <span style="color:crimson" class="my-2">Theme Cost</span><br> 
+            <input type="text" class="form-control mb-3" name="themeCost" #themeCost placeholder="{{data.themeCost}}" >
+            
+            <span style="color:crimson" class="my-2">Theme Description</span><br> 
+            <input type="text" class="form-control mb-3" name="themeDescription" #description placeholder="{{data.themeDescription}}" >
+            
+            <button type="submit" class="btn btn-danger" (click)="editTheme(id.value,themeName.value,imageUrl.value,photographer.value,videographer.value,returnGift.value,themeCost.value,description.value)">Edit</button>
+	</div>
+</ng-template>
+<button class="btn btn-primary mx-3 my-2" (click)="open(content)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+</svg></button>
+
+
+
+
+
+
+ 
+
+

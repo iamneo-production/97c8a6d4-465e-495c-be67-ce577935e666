@@ -5,6 +5,15 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
 }
+*{
+    font-family: sans-serif;
+    font-size: 15px;
+  }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    /* background-image: url("https://t4.ftcdn.net/jpg/04/20/81/73/240_F_420817374_T9jybguZaWLW618ZKcZ81IdQY9stTwQm.jpg");
+    background-size: cover; */
+  }
+
