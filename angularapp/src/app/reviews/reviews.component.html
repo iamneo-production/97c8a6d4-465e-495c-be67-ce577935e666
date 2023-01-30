@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-<h2 id="fh2">PLEASE REVIEW OUR WEBSITE HERE</h2>
-<h6 id="fh6">Your review will help us to improve our web hosting and customer services.</h6>
-
-<form id="feedback" action=""  [formGroup] = "reviewsform" (ngSubmit)= "userReview(reviewform.value)"ng> 
-   <div class="pinfo">Your personal info</div> 
-    <label>Full name</label><br><div class="form-group"> 
-       <div class="col-md-4 inputGroupContainer">       
-            <input  name="name" placeholder="Full Name" class="form-control"  type="text" formControlName ="name"><br> 
-          <span style="color: red;" *ngIf="name && name.invalid&& name.touched">Please enter your full name</span> 
-            </div>
-      </div>
-      <label>Email</label><br>
-      <div class="form-group"> 
-         <div class="col-md-4">
-               <input name="email" type="email" class="form-control" placeholder="Enter email address" formControlName ="email"><br>
-              <span style="color: red;" *ngIf="email && email.invalid&& email.touched">Please anter a valid email</span> 
-           </div>
-          </div>
-           <div class="pinfo">Rate our overall services.</div>
-          <div class="form-group"> 
-                   <ngb-rating [(rate)]="ratings"> </ngb-rating>
-            <pre>Ratings: <strong>{{ratings}}</strong></pre></div> <div class="pinfo">Write your feedback.</div>  
-            <div class="form-group">  
-            <div class="col-md-4 inputGroupContainer">  
-              <div class="input-group">    
-                <textarea class="form-control" id="review" rows="3" placeholder="Enter your feedback here... " name="review" formControlName ="review">
-
-                </textarea>  
-                <!-- <span style="color: red;" *ngIf="review && review.invalid&& review.touched">This field is required</span> -->    
-              </div>  
-            </div>
-          </div> 
-          <button type="submit" class="btn btn-primary"  >Submit</button>
-          </form>
-=======
 <h2 id="fh2">WE APPRECIATE YOUR REVIEW!</h2>
 <h6 id="fh6">Your review will help us to improve our web hosting and customer services.</h6>
 
@@ -76,4 +40,3 @@
 
  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
->>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
