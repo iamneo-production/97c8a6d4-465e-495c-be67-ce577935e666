@@ -50,6 +50,7 @@ export class LoginComponent {
           } else {
 
             localStorage.setItem("usertype", "user");
+            sessionStorage.setItem("userid",users[i].id);
             this.userExists = true;
             this.customerService.login();
             this.router.navigate(['home']);

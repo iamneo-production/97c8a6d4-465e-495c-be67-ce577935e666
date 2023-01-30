@@ -14,11 +14,7 @@ import { BookingComponent } from './booking/booking.component';
 import { CustomerguardGuard } from './customerguard.guard';
 import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
-<<<<<<< HEAD
-=======
-import { MainComponent } from './main/main.component';
 import { ReviewsComponent } from './reviews/reviews.component';
->>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 
 const routes: Routes = [

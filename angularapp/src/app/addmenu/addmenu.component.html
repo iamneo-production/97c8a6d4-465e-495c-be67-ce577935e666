@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-			<div class="form-center">
-                <form [formGroup]="menuform"  id="addMenu" (ngSubmit)="getMenuData(menuform.value)">
-
-                    <label for="image">Upload Image:</label>
-                    <input type="file" id="imageFile" formControlName="imageFile" name="imageFile"  placeholder="upload"  required>
-                     <br>
-                      <span [ngclass]="'error'"  *ngIf="imageFile && imageFile.invalid && imageFile.touched">Upload Image</span>
-                      
-=======
 <ng-template #content let-c="close" let-d="dismiss">
 	<div class="modal-header">
 		<h4 class="modal-title" id="modal-basic-title">Add Menu Item</h4>
@@ -18,7 +7,6 @@
 		<label for="image">Image Url</label>
                     <input type="url" class="form-control" id="imageUrl" name="imageUrl"  placeholder="Image Url" #img  required>
                     <br>
->>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
                      <br>
                      <label for="itemname">Item Name:</label>
                     <input type="text" id="itemName" class="form-control" #theName name="itemName" placeholder="Enter item name" required>
@@ -32,14 +20,6 @@
 					<br>
 				   <br>
                    <label for="itemPrice">Item Price:</label>
-<<<<<<< HEAD
-                   <input type="text" id="itemPrice" placeholder="Enter item price" formControlName="itemPrice">
-                   <span [ngclass]="'error'"  *ngIf="itemPrice && itemPrice.invalid && itemPrice.touched">Numeric value Required</span><br><br>
-                    <input type="submit" value="Add Item" id="addItem">
-                  </form>
-            </div>
-		
-=======
                    <input type="number" id="itemPrice" #thePrice class="form-control" placeholder="Enter item price" required>
 	</div>
 	<div class="modal-footer">
@@ -50,4 +30,3 @@
 <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Menu</button>
 <hr>
 <app-viewmenu></app-viewmenu>
->>>>>>> 57ae5e47aeacd1773d31c639dd6a73a869b9f4d1
