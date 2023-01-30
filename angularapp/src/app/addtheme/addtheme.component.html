@@ -1,6 +1,4 @@
-<table border="0" class="Themestable">
-<tr>
-   <td>
+
       <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
          <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
          <br>
@@ -19,9 +17,5 @@
        </textarea>
         <br>
         <input type="submit" value="submit">
-     
-     </form>
-   </td>
-   <td> <app-viewtheme></app-viewtheme> </td>
-</tr>
-</table>
+    
+    <app-viewtheme></app-viewtheme> 
