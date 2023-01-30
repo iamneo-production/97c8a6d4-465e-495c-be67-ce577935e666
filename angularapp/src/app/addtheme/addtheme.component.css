@@ -50,5 +50,9 @@ input[type="submit"]:active {
 	opacity:0.4;
 }
 .Themestable{
-    background-color: darkmagenta;
+    background-color: plum;
+    align-items: top;
+}
+td{
+    content: inherit;
 }
