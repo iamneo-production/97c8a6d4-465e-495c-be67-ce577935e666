@@ -1,11 +1,18 @@
 
-	<div>
-		<form [formGroup]="addOnForm" (ngSubmit)="AddaddOnData(addOnForm.value)">
-      <input type="text" id="imageUrl" formControlName="imageUrl"><br>
-      <input type="text" id="addOnName" formControlName="addOnName"><br>
-      <input type="number" id="addOnPrice" formControlName="addOnPrice"><br>
-      <input type="submit" value="Submit">
-    </form>
-	</div>
-	
+
+	<table>
+    <tr>
+      <td>
+        <div>
+          <form [formGroup]="addOnForm" (ngSubmit)="AddaddOnData(addOnForm.value)">
+            <input type="text" id="imageUrl" formControlName="imageUrl" placeholder="Enter Imgage Url"><br>
+            <input type="text" id="addOnName" formControlName="addOnName" placeholder="Enter AddOn Name"><br>
+            <input type="number" id="addOnPrice" formControlName="addOnPrice" placeholder="Enter Price"><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </td><td></td>
+    </tr>
+  </table>
+  <app-footer></app-footer>
 
