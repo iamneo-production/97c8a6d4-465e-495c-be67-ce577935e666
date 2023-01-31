@@ -15,6 +15,7 @@ import { CustomerguardGuard } from './customerguard.guard';
 import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ViewAddonComponent } from './view-addon/view-addon.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 
@@ -80,8 +81,11 @@ const routes: Routes = [
   {
     path:'viewThemes',
     component:ViewthemeComponent
-  }
-
+  },
+{
+  path:'viewAddons',
+  component:ViewAddonComponent
+}
 
 ];
 

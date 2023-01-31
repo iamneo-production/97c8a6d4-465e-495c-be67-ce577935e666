@@ -1,3 +1,5 @@
-.album py-5 bg-light{
-    align-content: inherit;
+ng-template{
+    width: 100%;
+    align-items: inherit;
+    size: large;
 }
