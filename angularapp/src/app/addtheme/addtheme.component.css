@@ -28,8 +28,9 @@ form input {
 input[type=submit] {
 	padding:15px 50px;
 	width:auto;
-	background:#cee8e3;
+	background:blueviolet;
 	border:none;
+	font-size: large;
 	color:white;
 	cursor:pointer;
 	display:inline-block;
