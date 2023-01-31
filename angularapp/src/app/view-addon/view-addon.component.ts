@@ -11,7 +11,7 @@ theAddons:any;
     this.AddonData.view().subscribe((result)=>{
      this.theAddons = result;
     });
-    location.reload();
+   
    }
 
 
