@@ -20,47 +20,69 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
             <div class="col">
                     <div class="card shadow-sm" id="itemGrid1">
-                      <img src="" alt="">
+                      <img src="../assets/birthday1.jpg" alt="">
                       <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            <button type="button" (click)="addReview()"  class="btn btn-sm btn-outline-secondary">Add review</button>
+                            
                           </div>
-                          <small class="text-muted">9 mins</small>
+                          <small class="text-muted">
+                            <div class="container">
+                              <div class="number-display">
+                                {{counter1}}
+                              </div>
+                              <button (click)="increment1()"> <mat-icon>thumb_up</mat-icon> </button>
+                            </div>
+                          </small>
                         </div>
                       </div>
                     </div>
                   </div>
+
                   <div class="col">
-                        <div class="card shadow-sm" id="itemGrid2">
-                          <img src="" alt="">
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                              <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                              </div>
-                              <small class="text-muted">9 mins</small>
-                            </div>
+                    <div class="card shadow-sm" id="itemGrid2">
+                      <img src="../assets/birthday2.jfif" alt="">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" (click)="addReview()" class="btn btn-sm btn-outline-secondary">Add review</button>
+                            
                           </div>
+                          <small class="text-muted">
+                            <div class="container">
+                            <div class="number-display">
+                              {{counter2}}
+                            </div>
+                            <button (click)="increment2()"> <mat-icon>thumb_up</mat-icon> </button>
+                          </div>
+                          </small>
                         </div>
-        
-                      <div class="col">
-                            <div class="card shadow-sm" id="itemGrid3">
-                              <img src="" alt="">
-                              <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                  <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                  </div>
-                                  <small class="text-muted">9 mins</small>
-                                </div>
-                              </div>
-                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="card shadow-sm" id="itemGrid3">
+                      <img src="../assets/birthday3.jpg" alt="">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" (click)="addReview()" class="btn btn-sm btn-outline-secondary">Add Reviews</button>
+                            
                           </div>
+                          <small class="text-muted">
+                            <div class="container">
+                            <div class="number-display">
+                              {{counter3}}
+                            </div>
+                            <button (click)="increment3()"> <mat-icon>thumb_up</mat-icon> </button>
+                          </div>
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
     </div>
 </div>
+

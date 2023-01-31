@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { AddonComponent } from './addon/addon.component';
 import { AddthemeComponent } from './addtheme/addtheme.component';
@@ -16,6 +17,7 @@ import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MainComponent } from './main/main.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ViewreviewsComponent } from './reviews/viewreviews/viewreviews.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
 
 const routes: Routes = [
@@ -53,8 +55,8 @@ const routes: Routes = [
     component: ReviewsComponent, canActivate:[CustomerguardGuard]
   },
   {
-    path:'about',
-    component: AboutComponent, canActivate:[CustomerguardGuard]
+    path:'viewreviews',
+    component: ViewreviewsComponent, canActivate:[CustomerguardGuard]
   },
   {
     path:'displayuser',

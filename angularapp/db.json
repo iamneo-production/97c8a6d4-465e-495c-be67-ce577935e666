@@ -94,5 +94,19 @@
       "addOnName": "JHB",
       "addOnPrice": "3000"
     }
+  ],
+  "reviews": [
+    {
+      "name": "kdks",
+      "email": "gift.makhuvele@lti.com",
+      "reviews": "",
+      "id": 1
+    },
+    {
+      "name": "ertyu",
+      "email": "gift.makhuvele@lti.com",
+      "reviews": "",
+      "id": 2
+    }
   ]
 }

@@ -1,1 +1,21 @@
-<p>viewreviews works!</p>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">review</th>
+    
+      </tr>
+    </thead>
+    <tbody *ngFor="let review of reviews">
+            <tr scope="row">
+                    <td>{{review.name}}</td>
+                    <td>{{review.email}}</td>
+                    <td>{{review.review}}</td>
+                   <!-- <td> <app-editreviews [data]="review"></app-editreviews></td>
+                    <td><app-deletereviews [data]="review"></app-deletereviews></td> -->
+            </tr>
+    </tbody>
+  </table>
+
+

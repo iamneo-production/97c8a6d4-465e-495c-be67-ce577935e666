@@ -39,6 +39,7 @@ export class ReviewsComponent implements OnInit {
 
       active = 1;  
     constructor(private reviewdata: ReviewsService) { }   
+    
       userReview(data:any)
     {
             this.reviewdata.addReviews(data).subscribe((result:any)=>   

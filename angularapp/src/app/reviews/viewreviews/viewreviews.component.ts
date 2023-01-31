@@ -8,7 +8,16 @@ import { ViewreviewsService } from 'src/app/services/viewreviews.service';
 })
 export class ViewreviewsComponent implements OnInit {
 
-  constructor(private reviewdata: ViewreviewsService) { }
+  reviews:any;
+  
+
+  constructor(private reviewdata: ViewreviewsService) {
+    
+     this.reviewdata.reviews().subscribe((data:any)=>
+  {
+    this.reviews = data
+  });
+  }
 
   ngOnInit(): void {
   }
