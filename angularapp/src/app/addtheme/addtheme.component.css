@@ -56,3 +56,13 @@ input[type="submit"]:active {
 td{
     content: inherit;
 }
+
+.themeD
+{
+	background-image: url("/assets/bground.jpg");
+}
+
+.themeForm
+{
+	background: transparent;
+}

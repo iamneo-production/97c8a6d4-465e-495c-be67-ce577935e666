@@ -1,5 +1,5 @@
-<div>
-   <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
+<div class="themeD"> 
+   <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)" class="themeForm">
       <span style="color:red;" *ngIf="themeName && themeName.invalid && themeName.touched">Invalid field</span>
       <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
       <br>
