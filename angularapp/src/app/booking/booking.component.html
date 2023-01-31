@@ -71,9 +71,7 @@
                     <div class="my-3">
                         Food Type
                         <select  name="selectFoodCategory" class="form-control" formControlName="selectCategory" id="selectFoodCategory">
-                          <optgroup *ngFor="let item of items">
-                            <option value="{{item.itemCategory}}">{{item.itemCategory}}</option>
-                          </optgroup>  
+                            <option *ngFor="let item of items" value="{{item.itemCategory}}">{{item.itemCategory}}</option>
                         </select>
                     </div>
                     <div>
@@ -85,8 +83,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="my-3">
-                          <select name="selectAddOnsCategory" id="selectAddOnsCategory" formControlName="selectAddOnsCategory" multiple>
-                                <option *ngFor="let addon of addons" value="{{addon.addOnPrice}}">{{addon.addOnPrice}} {{addon.addOnName}}</option>
+                          <select class="form-control" aria-label=".form-select-lg example" name="selectAddOnsCategory" id="selectAddOnsCategory" formControlName="selectAddOnsCategory" multiple>
+                                <option *ngFor="let addon of addons" value="{{addon.addOnPrice}}">{{addon.addOnPrice | currency:US}} &nbsp; {{addon.addOnName}}</option>
                           </select>
                     </div>
                     <div class="mt-4">
