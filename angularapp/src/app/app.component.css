@@ -16,7 +16,7 @@
 
  header
   {
-    background-color: #edeef1;
+    background-color: #f2d4d6;
   }
   
   /* Change the color of links on hover */
@@ -27,9 +27,9 @@
 
   #btnLogout
   {
-    background-color: rgb(61, 212, 212);
+    background-color: azure;
     float: right;
-    color: azure;
+    color: #081d5c;
     font-size: large;
   }
   
@@ -38,7 +38,7 @@
   .nav a:hover
   {
    
-    background-color: rgb(61, 212, 212);
+    background-color: #fcfafb;
     border-radius: 5px;
   }
 
@@ -49,7 +49,7 @@
 
   a
   {
-    color: azure;
+    color: #081d5c;
   }
 
   /* li a {
