@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
-import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AddOnsServiceService } from '../services/add-ons-service.service';
+
 
 
 @Component({
@@ -10,29 +11,31 @@ import { AddOnsServiceService } from '../services/add-ons-service.service';
 })
 export class AddonComponent  {
 
-  theAddOns: any;
+ 
+  addOnForm= new FormGroup({
+  imageUrl:new FormControl('',[Validators.required]),
+  addOnName:new FormControl('',[Validators.required]),
+  addOnPrice:new FormControl('',[Validators.required])
 
-  constructor(private addonService:AddOnsServiceService, config: NgbModalConfig, private modalService: NgbModal) {
-    this.addonService.view().subscribe((addons:any)=>{
-      this.theAddOns = addons;
-    });
-   }
-
-  open(content:any) {
-    this.modalService.open(content);
-  }
-
-  addAddOn(theAddOnsName:any,theAddOnsPrice:any,theAddOnsImageuUrl:any){
-      var addOn = {addOnName:theAddOnsName,addOnPrice:theAddOnsPrice,imageUrl:theAddOnsImageuUrl};
-
-      this.addonService.add(addOn).subscribe((addons)=>{
-        console.log("Added");
-      });
-
-      this.modalService.dismissAll();
-      location.reload();
-  }
-
-
-
+});
+get imageUrl(){
+  return this.addOnForm.get('imageUrl');
 }
+get addOnName(){
+  return this.addOnForm.get('addOnName');
+}
+get addOnPrice(){
+  return this.addOnForm.get('addOnPrice');
+}
+
+constructor(private addOnData:AddOnsServiceService){ }
+
+AddaddOnData(data:any){
+  this.addOnData.add(data).subscribe((result:any)=>{
+    console.log(result);
+    alert("Successfully Submitted!!");
+     });
+   }
+   
+}
+ 
