@@ -50,7 +50,7 @@
                 <div class="col-4"></div>
                 <div class="col-4"></div>
                 <div class="col-4">
-                    <button type="submit" class="btn btn-primary" id="nextPageButton">Next Page</button>
+                    <button type="submit" class="btn btn-primary"  id="nextPageButton">Next Page</button>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="my-3">
-                           SELECT ADDONS
+                           Extras
                            <div class="selectBox" onclick="showCheckboxes()">
                             <select>
                               <option>AddOns</option>
@@ -94,6 +94,7 @@
                             
                           </div>  
                     </div>
+                    
                     <div class="mt-4">
                         <button class="btn btn-primary" id="bookEvent">Book Event</button>
                     </div>
@@ -106,9 +107,9 @@
 </ng-template>
 
 <ng-template #button1>
-    <button type="submit" class="btn btn-primary" id="nextPageButton">Next Page</button>
+    <button type="submit" class="btn btn-primary" id="nextPageButton">Next Page</button><br>
 </ng-template>
 <ng-template #button2>
-    <button type="submit" [disabled]="true" class="btn btn-secondary" style="cursor: not-allowed;">Next Page</button>
+    <button type="submit" [disabled]="true" class="btn btn-secondary" style="cursor: not-allowed;">Next Page</button><br>
 </ng-template>
 <app-footer></app-footer>

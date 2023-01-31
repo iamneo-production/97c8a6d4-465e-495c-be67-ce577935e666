@@ -27,9 +27,10 @@
 
   #btnLogout
   {
-    background-color: #F2D4D6;
+    background-color: rgb(61, 212, 212);
     float: right;
-    color: #213F99;
+    color: azure;
+    font-size: large;
   }
   
  
@@ -37,7 +38,8 @@
   .nav a:hover
   {
    
-    background-color: #F2D4D6;
+    background-color: rgb(61, 212, 212);
+    border-radius: 5px;
   }
 
   li
@@ -72,4 +74,15 @@
     background: transparent;
   }
     */
+
+#cont
+{
+  align-items: center;
+  font-size: larger;
+}
+
+#btnLogout
+{
+  float:right;
+}
 

@@ -1,0 +1,33 @@
+#bookings {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #bookings td, #bookings th 
+  {
+    border: 1px solid #F2D4D6;
+    padding: 8px;
+  }
+  
+  #bookings tr:nth-child(even){background-color: #F2D4D6;}
+
+  
+  #bookings thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #201011;
+    color: white;
+    width: 100px;
+    font-size:larger;
+  }
+
+  table
+  {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border:12px solid #213F99;
+    border-radius: 15px;
+  }

@@ -1,18 +1,25 @@
 <header *ngIf="!admin" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-  <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+  <!-- <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
     <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-  </a>
-
+  </a> -->
+ 
   <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-    <li><a routerLink="home" class="nav-link px-2 link-secondary">Home</a></li>
-    <li><a routerLink="booking" class="nav-link px-2 link-dark">Book Event</a></li>
-    <li><a routerLink="reviews" class="nav-link px-2 link-dark">Reviews</a></li>
+    <li><a routerLink="home">
+      <img src="../assets/MainLogo.PNG" width="35%" id="logo" alt="">
+    </a></li>
+    <li><a routerLink="home" class="nav-link px-2 link-secondary" id="cont">Home</a></li>
+    <li><a routerLink="booking" class="nav-link px-2 link-dark" id="cont">Book Event</a></li>
+    <li><a routerLink="viewbooking" class="nav-link px-2 link-dark" id="cont">View Booked Events</a></li>
+    <li><a routerLink="reviews" class="nav-link px-2 link-dark" id="cont">Reviews</a></li>
+    <li><a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()" id="btnLogout">Logout</a></li>
+    
   </ul>
 
+
+  <!-- <div class="col-md-3 text-end">
+    <a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()" id="btnLogout">Logout</a>
+  </div> -->
   
-  <div class="col-md-3 text-end">
-    <a *ngIf="logged" class="btn btn-primary mx-4" (click)="logout()">Logout</a>
-  </div>
 </header>
 
 <header *ngIf="admin" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -25,9 +32,10 @@
     <li><a routerLink="addtheme" class="nav-link px-2 link-dark">Theme</a></li>
     <li><a routerLink="addmenu" class="nav-link px-2 link-dark">FoodMenu</a></li>
     <li><a routerLink="addon" class="nav-link px-2 link-dark">Addons</a></li>
+    <li><a *ngIf="logged" class="btn  mx-4" id="btnLogout" (click)="logout()" >Logi</a></li>
   </ul>
-  <div class="col-md-3 text-end" >
+  <!-- <div class="col-md-3 text-end" >
     <a *ngIf="logged" class="btn  mx-4" id="btnLogout" (click)="logout()">Logout</a>
-  </div>
+  </div> -->
 </header>
 <router-outlet></router-outlet>

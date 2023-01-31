@@ -1,5 +1,5 @@
 
-        <table class="table table-bordered">
+        <table class="table table-bordered" id="bookings" style="width:90%">
             <thead>
               <tr>
                 <th scope="col">Event Name</th>
@@ -12,13 +12,14 @@
             </thead>
             <tbody *ngFor="let event of events">
                     <tr scope="row">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button [data]="event" id="editBooking" class="btn btn-primary" (click)="edit()">Edit</button></td>
-                            <td><app-delete-event [data]="event" id="deleteBooking"></app-delete-event></td>
+                            <td>{{event.eventName}}</td>
+                            <td>{{event.eventTime}}</td>
+                            <td>{{event.eventDate}}</td>
+                            <td>{{event.price}}</td>
+                            <app-edit-booking [data]="event"></app-edit-booking>
+                            <td><button [data]="event" id="deleteBooking" class="btn btn-danger" (click)="delete()">delete</button></td>
                     </tr>
             </tbody>
           </table>
 
-
+          <app-footer></app-footer>

@@ -7,7 +7,7 @@ export class BookingServiceService {
 
   constructor(private http:HttpClient) { }
 
-  url = "https://8080-baafadfefdeafdaadbbceeaceaecabef.examlyiopb.examly.io/events";
+  url = "https://8080-defacfecfaffffdeafdaadbbceeaceaecabef.examlyiopb.examly.io/events";
 
   view(){
     return this.http.get(this.url);
@@ -24,5 +24,7 @@ export class BookingServiceService {
   edit(event:any){
     return this.http.put(this.url + "/" + event.id,event);
   }
+
+
 
 }

@@ -88,7 +88,8 @@ get selectAddOnsCategory(){
   return this.bookingForm.get('selectAddOnsCategory');
 }
 
-    bookEvent(form:any, category:any){
+    bookEvent(form:any, category:any)
+    {
 
         console.log(category);
         // this.secondFormData = form;

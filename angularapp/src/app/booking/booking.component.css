@@ -4,3 +4,10 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
 }
+
+form
+{
+    border: 10px solid #213F99;
+    border-width: 10px;
+    border-radius: 25px;
+}
