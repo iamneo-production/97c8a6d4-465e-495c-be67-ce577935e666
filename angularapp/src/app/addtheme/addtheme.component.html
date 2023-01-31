@@ -1,24 +1,24 @@
 <div>
    <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
-      <span style="color:red;" *ngIf="themeName && themeName.required && themeName.touched">Invalid field</span>
+      <span style="color:red;" *ngIf="themeName && themeName.invalid && themeName.touched">Invalid field</span>
       <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
       <br>
-      <span style="color:red;" *ngIf="imageUrl && imageUrl.required && imageUrl.touched">Invalid field</span>
+      <span style="color:red;" *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched">Invalid field</span>
       <input type="text" id="imageUrl" class="form-control" #imageUrl name="imageUrl" placeholder="Enter the image Url"  formControlName="imageUrl"    required>
       <br> 
-      <span style="color:red;" *ngIf="photographerDetails && photographerDetails.required && photographerDetails.touched">Invalid field</span>
+      <span style="color:red;" *ngIf="photographerDetails && photographerDetails.invalid && photographerDetails.touched">Invalid field</span>
      <input type="text" id="photographerDetails" class="form-control" #photographerDetails name="photographerDetails" placeholder="Enter Phographer details" formControlName="photographerDetails"  required>
      <br>
-     <span style="color:red;" *ngIf="videographerDetails && videographerDetails.required && videographerDetails.touched">Invalid field</span>
+     <span style="color:red;" *ngIf="videographerDetails && videographerDetails.invalid && videographerDetails.touched">Invalid field</span>
     <input type="text" id="videographerDetails" class="form-control" #videographerDetails name="videographerDetails" placeholder="Enter videographer details" formControlName="videographerDetails" required>
     <br>
-    <span style="color:red;" *ngIf="returnGift && returnGift.required && returnGift.touched">Invalid field</span>
+    <span style="color:red;" *ngIf="returnGift && returnGift.invalid&& returnGift.touched">Invalid field</span>
     <input type="text" id="returnGift" class="form-control" #returnGift name="returnGift" placeholder="Enter theme return Gift"      formControlName="returnGift" required>
      <br>
-     <span style="color:red;" *ngIf="themeCost && themeCost.required && themeCost.touched">Invalid field</span>
+     <span style="color:red;" *ngIf="themeCost && themeCost.invalid && themeCost.touched">Invalid field</span>
     <input type="number" id="themeCost" class="form-control" #themeCost name="themeCost" placeholder="Enter theme cost"   formControlName="themeCost" required>
     <br>
-    <span style="color:red;" *ngIf="themeDescription && themeDescription.required && themeDescription.touched">Invalid field</span>
+    <span style="color:red;" *ngIf="themeDescription && themeDescription.invalid && themeDescription.touched">Invalid field</span>
     <textarea id="themeDescription" class="form-control" #themeDescription name="themeDescription" placeholder="Enter theme description"   formControlName="themeDescription"    required>
        Enter Theme description....
     </textarea>
