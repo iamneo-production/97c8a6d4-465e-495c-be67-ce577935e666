@@ -55,15 +55,16 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                         <em class="fas fa-key fa-lg me-3 fa-fw"></em>
                         <div class="form-outline flex-fill mb-0">
-                                <span [ngClass]="'error'" *ngIf="confirmPassword && confirmPassword.invalid && confirmPass(registerForm.value) && confirmPassword.touched">Passwords Don't Match</span>    
+                                <span [ngClass]="'error'" *ngIf="confirmPassword && confirmPassword.invalid && confirmPassword.touched">Invalid Password</span>    
+                                <span [ngClass]="'error'" *ngIf="confirmPassword && confirmPassword.touched && confirmPass(registerForm.value)">Passwords Don't Match</span>    
                                 <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" formControlName="confirmPassword">  
                         </div>
                         </div>
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"  *ngIf="registerForm.invalid" >
-                                <button style="cursor: not-allowed;" class="btn btn-secondary"disabled type="submit" id="submitButton">Submit</button>
+                                <button style="cursor: not-allowed;" class="btn btn-secondary"disabled type="submit">Submit</button>
                         </div>
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"  *ngIf="registerForm.valid" >
-                                <button class="btn btn-secondary"  type="submit" id="submitButton">Submit</button>
+                                <button class="btn btn-primary"  type="submit" id="submitButton">Submit</button>
                         </div>
                         <div>
                                 Already a user? <a routerLink="login" (click)="login()" id="signinLink">Login</a>
@@ -84,4 +85,3 @@
           </div>
         </div>
       </section>
-<app-footer></app-footer>

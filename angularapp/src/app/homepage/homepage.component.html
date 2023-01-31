@@ -1,4 +1,3 @@
-
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
@@ -18,76 +17,25 @@
 </div>
 
 <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5 mb-5">
+          <div *ngFor="let event of events">
             <div class="col">
-                    <div class="card shadow-sm" id="itemGrid1">
-                      <img src="" alt="">
-                      <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                          </div>
-                          <small class="text-muted">9 mins</small>
-                        </div>
-                      </div>
+              <div class="card shadow-sm my-4" id="itemGrid1">
+                <div class="card-body">
+                  <p class="card-text">{{event.eventName}} <br>
+                                    {{event.eventAddress}} <br>
+                                    {{event.eventDate}} <br>
+                                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      
                     </div>
+                    <small class="text-muted">9 mins</small>
                   </div>
-                  <div class="col">
-                        <div class="card shadow-sm" id="itemGrid2">
-                          <img src="" alt="">
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                              <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                              </div>
-                              <small class="text-muted">9 mins</small>
-                            </div>
-                          </div>
-                        </div>
-        
-                      <div class="col">
-                            <div class="card shadow-sm" id="itemGrid3">
-                              <img src="" alt="">
-                              <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                  <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                  </div>
-                                  <small class="text-muted">9 mins</small>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 </div>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+<app-footer></app-footer>

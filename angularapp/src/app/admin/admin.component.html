@@ -1,0 +1,26 @@
+<div class="mx-5 my-4">
+    <table class="table table-hover table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile Number</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let user of users">
+          <tr scope="row">
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.mobileNumber}}</td>
+            <app-edit-user [data]="user" class="mx-3"></app-edit-user>
+            <td><app-delete-user></app-delete-user></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<app-footer></app-footer>
+

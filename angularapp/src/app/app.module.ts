@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 // import { NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './auth/login/login.component';
-import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MainComponent } from './main/main.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { DisplayUserComponent } from './auth/display-user/display-user.component';
@@ -31,8 +33,11 @@ import { DeleteAddonComponent } from './delete-addon/delete-addon.component';
 import { FooterComponent } from './footer/footer.component';
 import { CustomerheaderComponent } from './customerheader/customerheader.component';
 import { AdminheaderComponent } from './adminheader/adminheader.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { EditThemeComponent } from './edit-theme/edit-theme.component';
 import { DeleteBookingComponent } from './delete-booking/delete-booking.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import {MatSelectModule} from '@angular/material/select';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 @NgModule({
@@ -41,23 +46,17 @@ import { DeleteBookingComponent } from './delete-booking/delete-booking.componen
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, ViewbookingComponent, EditUserComponent,
     BookingComponent, AddmenuComponent,AddonComponent,
-    HomepageComponent,ViewmenuComponent,DeletethemeComponent,
+   HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent, DeleteBookingComponent
+    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent,DeleteBookingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgbModule, ReactiveFormsModule, FormsModule,
-    RouterModule,
-    HttpClientModule,
-    BrowserAnimationsModule
-    // NgbDatepicker
+    AppRoutingModule,ReactiveFormsModule, FormsModule,RouterModule, NgbModule,BrowserAnimationsModule,
+     HttpClientModule,MatSnackBarModule,MatTableModule,  MatFormFieldModule, MatSelectModule
   ],
-  
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

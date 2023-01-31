@@ -26,10 +26,7 @@
             <span style="color:crimson" class="my-2">Theme Cost</span><br> 
             <input type="text" class="form-control mb-3" name="themeCost" #themeCost placeholder="{{data.themeCost}}" >
             
-            <span style="color:crimson" class="my-2">Theme Description</span><br> 
-            <input type="text" class="form-control mb-3" name="themeDescription" #description placeholder="{{data.themeDescription}}" >
-            
-            <button type="submit" class="btn btn-danger" (click)="editTheme(id.value,themeName.value,imageUrl.value,photographer.value,videographer.value,returnGift.value,themeCost.value,description.value)">Edit</button>
+            <button type="submit" class="btn btn-danger" (click)="editTheme(id.value,themeName.value,imageUrl.value,photographer.value,videographer.value,returnGift.value,themeCost.value)">Edit</button>
 	</div>
 </ng-template>
 <button class="btn btn-primary mx-3 my-2" (click)="open(content)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BookingServiceService } from '../services/booking-service.service';
 import { EventserviceService } from '../services/eventservice.service';
 
 
@@ -9,9 +10,8 @@ import { EventserviceService } from '../services/eventservice.service';
 })
 export class HomepageComponent  {
   events:any;
-constructor(private eventsService:EventserviceService){
-  
-    this.eventsService.view().subscribe((theEvents:any)=>{
+    constructor(private bookingService:BookingServiceService){
+    this.bookingService.view().subscribe((theEvents:any)=>{
       this.events = theEvents;
     });
 
