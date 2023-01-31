@@ -93,25 +93,13 @@
     }
   ],
   "events": [
-    
     {
+      "id": 11,
       "eventName": "Sweet 16",
-      "applicantName": "Nande",
-      "applicantAddress": "Tembisa",
-      "email": "albi@gmail.com",
-      "eventAddress": "Rosebank",
-      "eventDate": "02-02-2023",
       "eventTime": "16:00",
-      "NoOfPeople": 78,
-      "foodType": ["Veg","Non Veg"],
-      "quantityOfVeg": 36,
-      "quantityOfNonVeg": 46,
-      "addOns": ["Invitations","Face Painting","Personalized Cake"],
-      "themes":"BLACK AND WHITE BALL THEME",
-      "price":7000,
-      "id": 11
+      "eventDate": "2023-02-10",
+      "price": "10000"
     },
-
     {
       "eventName": "21st Birthday",
       "applicantName": "Qhamani",
@@ -121,15 +109,21 @@
       "eventDate": "22-09-2023",
       "eventTime": "18:00",
       "NoOfPeople": 56,
-      "foodType": ["Veg","Non Veg"],
+      "foodType": [
+        "Veg",
+        "Non Veg"
+      ],
       "quantityOfVeg": 36,
       "quantityOfNonVeg": 46,
-      "addOns": ["Invitations","Face Painting","Personalized Cake"],
-      "themes":"BLACK AND WHITE BALL THEME",
-      "price":10000,
+      "addOns": [
+        "Invitations",
+        "Face Painting",
+        "Personalized Cake"
+      ],
+      "themes": "BLACK AND WHITE BALL THEME",
+      "price": 10000,
       "id": 11
     },
-
     {
       "eventName": "25th Birthday",
       "applicantName": "Nande",
@@ -139,15 +133,21 @@
       "eventDate": "12-12-2023",
       "eventTime": "20:00",
       "NoOfPeople": 38,
-      "foodType": ["Veg","Non Veg"],
+      "foodType": [
+        "Veg",
+        "Non Veg"
+      ],
       "quantityOfVeg": 36,
       "quantityOfNonVeg": 46,
-      "addOns": ["Invitations","Face Painting","Personalized Cake"],
-      "themes":"BLACK AND WHITE BALL THEME",
-      "price":9000,
+      "addOns": [
+        "Invitations",
+        "Face Painting",
+        "Personalized Cake"
+      ],
+      "themes": "BLACK AND WHITE BALL THEME",
+      "price": 9000,
       "id": 11
     },
-
     {
       "eventName": "1st Birthday",
       "applicantName": "Nande",
@@ -157,15 +157,21 @@
       "eventDate": "06-09-2023",
       "eventTime": "12:00",
       "NoOfPeople": 78,
-      "foodType": ["Veg","Non Veg"],
+      "foodType": [
+        "Veg",
+        "Non Veg"
+      ],
       "quantityOfVeg": 36,
       "quantityOfNonVeg": 46,
-      "addOns": ["Invitations","Face Painting","Personalized Cake"],
-      "themes":"BLACK AND WHITE BALL THEME",
-      "price":4000,
+      "addOns": [
+        "Invitations",
+        "Face Painting",
+        "Personalized Cake"
+      ],
+      "themes": "BLACK AND WHITE BALL THEME",
+      "price": 4000,
       "id": 11
     },
-
     {
       "eventName": "18th Birtday",
       "applicantName": "Nande",
@@ -175,15 +181,21 @@
       "eventDate": "17-08-2023",
       "eventTime": "17:00",
       "NoOfPeople": 48,
-      "foodType": ["Veg","Non Veg"],
+      "foodType": [
+        "Veg",
+        "Non Veg"
+      ],
       "quantityOfVeg": 36,
       "quantityOfNonVeg": 46,
-      "addOns": ["Invitations","Face Painting","Personalized Cake"],
-      "themes":"BLACK AND WHITE BALL THEME",
-      "price":5000,
+      "addOns": [
+        "Invitations",
+        "Face Painting",
+        "Personalized Cake"
+      ],
+      "themes": "BLACK AND WHITE BALL THEME",
+      "price": 5000,
       "id": 11
     },
-
     {
       "eventName": "50th Birthday",
       "applicantName": "Nande",
@@ -193,15 +205,21 @@
       "eventDate": "24-11-2023",
       "eventTime": "15:00",
       "NoOfPeople": 66,
-      "foodType": ["Veg","Non Veg"],
+      "foodType": [
+        "Veg",
+        "Non Veg"
+      ],
       "quantityOfVeg": 36,
       "quantityOfNonVeg": 46,
-      "addOns": ["Invitations","Face Painting","Personalized Cake"],
-      "themes":"BLACK AND WHITE BALL THEME",
-      "price":9000,
+      "addOns": [
+        "Invitations",
+        "Face Painting",
+        "Personalized Cake"
+      ],
+      "themes": "BLACK AND WHITE BALL THEME",
+      "price": 9000,
       "id": 11
     }
-    
   ],
   "menus": [],
   "addons": [

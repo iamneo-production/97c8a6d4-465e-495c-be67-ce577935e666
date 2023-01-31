@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import { NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './auth/login/login.component';
 import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -31,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CustomerheaderComponent } from './customerheader/customerheader.component';
 import { AdminheaderComponent } from './adminheader/adminheader.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { DeleteBookingComponent } from './delete-booking/delete-booking.component';
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent
+    CustomerheaderComponent, AdminheaderComponent, DeleteBookingComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     RouterModule,
     HttpClientModule,
     BrowserAnimationsModule
+    // NgbDatepicker
   ],
   
   providers: [],

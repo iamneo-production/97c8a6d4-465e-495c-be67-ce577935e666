@@ -17,8 +17,8 @@
                             <td>{{event.eventDate}}</td>
                             <td>{{event.price}}</td>
                             <app-edit-booking [data]="event"></app-edit-booking>
-                            <td><button [data]="event" id="deleteBooking" class="btn btn-danger" (click)="delete()">delete</button></td>
-                    </tr>
+                            <td><app-delete-booking [data]="event"></app-delete-booking></td>
+                          </tr>
             </tbody>
           </table>
 

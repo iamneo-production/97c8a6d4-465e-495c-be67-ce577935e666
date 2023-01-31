@@ -7,7 +7,7 @@
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #213F99;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -16,7 +16,7 @@
 
  header
   {
-    background-color: #213F99;
+    background-color: #edeef1;
   }
   
   /* Change the color of links on hover */
@@ -84,5 +84,10 @@
 #btnLogout
 {
   float:right;
+}
+
+#logo
+{
+  background: transparent;
 }
 
