@@ -43,11 +43,11 @@ import { EditMenuComponent } from './edit-menu/edit-menu.component';
     AppComponent,SignupComponent,LoginComponent, MainComponent,
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, ViewbookingComponent, EditUserComponent,
-    BookingComponent, AddmenuComponent,AddonComponent,
+    BookingComponent, AddmenuComponent,
     HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent, EditMenuComponent,AddonComponent
+    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent, EditMenuComponent
   ],
   imports: [
     BrowserModule,
