@@ -33,6 +33,7 @@ import { CustomerheaderComponent } from './customerheader/customerheader.compone
 import { AdminheaderComponent } from './adminheader/adminheader.component';
 import { EditThemeComponent } from './edit-theme/edit-theme.component';
 import { EditMenuComponent } from './edit-menu/edit-menu.component';
+import { ViewAddOnsComponent } from './view-add-ons/view-add-ons.component';
 
 
 
@@ -45,7 +46,7 @@ import { EditMenuComponent } from './edit-menu/edit-menu.component';
     HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent, EditMenuComponent
+    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent, EditMenuComponent, ViewAddOnsComponent
   ],
   imports: [
     BrowserModule,
