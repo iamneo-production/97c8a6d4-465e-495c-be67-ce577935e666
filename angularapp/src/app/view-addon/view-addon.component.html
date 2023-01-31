@@ -1,1 +1,23 @@
-<p>view-addon works!</p>
+<div class="album py-5 bg-light" id="gridBody">
+    <div class="container album py-5 bg-light" id="gridBody">
+      <div  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
+        <div *ngFor="let addon of theAddOns">
+        <div class="col" >
+          <div class="card shadow-sm">
+            <img src="{{addon.imageUrl}}" alt="Oops! Loadin Picture" id="addOnsGrid{{addon.id}}" >
+             <div class="card-body">
+              <h3>{{addon.addOnName}}</h3> 
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <app-edit-addon [data]="addon"></app-edit-addon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <app-delete-addon [data]="addon"></app-delete-addon>
+                </div>
+                <small class="text-muted"><strong>Price : </strong>{{addon.addOnPrice}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>  
+    </div>
+  </div>
