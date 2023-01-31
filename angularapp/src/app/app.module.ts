@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './auth/login/login.component';
-import {  ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MainComponent } from './main/main.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { DisplayUserComponent } from './auth/display-user/display-user.component';
@@ -32,6 +33,7 @@ import { DeleteAddonComponent } from './delete-addon/delete-addon.component';
 import { FooterComponent } from './footer/footer.component';
 import { CustomerheaderComponent } from './customerheader/customerheader.component';
 import { AdminheaderComponent } from './adminheader/adminheader.component';
+import { EditThemeComponent } from './edit-theme/edit-theme.component';
 
 
 @NgModule({
@@ -40,14 +42,15 @@ import { AdminheaderComponent } from './adminheader/adminheader.component';
     DisplayUserComponent, DeleteUserComponent, 
     AdminComponent, ViewbookingComponent, EditUserComponent,
     BookingComponent, AddmenuComponent,AddonComponent,
-    HomepageComponent,ViewmenuComponent,DeletethemeComponent,
+   HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent
+    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,ReactiveFormsModule, FormsModule,RouterModule, NgbModule,BrowserAnimationsModule, HttpClientModule
+    AppRoutingModule,ReactiveFormsModule, FormsModule,RouterModule, NgbModule,BrowserAnimationsModule,
+     HttpClientModule,MatSnackBarModule,MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,7 +29,11 @@
                 <div class="col-md-4">
                     <div class="my-3">
                         <span *ngIf="eventAddress && eventAddress.invalid && eventAddress.touched" style="color: red;">Invalid Event Address</span>
-                        <input type="text" class="form-control" name="eventAddress" id="eventAddress" placeholder="Event Address" formControlName="eventAddress">
+                        <select name="eventAddress" class="form-control" id="eventAddress" formControlName="eventAddress">
+                            <optgroup *ngFor="let v of theVenues">
+                                <option value="{{v.venueAddress}}">{{v.venueAddress}}</option>
+                            </optgroup>
+                        </select>
                     </div>
                     <div class="">
                         <span *ngIf="eventDate && eventDate.invalid && eventDate.touched" style="color: red;">Invalid Event Date</span>
@@ -59,7 +63,7 @@
     
 
 <ng-template #secondPage>
-    <form [formGroup]="bookingForm2" (ngSubmit)="bookEvent(bookingForm2.value,selectAddOnsCategory.value)">
+    <form [formGroup]="bookingForm2" (ngSubmit)="bookEvent(bookingForm2.value)">
         <div class="container">
             <div class="row">
                 <div class="col-md-2"></div>
@@ -81,18 +85,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="my-3">
-                           SELECT ADDONS
-                           <div class="selectBox" onclick="showCheckboxes()">
-                            <select>
-                              <option>AddOns</option>
-                            </select>
-                            <div class="overSelect"></div>
-                          </div>
-                          <div id="checkboxes" *ngFor = "let a of addOns">
-                            <label for="one">
-                              <input type="checkbox" id="one" /><img src="{{a.imageUrl}}" alt="pic" width="50px" height="60px">|{{a.addOnName}}|{{a.addOnPrice}}</label>
-                            
-                          </div>  
+                           <!-- SELECT ADDONS
+                          <div *ngFor="let a of addons">
+                                <input type="checkbox" name="selectAddOnsCategory" id="selectAddOnsCategory" formControlName="selectAddOnsCategory" value="{{a.addOnPrice}}"> {{a.addOnName}} {{a.addOnPrice}}
+                          </div>  -->
                     </div>
                     <div class="mt-4">
                         <button class="btn btn-primary" id="bookEvent">Book Event</button>

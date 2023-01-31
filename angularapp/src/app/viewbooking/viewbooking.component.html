@@ -5,19 +5,15 @@
                 <th scope="col">Event Name</th>
                 <th scope="col">Time</th>
                 <th scope="col">Date</th>
-                <th scope="col">Total Price</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
               </tr>
             </thead>
             <tbody *ngFor="let event of events">
-                    <tr scope="row">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><button [data]="event" id="editBooking" class="btn btn-primary" (click)="edit()">Edit</button></td>
-                            <td><app-delete-event [data]="event" id="deleteBooking"></app-delete-event></td>
-                    </tr>
+                   <td>{{event.eventName}}</td>
+                   <td>{{event.eventTime}}</td>
+                   <td>{{event.eventDate}}</td>
+                   <app-edit-event></app-edit-event>
             </tbody>
           </table>
 

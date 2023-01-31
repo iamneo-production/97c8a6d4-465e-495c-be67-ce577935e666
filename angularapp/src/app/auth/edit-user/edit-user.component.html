@@ -4,20 +4,11 @@
 		<h4 class="modal-title" id="modal-basic-title">Edit User Here</h4>
 		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
 	</div>
-	<div class="modal-body">
-            <span style="color:crimson" class="mt-2">User id</span><br>
-            <input disabled type="text" class="form-control mb-3" #id value="{{data.id}}">
-            <span style="color:crimson" class="">Email</span><br>
-            <input type="email" class="form-control mb-3" #email placeholder="{{data.email}}">
-            <span style="color:crimson" class="mt-2">Username</span><br>
-            <input type="text" class="form-control mb-3" placeholder="{{data.username}}" #username>
-            <span style="color:crimson">Mobile Number</span><br>
-            <input type="text" class="form-control mb-3"  placeholder="{{data.mobileNumber}}" #mobileNumber> 
-            <span style="color:crimson" class="my-2">Password</span><br> 
-            <input disabled type="text" class="form-control mb-3" id="password" value="{{data.password}}" #password>  
-	</div>
+	<div class="modal-body" *ngIf="true; then template">
+
+            </div>
 	<div class="modal-footer">
-		<button type="submit" class="btn btn-danger" (click)="update(email.value,id.value,username.value,mobileNumber.value)">Update User</button>
+		<button type="submit" class="btn btn-danger">Update User</button>
 	</div>
 </ng-template>
 <button class="btn btn-primary mx-3 my-2" (click)="open(content)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
@@ -25,7 +16,20 @@
 </svg></button>
 
 
-
+<ng-template #template>
+    <form [formGroup]="editForm" (ngSubmit)="updateUser(editForm.value)">
+        <span style="color:crimson" class="mt-2">User id</span><br>
+        <input disabled type="text" class="form-control mb-3" #id value="{{data.id}}">
+        <span style="color:crimson" class="">Email</span><br>
+        <input type="email" class="form-control mb-3" #email placeholder="{{data.email}}">
+        <span style="color:crimson" class="mt-2">Username</span><br>
+        <input type="text" class="form-control mb-3" placeholder="{{data.username}}" #username>
+        <span style="color:crimson">Mobile Number</span><br>
+        <input type="text" class="form-control mb-3"  placeholder="{{data.mobileNumber}}" #mobileNumber> 
+        <span style="color:crimson" class="my-2">Password</span><br> 
+        <input disabled type="text" class="form-control mb-3" id="password" value="{{data.password}}" #password>  
+    </form>
+</ng-template>
 
 
 

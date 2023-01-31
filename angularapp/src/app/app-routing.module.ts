@@ -16,6 +16,7 @@ import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
+import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 
 const routes: Routes = [
   {
@@ -49,7 +50,7 @@ const routes: Routes = [
   },
   {
     path:'displayuser',
-    component: DisplayUserComponent, canActivate:[AdminguardGuard]
+    component: AdminComponent, canActivate:[AdminguardGuard]
   },
   {
     path: 'edituser',
@@ -78,6 +79,10 @@ const routes: Routes = [
   {
     path: 'edit-booking',
     component: EditBookingComponent, canActivate:[CustomerguardGuard]
+  },
+  {
+    path: 'viewtheme',
+    component: ViewthemeComponent
   }
 
 

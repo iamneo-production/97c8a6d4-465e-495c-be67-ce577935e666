@@ -10,7 +10,7 @@ import { BookingServiceService } from '../services/booking-service.service';
 export class ViewbookingComponent implements OnInit {
   events:any;
   constructor(private bookingService:BookingServiceService, private router:Router) {
-    this.bookingService.view().subscribe((theEvents:any)=>{
+    this.bookingService.viewEvent(sessionStorage.getItem("userid")).subscribe((theEvents:any)=>{
       this.events = theEvents;
     });
    }
@@ -21,5 +21,6 @@ export class ViewbookingComponent implements OnInit {
   edit(){
     this.router.navigate(['edit-booking']);
   }
+
 
 }

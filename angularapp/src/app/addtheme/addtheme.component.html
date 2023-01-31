@@ -1,23 +1,56 @@
 
-  <div>
+  <div class="form w-50" style="margin:50px 200px 50px 300px;">
     <form [formGroup]="themeForm"  (ngSubmit)="addThemeData(themeForm.value)">
-        <input type="text" id="themeName" class="form-control" #themeName name="themeName" placeholder="Enter theme name" formControlName="themeName"     required>
-        <br>
-        <input type="text" id="imageUrl" class="form-control" #imageUrl name="imageUrl" placeholder="Enter the image Url"  formControlName="imageUrl"    required>
-        <br> 
-       <input type="text" id="photographerDetails" class="form-control" #photographerDetails name="photographerDetails" placeholder="Enter Phographer details" formControlName="photographerDetails"  required>
-       <br>
-      <input type="text" id="videographerDetails" class="form-control" #videographerDetails name="videographerDetails" placeholder="Enter videographer details" formControlName="videographerDetails" required>
-      <br>
-      <input type="text" id="returnGift" class="form-control" #returnGift name="returnGift" placeholder="Enter theme return Gift"      formControlName="returnGift" required>
-       <br>
-      <input type="number" id="themeCost" class="form-control" #themeCost name="themeCost" placeholder="Enter theme cost"   formControlName="themeCost" required>
-      <br>
-      <textarea id="themeDecription" class="form-control" #themeDescription name="themeDescription" placeholder="Enter theme description"   formControlName="themeDescription"    required>
-         Enter Theme description....
-      </textarea>
-       <br>
-       <input type="submit" value="submit">
-    
+       <div class="row mb-4">
+            <div  class="col">
+               <div class="form-outline">
+                 <span style="color: red;" *ngIf="themeName && themeName.invalid && themeName.touched">Invalid Theme Name</span>
+                  <input type="text" id="themeName" class="form-control"  name="themeName" placeholder="Enter theme name" formControlName="themeName">
+               </div>
+            </div>
+            <div  class="col">
+              <div class="form-outline">
+                <span style="color: red;" *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched">Invalid Image Url</span>
+                <input type="text" id="imageUrl" class="form-control"  name="imageUrl" placeholder="Enter the image Url"  formControlName="imageUrl">
+              </div>
+           </div>
+       </div>
+       <div class="form-outline mb-4">
+        <span style="color: red;" *ngIf="photographerDetails && photographerDetails.invalid && photographerDetails.touched">Invalid Photographer details</span>
+        <input type="text" id="photographerDetails" class="form-control"name="photographerDetails" placeholder="Enter Phographer details" formControlName="photographerDetails">
+      </div>
+      <div class="form-outline mb-4">
+        <span style="color: red;" *ngIf="videographerDetails && videographerDetails.invalid && videographerDetails.touched">Invalid Videographer details</span>
+        <input type="text" id="videographerDetails" class="form-control" name="videographerDetails" placeholder="Enter videographer details" formControlName="videographerDetails">
+      </div>
+      <div class="form-outline mb-4">
+        <span style="color: red;" *ngIf="returnGift && returnGift.invalid && returnGift.touched">Invalid Return Gift</span>
+        <input type="text" id="returnGift" class="form-control"  name="returnGift" placeholder="Enter theme return Gift" formControlName="returnGift">
+      </div>
+      <div class="form-outline mb-4">
+        <span style="color: red;" *ngIf="themeCost && themeCost.invalid && themeCost.touched">Invalid Theme Cost</span>
+        <input type="number" id="themeCost" class="form-control" name="themeCost" placeholder="Enter theme cost" formControlName="themeCost">
+      </div>
+      <div class="form-outline mb-4">
+        <span style="color: red;" *ngIf="themeDescription && themeDescription.invalid && themeDescription.touched">Invalid Theme Description</span>
+        <textarea id="themeDecription" class="form-control" name="themeDescription" placeholder="Enter theme description" formControlName="themeDescription">
+          Enter Theme description....
+       </textarea>
+      </div>      
+      <div class="row mb-4">
+        <div class="col">
+          <div class="form-outline">
+            <button style="cursor: not-allowed;" *ngIf="themeForm.invalid" disabled class="btn btn-secondary" id="addTheme">Add Theme</button>
+            <button *ngIf="themeForm.valid" class="btn btn-primary" id="addTheme">Add Theme</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <button (click)="viewThemes()" class="btn btn-success">View Themes</button>
+          </div>
+        </div>
+      </div>
+
     </form>
    </div>
+  <app-footer></app-footer>

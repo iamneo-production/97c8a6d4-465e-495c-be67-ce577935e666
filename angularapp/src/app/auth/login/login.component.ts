@@ -41,15 +41,18 @@ export class LoginComponent {
         if (users[i].email == user.email && users[i].password == user.password) {
           loggedIn = users[i];
 
-          if (loggedIn.password == 'admin') {
+          if (loggedIn.password == 'admin')
+           {
             localStorage.setItem("usertype", "admin");
             this.admin = true;
             this.adminService.login();
             this.router.navigate(['admin']);
             return
-          } else {
+          } 
+          else {
 
             localStorage.setItem("usertype", "user");
+            sessionStorage.setItem("userid",String(users[i].id));
             this.userExists = true;
             this.customerService.login();
             this.router.navigate(['home']);

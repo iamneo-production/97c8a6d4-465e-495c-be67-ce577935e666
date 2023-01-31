@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +17,11 @@ user: any;
 users:any;
 userTaken = false;
 
-constructor(private loginService:LoginService, private router:Router){}
+constructor(private loginService:LoginService, private router:Router, private snackbar:MatSnackBar){
+  this.loginService.getUsers().subscribe((theUsers:any)=>{
+    this.users = theUsers;
+});
+}
 
 // Register Form
 registerForm  = new FormGroup({
@@ -63,38 +68,32 @@ login(){
 // Register Method
 register(form:any)
 {
-  this.user = {email:form.email, username: form.username, mobileNumber: form.mobileNumber, password: form.password};
-
-  this.loginService.getUsers().subscribe((theUsers:any)=>{
-            this.users = theUsers;
-  });
-
+  
   for(let i in this.users){
-      if(this.users[i].email == this.user.email){
+      if(this.users[i].email == form.email){
         this.userTaken = true;
+        break;
       }
   }
-
   if(this.userTaken){
-    alert("Oops! User Already exists, try another email");
+    console.log("Oops user taken");
+    this.snackbar.open("Email already exists",'',{
+      duration: 4000,
+      verticalPosition:'bottom'
+    });
+    return
   }
   else{
-    var confirm : boolean = window.confirm("Do you want to submit this user.");
-  console.log(confirm);
-
-if(confirm){
-
-this.loginService.addUser(this.user).subscribe
-(
-  (users:any) => 
-  {
-      console.log(users);
-      this.router.navigate(['login']);
+    var newUser = {email:form.email,username:form,mobileNumber:form.mobileNumber,password:form.password};
+    this.loginService.addUser(newUser).subscribe((res)=>{
+      console.log("added");
+      this.snackbar.open("added",'',{
+        duration: 4000,
+        verticalPosition:'bottom'
+      });
+      });
+    
   }
-);
-} 
-  }
-
    
 }
 }

@@ -25,4 +25,8 @@ export class BookingServiceService {
     return this.http.put(this.url + "/" + event.id,event);
   }
 
+  viewEvent(userid:any){
+    return this.http.get(this.url + "?userid="+userid);
+  }
+
 }

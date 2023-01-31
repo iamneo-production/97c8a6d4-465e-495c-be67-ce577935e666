@@ -36,5 +36,9 @@ update(theEmail:any,theId:any,theUsername:any,theMobile:any,thePassword:any){
     location.reload();
 }
 
+editUser(form:any){
+
+}
+
 }
 

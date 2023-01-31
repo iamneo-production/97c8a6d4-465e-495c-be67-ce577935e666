@@ -1,5 +1,6 @@
-<table class="table table-bordered">
-    <thead>
+<div class="mx-5 my-4">
+<table class="table align-middle mb-0 bg-white mx-5">
+    <thead class="bg-light">
       <tr>
         <th scope="col">Theme Name</th>
         <th scope="col">Image</th>
@@ -19,11 +20,11 @@
                     <td>{{theme.photographerDetails}}</td>
                     <td>{{theme.videographerDetails}}</td>
                     <td>{{theme.returnGift}}</td>
-                    <td>{{theme.themeCost}}</td>
+                    <td>{{theme.themeCost | currency:US}}</td>
                     <td>{{theme.themeDescription}}</td>
                     <app-edit-theme [data]="theme"></app-edit-theme>
                     <td><app-deletetheme [data]="theme"></app-deletetheme></td>
             </tr>
     </tbody>
   </table>
-
+  </div>
