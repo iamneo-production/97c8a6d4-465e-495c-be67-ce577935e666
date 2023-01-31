@@ -37,6 +37,7 @@ import { EditMenuComponent } from './edit-menu/edit-menu.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,SignupComponent,LoginComponent, MainComponent,
@@ -46,7 +47,7 @@ import { EditMenuComponent } from './edit-menu/edit-menu.component';
     HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent, EditMenuComponent
+    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent, EditMenuComponent,AddonComponent
   ],
   imports: [
     BrowserModule,
