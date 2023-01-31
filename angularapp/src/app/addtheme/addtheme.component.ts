@@ -14,7 +14,7 @@ export class AddthemeComponent  {
       photographerDetails:new FormControl('',[Validators.required]),
       videographerDetails:new FormControl('',[Validators.required]),
       returnGift:new FormControl('',[Validators.required]),
-      themeCost:new FormControl('',[Validators.required]),
+      themeCost:new FormControl('',[Validators.required,Validators.maxLength(6)]),
       themeCostDescription:new FormControl('',[Validators.required])
     }
   );
