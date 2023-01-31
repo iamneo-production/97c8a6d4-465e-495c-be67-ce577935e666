@@ -15,7 +15,7 @@ export class AddonComponent  {
   addOnForm= new FormGroup({
   imageUrl:new FormControl('',[Validators.required]),
   addOnName:new FormControl('',[Validators.required]),
-  addOnPrice:new FormControl('',[Validators.required])
+  addOnPrice:new FormControl('',[Validators.required,Validators.maxLength(6)])
 
 });
 get imageUrl(){
