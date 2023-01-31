@@ -41,7 +41,7 @@ import { EditMenuComponent } from './edit-menu/edit-menu.component';
 @NgModule({
   declarations: [
     AppComponent,SignupComponent,LoginComponent, MainComponent,
-    DisplayUserComponent, DeleteUserComponent, 
+    DisplayUserComponent, DeleteUserComponent,  AddonComponent,
     AdminComponent, ViewbookingComponent, EditUserComponent,
     BookingComponent, AddmenuComponent,
     HomepageComponent,ViewmenuComponent,DeletethemeComponent,

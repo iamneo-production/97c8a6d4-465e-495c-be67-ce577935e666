@@ -2,11 +2,11 @@
         <div>
           <form [formGroup]="addOnForm" (ngSubmit)="AddaddOnData(addOnForm.value)">
             <input type="text" id="imageUrl" formControlName="imageUrl" placeholder="Enter Imgage Url"><br>
-            <span style="color:red;" *ngIf="imageUrl && imageUrl.required && imageUrl.touched">Invalid field</span>
+            <span style="color:red;" *ngIf="imageUrl && imageUrl.Invalid && imageUrl.touched">Invalid field</span>
             <input type="text" id="addOnName" formControlName="addOnName" placeholder="Enter AddOn Name"><br>
-            <span style="color:red;" *ngIf="addOnName && addOnName.required && addOnName.touched">Invalid field</span>
+            <span style="color:red;" *ngIf="addOnName && addOnName.Invalid&& addOnName.touched">Invalid field</span>
             <input type="number" id="addOnPrice" formControlName="addOnPrice" placeholder="Enter Price"><br>
-            <span style="color:red;" *ngIf="addOnPrice && addOnPrice.required && addOnPrice.touched">Invalid field</span>
+            <span style="color:red;" *ngIf="addOnPrice && addOnPrice.Invalid && addOnPrice.touched">Invalid field</span>
             <input type="submit" value="Submit">
           </form>
         </div>
