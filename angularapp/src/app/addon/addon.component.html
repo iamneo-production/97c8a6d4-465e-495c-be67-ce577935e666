@@ -1,6 +1,8 @@
 
         <div>
+          
           <form [formGroup]="addOnForm" (ngSubmit)="AddaddOnData(addOnForm.value)">
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Fill in Add-On Details</h1>
             <input type="text" id="imageUrl" formControlName="imageUrl" placeholder="Enter Imgage Url"><br>
             <span style="color:red;" *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched">Invalid field</span>
             <input type="text" id="addOnName" formControlName="addOnName" placeholder="Enter AddOn Name"><br>
