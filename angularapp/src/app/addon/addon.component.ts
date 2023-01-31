@@ -29,7 +29,6 @@ get addOnPrice(){
 }
 
 constructor(private addOnData:AddOnsServiceService){ }
-
 AddaddOnData(data:any){
   this.addOnData.add(data).subscribe((result:any)=>{
     console.log(result);
