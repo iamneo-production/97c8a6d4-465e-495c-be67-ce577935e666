@@ -16,6 +16,7 @@ import { EditBookingComponent } from './edit-booking/edit-booking.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ViewbookingComponent } from './viewbooking/viewbooking.component';
+import { ViewmenuComponent } from './viewmenu/viewmenu.component';
 import { ViewthemeComponent } from './viewtheme/viewtheme.component';
 
 const routes: Routes = [
@@ -83,6 +84,10 @@ const routes: Routes = [
   {
     path: 'viewtheme',
     component: ViewthemeComponent
+  },
+  {
+    path:'viewmenu',
+    component:ViewmenuComponent
   }
 
 

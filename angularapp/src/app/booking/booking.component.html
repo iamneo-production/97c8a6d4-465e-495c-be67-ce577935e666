@@ -85,10 +85,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="my-3">
-                           <!-- SELECT ADDONS
-                          <div *ngFor="let a of addons">
-                                <input type="checkbox" name="selectAddOnsCategory" id="selectAddOnsCategory" formControlName="selectAddOnsCategory" value="{{a.addOnPrice}}"> {{a.addOnName}} {{a.addOnPrice}}
-                          </div>  -->
+                          <select name="selectAddOnsCategory" id="selectAddOnsCategory" formControlName="selectAddOnsCategory" multiple>
+                                <option *ngFor="let addon of addons" value="{{addon.addOnPrice}}">{{addon.addOnPrice}} {{addon.addOnName}}</option>
+                          </select>
                     </div>
                     <div class="mt-4">
                         <button class="btn btn-primary" id="bookEvent">Book Event</button>

@@ -8,7 +8,6 @@
         <th scope="col">Videographer details</th>
         <th scope="col">Return Gift</th>
         <th scope="col">Theme Cost</th>
-        <th scope="col">Theme Description</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
       </tr>
@@ -21,7 +20,6 @@
                     <td>{{theme.videographerDetails}}</td>
                     <td>{{theme.returnGift}}</td>
                     <td>{{theme.themeCost | currency:US}}</td>
-                    <td>{{theme.themeDescription}}</td>
                     <app-edit-theme [data]="theme"></app-edit-theme>
                     <td><app-deletetheme [data]="theme"></app-deletetheme></td>
             </tr>

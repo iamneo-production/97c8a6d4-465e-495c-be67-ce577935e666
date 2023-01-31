@@ -34,6 +34,9 @@ import { FooterComponent } from './footer/footer.component';
 import { CustomerheaderComponent } from './customerheader/customerheader.component';
 import { AdminheaderComponent } from './adminheader/adminheader.component';
 import { EditThemeComponent } from './edit-theme/edit-theme.component';
+import { DeleteBookingComponent } from './delete-booking/delete-booking.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -45,12 +48,12 @@ import { EditThemeComponent } from './edit-theme/edit-theme.component';
    HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent
+    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent,DeleteBookingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,ReactiveFormsModule, FormsModule,RouterModule, NgbModule,BrowserAnimationsModule,
-     HttpClientModule,MatSnackBarModule,MatTableModule
+     HttpClientModule,MatSnackBarModule,MatTableModule,  MatFormFieldModule, MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

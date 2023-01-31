@@ -84,7 +84,7 @@ register(form:any)
     return
   }
   else{
-    var newUser = {email:form.email,username:form,mobileNumber:form.mobileNumber,password:form.password};
+    var newUser = {email:form.email,username:form.username,mobileNumber:form.mobileNumber,password:form.password};
     this.loginService.addUser(newUser).subscribe((res)=>{
       console.log("added");
       this.snackbar.open("added",'',{

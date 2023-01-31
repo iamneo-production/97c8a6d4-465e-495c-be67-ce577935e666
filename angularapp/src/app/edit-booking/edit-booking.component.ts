@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { BookingServiceService } from '../services/booking-service.service';
 
 @Component({
   selector: 'app-edit-booking',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditBookingComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
+  @Input() data:any;
+
+  constructor(private menuService:BookingServiceService,config: NgbModalConfig, private modalService: NgbModal) { }
+  open(content:any) {
+    this.modalService.open(content);
+  }
 }

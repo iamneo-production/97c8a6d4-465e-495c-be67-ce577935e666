@@ -1,32 +1,84 @@
-<ng-template #content let-c="close" let-d="dismiss">
-	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Add Menu Item</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
-	</div>
-	<div class="modal-body">
-		<label for="image">Image Url</label>
-                    <input type="url" class="form-control" id="imageUrl" name="imageUrl"  placeholder="Image Url" #img  required>
-                    <br>
-                     <br>
-                     <label for="itemname">Item Name:</label>
-                    <input type="text" id="itemName" class="form-control" #theName name="itemName" placeholder="Enter item name" required>
-					<br>
-					<br>
-                    <label for="catagory">Choose a Catagory:</label>
-                    <select name="itemCatagory" id="itemCatagory" class="form-control" #theItemCategory required>
-                      <option value="veg" >Veg</option>
-                      <option value="Non veg">Non Veg</option>
-                    </select>
-					<br>
-				   <br>
-                   <label for="itemPrice">Item Price:</label>
-                   <input type="number" id="itemPrice" #thePrice class="form-control" placeholder="Enter item price" required>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="saveMenu(img.value,theName.value,theItemCategory.value,thePrice.value)">Save</button>
-	</div>
-</ng-template>
+<!-- <form [formGroup]="addMenuForm" (ngSubmit)="save()">
+	<ng-template #content let-c="close" let-d="dismiss">
+		<div class="modal-header">
+			<h4 class="modal-title" id="modal-basic-title">Add Menu Item</h4>
+			<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
+		</div>
+		<div class="modal-body">
+			<label for="image">Image Url</label>
+						<input type="url" class="form-control" id="imageUrl" name="imageUrl"  placeholder="Image Url" formControlName="imageUrl">
+						<span *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched"></span>
+						<br>
+						 <br>
+						 <label for="itemname">Item Name:</label>
+						<input type="text" id="itemName" class="form-control" name="itemName" placeholder="Enter item name" formControlName="itemName">
+						<span *ngIf="itemName && itemName.invalid && itemName.touched">Invalid Item Name</span>
+						<br>
+						<br>
+						<label for="catagory">Choose a Catagory:</label>
+						<select name="itemCatagory" id="itemCatagory" class="form-control" formControlName="itemCatagory">
+						  <option value="veg" >Veg</option>
+						  <option value="Non veg">Non Veg</option>
+						</select>
+						<span *ngIf="itemCatagory && itemCatagory.invalid && itemCategory.touched">Invalid Item Catagory</span>
+						<br>
+					   <br>
+					   <label for="itemPrice">Item Price:</label>
+					   <input type="number" id="itemPrice" formControlName="itemPrice" class="form-control" placeholder="Enter item price">
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-outline-dark">Save</button>
+		</div>
+	</ng-template>
+</form>
+
 
 <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add Menu</button>
 <hr>
-<app-viewmenu></app-viewmenu>
+<app-viewmenu></app-viewmenu> -->
+
+
+<div class="form w-50" style="margin:50px 200px 50px 300px;">
+    <form [formGroup]="addMenuForm"  (ngSubmit)="addMenu(addMenuForm.value)">
+       <div class="row mb-4">
+            <div  class="col">
+               <div class="form-outline">
+                <input type="url" class="form-control" id="imageUrl" name="imageUrl"  placeholder="Image Url" formControlName="imageUrl">
+				<span *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched"></span>
+				</div>
+            </div>
+            <div  class="col">
+              <div class="form-outline">
+                <input type="text" id="itemName" class="form-control" name="itemName" placeholder="Enter item name" formControlName="itemName">
+				<span *ngIf="itemName && itemName.invalid && itemName.touched">Invalid Item Name</span>
+				</div>
+           </div>
+       </div>
+       <div class="form-outline mb-4">
+        <select name="itemCategory" id="itemCategory" class="form-control" formControlName="itemCategory">
+			<option value="veg" >Veg</option>
+			<option value="Non veg">Non Veg</option>
+		  </select>
+		  <span *ngIf="itemCategory && itemCategory.invalid && itemCategory.touched">Invalid Item Catagory</span>
+		</div>
+      <div class="form-outline mb-4">
+		  <span *ngIf="itemPrice && itemPrice.invalid && itemPrice.touched">Invalid Item Price</span>
+        <input type="number" id="itemPrice" formControlName="itemPrice" class="form-control" placeholder="Enter item price">
+	</div>   
+      <div class="row mb-4">
+        <div class="col">
+          <div class="form-outline">
+            <button class="btn btn-secondary">Add Menu</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <button (click)="viewMenuItems()" class="btn btn-success">View Themes</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+   </div>
+  <app-footer></app-footer>
+

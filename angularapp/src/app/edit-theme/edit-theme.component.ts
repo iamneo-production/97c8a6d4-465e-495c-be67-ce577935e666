@@ -18,8 +18,8 @@ export class EditThemeComponent{
   }
 
   
-  editTheme(id:any,theTheme:any,theImage:any,thePhotographer:any,theVideographer:any,theReturnGift:any,theThemeCost:any,theDescription:any){
-      var theme = {id:id,themeName:theTheme,imageUrl:theImage,photographerDetails:thePhotographer,videographerDetails:theVideographer,returnGift:theReturnGift,themeCost:theThemeCost,themeDescription:theDescription}
+  editTheme(id:any,theTheme:any,theImage:any,thePhotographer:any,theVideographer:any,theReturnGift:any,theThemeCost:any){
+      var theme = {id:id,themeName:theTheme,imageUrl:theImage,photographerDetails:thePhotographer,videographerDetails:theVideographer,returnGift:theReturnGift,themeCost:theThemeCost}
 
       console.log(theme);
       this.editThemeService.updateTheme(theme).subscribe((themes:any)=>{

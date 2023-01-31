@@ -19,8 +19,38 @@
 		<button type="button" class="btn btn-outline-dark" (click)="addAddOn(addOnsName.value,addOnsPrice.value,addOnsImageUrl.value)">Save</button>
 	</div>
 </ng-template>
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Addon</button>
 
-  <app-footer></app-footer>
+<div class="row mx-5">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4"><button class="btn btn-lg btn-outline-primary mx-5" (click)="open(content)">Addon</button></div>
+	<div class="col-lg-4"></div>
+</div>
+
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5 mb-5">
+          <div *ngFor="let addon of theAddOns">
+            <div class="col">
+              <div class="card shadow-sm my-4" id="itemGrid{{addon.id}}">
+				<img src="{{addon.imageUrl}}" alt="" style="height: 200px;">
+                <div class="card-body">
+                  <p class="card-text">{{addon.addOnName}} <br>
+                                    {{addon.id}} <br>
+                                    {{addon.addOnPrice}} <br>
+                                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+					  <app-edit-addon></app-edit-addon>	
+                      <app-delete-addon></app-delete-addon>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+<app-footer></app-footer>
 
 

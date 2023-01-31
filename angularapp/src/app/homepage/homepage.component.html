@@ -17,10 +17,10 @@
 </div>
 
 <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5 mb-5">
           <div *ngFor="let event of events">
             <div class="col">
-              <div class="card shadow-sm" id="itemGrid1">
+              <div class="card shadow-sm my-4" id="itemGrid1">
                 <div class="card-body">
                   <p class="card-text">{{event.eventName}} <br>
                                     {{event.eventAddress}} <br>
@@ -38,3 +38,4 @@
           </div>
     </div>
 </div>
+<app-footer></app-footer>

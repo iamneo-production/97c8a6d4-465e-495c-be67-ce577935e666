@@ -1,5 +1,6 @@
 
-        <table class="table table-bordered">
+        <div class="mx-5 my-4">
+        <table class="table table-hover table-striped table-dark">
             <thead>
               <tr>
                 <th scope="col">Event Name</th>
@@ -10,11 +11,15 @@
               </tr>
             </thead>
             <tbody *ngFor="let event of events">
-                   <td>{{event.eventName}}</td>
+              <tr scope="row" class="my-4">
+                <td>{{event.eventName}}</td>
                    <td>{{event.eventTime}}</td>
                    <td>{{event.eventDate}}</td>
-                   <app-edit-event></app-edit-event>
+                   <app-edit-booking [data]="event"></app-edit-booking>
+                   <td><app-delete-booking [data]="event"></app-delete-booking></td>
+              </tr>
             </tbody>
           </table>
-
+        </div>
+<app-footer></app-footer>
 
