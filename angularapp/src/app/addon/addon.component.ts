@@ -33,6 +33,7 @@ AddaddOnData(data:any){
   this.addOnData.add(data).subscribe((result:any)=>{
     console.log(result);
     alert("Successfully Submitted!!");
+    this.addOnForm.reset();
      });
    }
    
