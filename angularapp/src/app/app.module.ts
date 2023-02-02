@@ -37,6 +37,7 @@ import { EditThemeComponent } from './edit-theme/edit-theme.component';
 import { DeleteBookingComponent } from './delete-booking/delete-booking.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import {MatSelectModule} from '@angular/material/select';
+import { EditMenuComponent } from './edit-menu/edit-menu.component';
 
 
 @NgModule({
@@ -48,7 +49,7 @@ import {MatSelectModule} from '@angular/material/select';
    HomepageComponent,ViewmenuComponent,DeletethemeComponent,
     ViewthemeComponent,DeletemenuComponent, ReviewsComponent, 
     AddthemeComponent, DeleteAddonComponent, EditAddonComponent, EditBookingComponent, FooterComponent,
-    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent,DeleteBookingComponent
+    CustomerheaderComponent, AdminheaderComponent, EditThemeComponent,DeleteBookingComponent, EditMenuComponent
   ],
   imports: [
     BrowserModule,

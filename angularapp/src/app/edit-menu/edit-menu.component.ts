@@ -11,6 +11,7 @@ export class EditMenuComponent  {
 @Input() data:any;
 
   constructor(private menuService:MenudataService,config: NgbModalConfig, private modalService: NgbModal) { }
+  
   open(content:any) {
     this.modalService.open(content);
   }

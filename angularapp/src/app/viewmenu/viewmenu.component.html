@@ -1,4 +1,4 @@
-<table class="table table-bordered">
+<table  class="table table-hover table-striped table-dark">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -16,7 +16,7 @@
                     <td><img style="width: fit-content; height: 50px;" src="{{item.imageUrl}}" alt="Oops! can't show image"></td>
                     <td>{{item.itemName}}</td>
                     <td>{{item.itemCategory}}</td>
-                    <td>{{item.price}}</td>
+                    <td>{{item.itemPrice}}</td>
                     <app-edit-menu [data]="item"></app-edit-menu>
                     <td><app-deletemenu [data]="item">Delete</app-deletemenu></td>
             </tr>

@@ -13,6 +13,8 @@ export class BookingComponent {
   addons: any;
   items:any;
   theVenues: any;
+  theEvents:any;
+  eventExists:any;
      constructor(private menuService:MenudataService, private addonService:AddOnsServiceService,
        private bookingService:BookingServiceService, private venues:VenuesserviceService) {
          
@@ -27,6 +29,11 @@ export class BookingComponent {
         this.venues.view().subscribe((myVenues:any)=>{
           this.theVenues = myVenues;
         });
+
+        this.bookingService.viewEvent(sessionStorage.getItem("userid")).subscribe((result:any)=>{
+          this.theEvents = result;
+        });
+        
       }
 
   // ngOnInit(): void {
@@ -98,31 +105,46 @@ total:number = 0;
 values: any;
     bookEvent(form:any){
 
+      this.secondFormData = form;
+
       this.values = this.bookingForm2.get('selectAddOnsCategory').value;
+
       for(let v of this.values){
           this.total += parseInt(v);
       }
-      console.log(this.total);
-      // this.secondFormData = form;
+   
     
-      // var event =
-      // {userid:Number(sessionStorage.getItem("userid")),eventName:this.firstFormData.eventName,applicantName:this.firstFormData.applicantName,
-      // applicantAddress:this.firstFormData.applicantAddress,applicantMobileNo:this.firstFormData.applicantMobileNo,
-      // applicantEmailId:this.firstFormData.applicantEmailId,eventAddress:this.firstFormData.eventAddress,eventDate:this.firstFormData.eventDate,
-      // eventTime:this.firstFormData.eventTime,noOfPeople:this.firstFormData.noOfPeople,foodCategory:this.secondFormData.selectFoodCategory,
-      // quantityOfVeg:this.secondFormData.quantityOfVeg,quantityOfNonVeg:this.secondFormData.quantityNonOfVeg}
+      var event =
+      {userid:Number(sessionStorage.getItem("userid")),eventName:this.firstFormData.eventName,applicantName:this.firstFormData.applicantName,
+      applicantAddress:this.firstFormData.applicantAddress,applicantMobileNo:this.firstFormData.applicantMobileNo,
+      applicantEmailId:this.firstFormData.applicantEmailId,eventAddress:this.firstFormData.eventAddress,eventDate:this.firstFormData.eventDate,
+      eventTime:this.firstFormData.eventTime,noOfPeople:this.firstFormData.noOfPeople,foodCategory:this.secondFormData.selectFoodCategory,
+      quantityOfVeg:this.secondFormData.quantityOfVeg,quantityOfNonVeg:this.secondFormData.quantityNonOfVeg,total:this.total}
 
-      // this.bookingService.add(event).subscribe((events:any)=>{
-      //   console.log("added");
-      // });
-
-      // location.reload();
+      this.bookingService.add(event).subscribe((events:any)=>{
+      });
+      alert("Event has been added")
+      location.reload();
         
     }
 
     nextPage(form:any){
-        this.next = true;
-        this.firstFormData = form;
+
+      for(let i in this.theEvents){
+        if(this.bookingForm.get('eventName').value == this.theEvents[i].eventName){
+          this.eventExists = true;
+          break;
+        }
+    }
+
+    if(this.eventExists){
+        alert("You have already Booked this event");
+        this.next = false;
+    }
+    else{
+      this.next = true;
+      this.firstFormData = form;
+    }
     }
 
 }

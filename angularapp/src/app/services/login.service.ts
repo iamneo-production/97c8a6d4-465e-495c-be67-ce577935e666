@@ -17,4 +17,8 @@ export class LoginService {
     return this.http.post(this.url, user);
   }
 
+  delete(user:any){
+    return this.http.post(this.url + "/" + user.id, user);
+  }
+
 }

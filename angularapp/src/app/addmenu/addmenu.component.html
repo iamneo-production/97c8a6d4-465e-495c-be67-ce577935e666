@@ -63,7 +63,7 @@
 		</div>
       <div class="form-outline mb-4">
 		  <span *ngIf="itemPrice && itemPrice.invalid && itemPrice.touched">Invalid Item Price</span>
-        <input type="number" id="itemPrice" formControlName="itemPrice" class="form-control" placeholder="Enter item price">
+        <input type="number" id="itemPrice"  class="form-control" placeholder="Enter item price" formControlName="itemPrice">
 	</div>   
       <div class="row mb-4">
         <div class="col">
@@ -73,7 +73,7 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <button (click)="viewMenuItems()" class="btn btn-success">View Themes</button>
+            <button (click)="viewMenuItems()" class="btn" id="btnViewMenu">View Menu Items</button>
           </div>
         </div>
       </div>

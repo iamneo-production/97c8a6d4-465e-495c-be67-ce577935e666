@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { MenudataService } from '../services/menudata.service';
-import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
 @Component({
@@ -9,17 +9,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./addmenu.component.css']
 })
 export class AddmenuComponent  {
-
-    constructor(private menuService:MenudataService,config: NgbModalConfig, private modalService: NgbModal, private router:Router){}
-
-    open(content:any) {
-      this.modalService.open(content);
+  items:any;
+  itemExists: any;
+    constructor(private menuService:MenudataService, private router:Router){
+          this.menuService.items().subscribe((result)=>{
+            this.items = result;
+          });
     }
 
     addMenuForm = new FormGroup({
       imageUrl: new FormControl('',[Validators.required]),
       itemName: new FormControl('',[Validators.required]),
-      itemCatagory: new FormControl('',[Validators.required]),
+      itemCategory: new FormControl('',[Validators.required]),
       itemPrice: new FormControl('',[Validators.required,Validators.maxLength(6)])
     });
 
@@ -41,14 +42,26 @@ export class AddmenuComponent  {
 
     addMenu(menuForm:any){
 
-        this.menuService.additems(menuForm).subscribe((data:any)=>{
-          console.log("added");
-        });
+     for(let i in this.items)
+     {
+        if(this.addMenuForm.get('itemName').value == this.items[i].itemName)
+        {
+            this.itemExists = true;   
+        }
+     }
 
-        this.modalService.dismissAll();
-        location.reload();
+     if(this.itemExists){
+        alert("Item already exists");
+     }
+     else{
+      this.menuService.additems(menuForm).subscribe((data:any)=>{
+        this.router.navigate(['viewmenu']);
+      });
+      alert("Menu Item Added");
+     }
+
+        
     }
-
    viewMenuItems(){
       this.router.navigate(['viewmenu']);
    }

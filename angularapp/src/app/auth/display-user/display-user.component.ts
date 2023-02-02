@@ -9,15 +9,12 @@ import { UserDisplayService } from 'src/app/services/user-display.service';
 export class DisplayUserComponent implements OnInit {
 
   users: any;
- 
-  
-  constructor(private userService:UserDisplayService){
-    this.userService.users().subscribe((data:any)=>{
+  constructor(private userDisplayService:UserDisplayService){
+    this.userDisplayService.users().subscribe((data:any)=>{
       this.users = data;
   });
   }
   
   ngOnInit(): void {
   }
-
-}
+  }

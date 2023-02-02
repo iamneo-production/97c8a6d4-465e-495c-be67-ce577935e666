@@ -18,4 +18,6 @@ export class EditBookingComponent implements OnInit {
   open(content:any) {
     this.modalService.open(content);
   }
+
+  
 }

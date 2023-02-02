@@ -13,7 +13,7 @@ export class DeleteBookingComponent implements OnInit {
   }
 
   delete(){
-    var confirm = window.confirm("confirm if you want to delete Food Menu");
+    var confirm = window.confirm("confirm if you want to delete Food Event");
     if(confirm){
       this.bookingService.delete(this.data).subscribe((menu:any)=>
       {

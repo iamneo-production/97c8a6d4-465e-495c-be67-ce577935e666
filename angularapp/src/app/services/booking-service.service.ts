@@ -29,4 +29,13 @@ export class BookingServiceService {
     return this.http.get(this.url + "?userid="+userid);
   }
 
+  deleteEvent(userid:any,user:any){
+    return this.http.delete(this.url + "?userid="+userid,user);
+  }
+
+  editEvent(userid:any,user:any){
+    return this.http.put(this.url + "?userid="+userid,user);
+  }
+
+
 }

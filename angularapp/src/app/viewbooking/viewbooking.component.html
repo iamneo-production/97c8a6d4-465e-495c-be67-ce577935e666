@@ -6,6 +6,7 @@
                 <th scope="col">Event Name</th>
                 <th scope="col">Time</th>
                 <th scope="col">Date</th>
+                <th scope="col">Total</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
               </tr>
@@ -15,6 +16,7 @@
                 <td>{{event.eventName}}</td>
                    <td>{{event.eventTime}}</td>
                    <td>{{event.eventDate}}</td>
+                   <td>{{event.total | currency:US}}</td>
                    <app-edit-booking [data]="event"></app-edit-booking>
                    <td><app-delete-booking [data]="event"></app-delete-booking></td>
               </tr>

@@ -71,7 +71,8 @@
                     <div class="my-3">
                         Food Type
                         <select  name="selectFoodCategory" class="form-control" formControlName="selectCategory" id="selectFoodCategory">
-                            <option *ngFor="let item of items" value="{{item.itemCategory}}">{{item.itemCategory}}</option>
+                            <option  value="Veg">Veg</option>
+                            <option  value="Non Veg">Veg</option>
                         </select>
                     </div>
                     <div>
@@ -88,7 +89,7 @@
                           </select>
                     </div>
                     <div class="mt-4">
-                        <button class="btn btn-primary" id="bookEvent">Book Event</button>
+                        <button class="btn btn-primary" [disabled]="bookingForm2.invalid" id="bookEvent">Book Event</button>
                     </div>
                 </div>
             </div>
@@ -98,10 +99,4 @@
     </form>
 </ng-template>
 
-<ng-template #button1>
-    <button type="submit" class="btn btn-primary" id="nextPageButton">Next Page</button>
-</ng-template>
-<ng-template #button2>
-    <button type="submit" [disabled]="true" class="btn btn-secondary" style="cursor: not-allowed;">Next Page</button>
-</ng-template>
 <app-footer></app-footer>

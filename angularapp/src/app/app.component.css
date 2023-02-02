@@ -1,0 +1,32 @@
+#logo
+{
+    position: absolute;
+    background: transparent;
+    left: 40px;
+    top: 5px;
+    width: 60px;
+}
+
+#btnLogout
+{
+    float: right;
+    color: #081D5C;
+    font-size: large;
+    background-color: azure;
+}
+
+a
+{
+    color: #081D5C;
+}
+
+.nav a:hover
+{
+    background-color: #fcfafb;
+    border-radius: 5px;
+}
+
+header
+{
+    background-color: #f2d4d6;
+}

@@ -1,4 +1,5 @@
 import { Component, Input} from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UserServiceService } from 'src/app/services/user-service.service';
@@ -26,17 +27,24 @@ open(content:any) {
   this.modalService.open(content);
 }
 
-update(theEmail:any,theId:any,theUsername:any,theMobile:any,thePassword:any){
-    var user = {email:theEmail,username:theUsername,mobileNumber:theMobile,password:thePassword,id:theId};
-    this.userService.edit(user).subscribe((users:any)=>{
-      console.log("Updated");
-    });
-    
-    this.modalService.dismissAll();
-    location.reload();
-}
+editForm = new FormGroup({
+  id: new FormControl(''),
+  email: new FormControl(''),
+  username: new FormControl(''),
+  mobileNumber: new FormControl(''),
+  password: new FormControl('')
+});
 
-editUser(form:any){
+
+updateUser(theId:any,theEmail:any,theUsername:any,theMobileNumber:any,thePassword:any){
+        var user = {id:theId,email:theEmail,username:theUsername,
+        mobileNumber:theMobileNumber,password:thePassword}
+        this.userService.edit(user).subscribe((users:any)=>{
+          console.log("Updated");
+        });
+        
+        this.modalService.dismissAll();
+        location.reload();
 
 }
 

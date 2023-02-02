@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserServiceService } from 'src/app/services/user-service.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-delete-user',
@@ -7,9 +7,9 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   styleUrls: ['./delete-user.component.css']
 })
 export class DeleteUserComponent implements OnInit {
-@Input() data: any = {};
+@Input() data: any;
 
-  constructor(private userService:UserServiceService) { }
+  constructor(private userService:LoginService) { }
 
   ngOnInit(): void {
   }
@@ -21,10 +21,11 @@ export class DeleteUserComponent implements OnInit {
 
       this.userService.delete(this.data).subscribe((users:any)=>{
         console.log("deleted");
+        location.reload();
     });
-    
-    location.reload();
     }
+
+   
   }
 
 }

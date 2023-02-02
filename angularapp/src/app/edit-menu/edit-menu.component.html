@@ -20,11 +20,11 @@
                 <option value="Non Veg">Non Veg</option>
             </select>   
             
-            <span style="color:crimson" class="my-2">Theme Cost</span><br> 
-            <input type="text" class="form-control mb-3" name="price" #price placeholder="{{data.price}}" >  
+            <span style="color:crimson" class="my-2">Item Price</span><br> 
+            <input type="text" class="form-control mb-3" name="price" #price placeholder="{{data.itemPrice}}" >  
 	</div>
     <div class="modal-footer">
-		<button type="submit" class="btn btn-danger" (click)="editMenu(id.value,imageUrl.value,itemName.value,itemCategory.value,price.value)">Edit</button>
+		<button type="submit" class="btn btn-danger" (click)="editMenu(id.value,imageUrl.value,itemName.value,itemCategory.value,price.value)">Update</button>
 	</div>
 </ng-template>
 <button class="btn btn-primary mx-3 my-2" (click)="open(content)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">

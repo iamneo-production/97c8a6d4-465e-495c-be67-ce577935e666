@@ -1,55 +1,58 @@
-<ng-template #content let-c="close" let-d="dismiss">
-	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Add Menu Item</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')">X</button>
-	</div>
-	<div class="modal-body">
-		<label for="image">Addons Name</label>
-                    <input type="text" class="form-control" id="addOnsName" name="addOnsName"  placeholder="Add On Name" #addOnsName  required>
-                    <br>
-                    <br>
-                    <label for="itemname">Addons Price</label>
-                    <input type="number" id="addOnsPrice" class="form-control" #addOnsPrice name="addOnsPrice" placeholder="Price" required>
-				           <br>
-                   <br>
-                   <label for="addOnsImageUrl">Addons Image Url</label>
-                   <input type="url" id="addOnsImageUrl" #addOnsImageUrl class="form-control" placeholder="Image Url" required>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="addAddOn(addOnsName.value,addOnsPrice.value,addOnsImageUrl.value)">Save</button>
-	</div>
-</ng-template>
-
-<div class="row mx-5">
-	<div class="col-lg-4"></div>
-	<div class="col-lg-4"><button class="btn btn-lg btn-outline-primary mx-5" (click)="open(content)">Addon</button></div>
-	<div class="col-lg-4"></div>
-</div>
-
-
 <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5 mb-5">
-          <div *ngFor="let addon of theAddOns">
-            <div class="col">
-              <div class="card shadow-sm my-4" id="itemGrid{{addon.id}}">
-				<img src="{{addon.imageUrl}}" alt="" style="height: 200px;">
-                <div class="card-body">
-                  <p class="card-text">{{addon.addOnName}} <br>
-                                    {{addon.id}} <br>
-                                    {{addon.addOnPrice}} <br>
-                                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-					  <app-edit-addon></app-edit-addon>	
-                      <app-delete-addon></app-delete-addon>
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5 mb-5">
+            <div *ngFor="let addon of theAddOns">
+              <div class="col">
+                <div class="card shadow-sm my-4" id="itemGrid{{addon.id}}">
+          <img src="{{addon.imageUrl}}" alt="" style="height: 200px;">
+                  <div class="card-body">
+                    <p class="card-text">{{addon.addOnName}} <br>
+                                      {{addon.addOnPrice | currency:US}} <br>
+                                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                      </div>
+                    
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+      </div>
+        </div>
+        <div class="col-lg-4 mt-5">
+          <div class="row">
+              <div class="col-lg-1">
+
+              </div>
+              <div class="col-lg-10">
+                <form [formGroup]="addonForm" (ngSubmit)="submit(addonForm.value)">
+                  <div class="form-group">
+                    <span style="color: red;" *ngIf="addOnName && addOnName.invalid && addOnName.touched">Invalid Addons Name</span>
+                    <input type="text" class="form-control" id="addOnName" formControlName="addOnsName" name="addOnName"  placeholder="Add On Name">
+                  </div>
+                  <div class="form-group">
+                    <span style="color: red;" *ngIf="addOnPrice && addOnPrice.invalid && addOnPrice.touched">Invalid Price</span>
+                    <input type="number" id="addOnsPrice" class="form-control" formControlName="addOnPrice" name="addOnPrice" placeholder="Price">
+                  </div>
+                  <div class="form-group">
+                    <span style="color: red;" *ngIf="imageUrl && imageUrl.invalid && imageUrl.touched">Invalid Url</span>
+                    <input type="url" id="addOnsImageUrl" class="form-control" formControlName="imageUrl" placeholder="Image Url">
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-1">
+
+              </div>
+          </div>  
+            
+        </div>
     </div>
+   
 </div>
 <app-footer></app-footer>
 

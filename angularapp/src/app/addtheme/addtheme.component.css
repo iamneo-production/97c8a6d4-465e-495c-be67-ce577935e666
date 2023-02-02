@@ -1,0 +1,22 @@
+#btnViewTheme
+{
+    background-color: #081d5c;
+    color: aliceblue;
+}
+
+.form
+{
+    border: 15px solid #081d5c;
+    padding: 15px;
+    
+}
+
+input
+{
+    background-color: #e8ecf8;
+}
+
+textarea
+{
+    background-color: #e8ecf8;
+}
